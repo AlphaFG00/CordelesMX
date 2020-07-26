@@ -1,11 +1,12 @@
 <template>
   <div class="home">
+    <b-container id="view-inicio">
     <h1>bienvenido</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-      a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
+      Un solo proveedor para todas sus necesidades de amarre.
     </p>
     <slider/>
+    </b-container>
   </div>
 </template>
 
@@ -20,3 +21,10 @@ export default {
   
 }
 </script>
+<style scoped>
+#view-inicio{
+    background-color:transparent;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.568);
+  }
+</style>
