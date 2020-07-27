@@ -3,7 +3,7 @@
     <b-row align-v="center">
       <b-col sm="4" class="text-center mt-2 " order="3" order-sm="1">
         <a class="i_block">Términos</a><a class="i_block">Privacidad</a>
-        <p class="rights-reserved">© 2020 Garca Desarrollos. Todos los derechos reservados</p>
+        <p class="rights-reserved">© 2020 CordelesMX. Todos los derechos reservados</p>
       </b-col>
       <b-col sm="4" class="text-center " order="2">
         <router-link :to="{name: 'home'}">Inicio</router-link>
@@ -14,11 +14,11 @@
         <a href="" target="_blank">
           Facebook
         </a>
-        <a href="https://api.WhatsApp.com/send?phone=+5255" target="_blank">
+        <a href="#" target="_blank">
           WhatsApp
         </a><br>
         <span class="block">
-          <i class="fas fa-phone-square "></i><span class="i_block ml-3">(+521) 811 978 3811</span>
+          <i class="fas fa-phone-square "></i><span class="i_block ml-3">(+555) 555 555 5555</span>
         </span>
       </b-col>
     </b-row>

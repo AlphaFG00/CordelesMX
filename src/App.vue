@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-      <project-header/>
-      <router-view/>
+    <project-header/>
+    <router-view/>
     <project-footer/>
   </div>
 </template>
@@ -18,14 +18,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$pageBackground: #ffffff;
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: $pageBackground;
+  min-height:100vh;
 }
+
 #nav {
   padding: 30px;
 }
