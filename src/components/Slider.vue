@@ -24,7 +24,7 @@
                   class="d-block  w-100"
                   width="720"
                   height="320"
-                  src="https://i.imgur.com/EdKo3hE.gif"
+                  src="@/assets/Gifs/Presentacion.gif"
                   alt="cordeles"
                 >
               </template>
