@@ -10,8 +10,6 @@
             controls
             indicators
             background="#ababab"
-            img-width="1024"
-            img-height="420"
             style="text-shadow: 3px 3px 3px #000;"
             @sliding-start="onSlideStart"
             @sliding-end="onSlideEnd"
@@ -26,7 +24,7 @@
                   class="d-block  w-100"
                   width="720"
                   height="320"
-                  src="https://i.imgur.com/EdKo3hE.gif"
+                  src="@/assets/Gifs/Presentacion.gif"
                   alt="cordeles"
                 >
               </template>
@@ -39,7 +37,7 @@
                 src="@/assets/productos/Cable.jpg"
                 width="720"
                 height="320"
-                alt="Imagen 1"/>
+                alt="Cable.jpg"/>
               </template>
             </b-carousel-slide>
 
@@ -50,7 +48,7 @@
                 src="@/assets/productos/Cable_polipropileno.jpg"
                 width="720"
                 height="320"
-                alt="Imagen 2"/>
+                alt="Cable_polipropileno.jpg"/>
               </template>
             </b-carousel-slide>
 
@@ -58,7 +56,6 @@
         </b-col>
       </b-row>
     </b-container>
-    <br>
 </div>
 </template>
 
@@ -80,3 +77,5 @@
     }
   }
 </script>
+<style lang="scss" scoped>
+</style>
