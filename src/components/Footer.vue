@@ -11,19 +11,16 @@
       </b-col>
      <b-col sm="4" class="text-center" order="1" order-sm="3">
         <a href="https://twitter.com/_cgarquitectura" target="_blank">
-          <i class="fab fa-twitter-square color-tw"></i>
+          Twitter
         </a>
-        <a href="https://www.facebook.com/CG-Arquitectura-y-Desarrollos-106084567863601/" target="_blank">
-          <i class="fab fa-facebook-square color-fb"></i>
+        <a href="https://www.facebook.com/atlasjarcieria" target="_blank">
+          Facebook
         </a>
-        <a href="https://www.instagram.com/cgarqydesarrollos/" target="_blank">
-          <i class="fab fa-instagram-square" style="color: deeppink"></i>
-        </a>
-        <a href="https://api.WhatsApp.com/send?phone=+5218119783811" target="_blank">
-          <i class="fab fa-whatsapp-square color-wa"></i>
+        <a href="https://api.WhatsApp.com/send?phone=+525584813993" target="_blank">
+          WhatsApp
         </a><br>
         <span class="block">
-          <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">(+521) 811 978 3811</span>
+          <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">tel: 55-42-09-68</span>
         </span>
       </b-col>
     </b-row>
@@ -33,10 +30,12 @@
 .foot-body {
   border-top: double 4px #fd0100;
   bottom: 0;
+  margin-top: 1em;
   width: 100%;
-  position: absolute;
+  position: relative;
   height: 20px; /**quitar cuando se le de estilo */
 }
+
 .rights-reserved {
 display:block;
 font-family:'Times New Roman', Times, serif;
