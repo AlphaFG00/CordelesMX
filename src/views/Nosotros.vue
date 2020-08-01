@@ -25,12 +25,12 @@
         </div> 
         <b-container class="mt-3 mb-5">
             <b-row align-v="center">
-                <b-col cols="6" md="6" sm="12" lang>
+                <b-col cols="12" md="6" sm="12"  lang>
                     <div class="tercera-parte">
                     Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
                     </div>
                 </b-col>
-                <b-col cols="6" md="6" sm="12" align-self="center">
+                <b-col cols="12" md="6" sm="12" align-self="center">
                     <div class="imagen-1">
                         <b-img :src="require('@/assets/img/Maguey.jpg')" width="auto" height="250"/>
                     </div>
@@ -42,12 +42,12 @@
         </div> 
         <b-container class="mt-3 mb-3">
             <b-row align-v="center">
-                <b-col cols="6" lg="6" md="6" sm="12">
+                <b-col cols="12" lg="6" md="6" sm="12">
                     <div class="imagen-2">
                         <b-img :src="require('@/assets/img/burrero_rafia.jpg')" width="400" height="250"/>
                     </div>
                 </b-col>
-                <b-col cols="6" lg="6" md="6" sm="12">
+                <b-col cols="12" lg="6" md="6" sm="12">
                     <div class="cuarta-parte">
                         Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
                     </div>
@@ -77,16 +77,16 @@
       font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
     
-    .titulo-1.primero {    
+    .primero {    
       animation: showup 5s forwards;
     }
     
-    .titulo-1.segundo {
+    .segundo {
       width:0px;
       animation: reveal 5s forwards;
     }
     
-    .titulo-1 .ultimo {
+     .ultimo {
       margin-left:-355px;
       animation: slidein 5s forwards;
     }

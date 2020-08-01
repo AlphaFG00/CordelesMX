@@ -10,7 +10,7 @@
        
       </b-col>
      <b-col sm="4" class="text-center" order="1" order-sm="3">
-        <a href="https://twitter.com/_cgarquitectura" target="_blank">
+        <a href="https://twitter.com/" target="_blank">
           Twitter
         </a>
         <a href="https://www.facebook.com/atlasjarcieria" target="_blank">
@@ -29,11 +29,10 @@
 <style>
 .foot-body {
   border-top: double 4px #fd0100;
-  bottom: 0;
-  margin-top: 1em;
+  margin-top: 0em;
   width: 100%;
   position: relative;
-  height: 20px; /**quitar cuando se le de estilo */
+  /*height: 20px; /**quitar cuando se le de estilo */
 }
 
 .rights-reserved {

@@ -22,7 +22,7 @@
 
 %selectState{
   border-radius: 0;
-  background: rgb(255, 245, 230);
+  /*background: rgb(218, 193, 193);*/
   &:before,
   &:after {
     width: 100%;
@@ -32,8 +32,8 @@
 }
 
 .nav-style{
-  background-color: #f1e0cc;
-
+  
+  background:linear-gradient(41deg, #e4dcdd 5%, #f7f1f2 40%, #e4dcdd 55%);
   .router-link-exact-active{
     background-color:transparent;
     .link-efect{ 
@@ -42,7 +42,7 @@
   }
 }
 
-$borderColor:#a4181a;
+$borderColor:#e7c047;
 $curvatura:20px;
 .link-efect {
   position: relative;
@@ -76,6 +76,7 @@ $curvatura:20px;
 	}
 	&:hover {
     @extend %selectState;
+    color:#e7c047;
 	}
 }
 

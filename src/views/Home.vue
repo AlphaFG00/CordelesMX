@@ -1,49 +1,29 @@
 <template>
 <div>
   <div class="home">
-    <b-container id="view-inicio">
-    <h1>Bienvenido</h1>
-    <p>
-      Un solo proveedor para todas sus necesidades de amarre.
-    </p>
+    <b-container id="view-inicio" class="mt-4 mb-5 p-5">
+
+      <div class="titulo-1 primero">Bienvenido </div> 
+            <div class="titulo-1 segundo"> 
+                <span class="ultimo">a CordelesMX</span>
+            </div>
+    <br>
+    
+        <div class="titulo-slogan animacion-1">
+          Un solo proveedor para todas sus necesidades de amarre.
+        </div>
+    
     <slider/>
-            <b-container>
-
-              <h5>Ejemplo de Productos</h5>
-
-                  <b-card title="Yute" img-src="https://picsum.photos/600/300/?image=25" img-alt="Image" img-top  tag="article" style="max-width: 20rem;" class="mb-2">
-                  <b-card-text>
-                    Info del Yute
-                  </b-card-text>
-
-                            <b-button variant="primary" v-b-toggle.collapse-1 id="collapse-1">Medidas</b-button> |
-                            <b-button href="#" variant="primary" v-b-toggle.collapse-2 id="collapse-2">Peso </b-button> |
-                            <b-button href="#" variant="primary"  v-b-toggle.collapse-3 id="collapse-3">Piezas y Paca</b-button>  |
-                            este boton debe desplegar un modal con la imagen de la tabla
-                            <b-button href="#" variant="success"  v-b-modal.modal-1 id="modal-1">Informacion Detallada</b-button>
-
-                              
-                              <b-collapse id="collapse-1" class="mt-2">
-                                  <b-card>
-                                    <p class="card-text">aca van las pinchis medidas xD</p>
-                                  </b-card>
-                              </b-collapse>
-                               <b-collapse id="collapse-2" class="mt-2">
-                                  <b-card>
-                                    <p class="card-text">aca van los pesos xD</p>
-                                  </b-card>
-                              </b-collapse>
-                              <b-collapse id="collapse-3" class="mt-2">
-                                  <b-card>
-                                    <p class="card-text">aca van mas info </p>
-                                  </b-card>
-                              </b-collapse>
-                              
-                                  <b-modal id="modal-1" title="Mas Datos del Producto">
-                                       <p class="my-4">Y aca va la tabla</p>
-                                  </b-modal> 
-                  </b-card>
-            </b-container>
+      <p class="mt-2">
+    Consulta de precios, cotizaciones, asesoría e información de nuestros productos; <router-link :to="{name: 'Contacto'}">contactenos</router-link> </p>
+<p>
+Dirección:
+    Adolfo Gurrión No. 135 Col. Centro
+    México, D.F. CP 15810
+    Cuauhtémoc
+    D.F.
+    15810
+    México</p>
     </b-container>
   </div>
 </div>
@@ -63,17 +43,106 @@ export default {
 
 <style scoped>
 
-
 .home{
   top: 0;
-  min-width: 100vw;
+  /*min-width: 10vw;*/
   height: 100vh;
   padding-top: 20px;
+  scroll-padding-bottom: 20px;
+  padding-bottom: 10px;
+  
+  background-image: url('../assets/img/Portada.jpg');
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: mostrar 1s forwards;
 }
 
 #view-inicio{
     background-color:transparent;
     text-align: center;
-    background-color: rgba(255, 255, 255,1);
+    background-color: rgba(255, 255, 255,.65);
+  }
+
+  .titulo-1 {
+      display:inline-block;
+      overflow:hidden;
+      white-space:nowrap;
+      font-size: xx-large;
+      color: #a13a4b;
+      font-weight: 600;
+      font-family: 'Franklin Gothic Medium', sans-serif !important;
+    }
+    .titulo-slogan {
+      width: 100%;
+      
+      font-size: x-large;
+      color:#a88d39;
+      font-family: 'Franklin Gothic Medium', sans-serif !important;
+    }
+    .primero {    
+      animation: showup 5s forwards;
+    }
+    
+    .segundo {
+      width:0px;
+      animation: reveal 5s forwards;
+    }
+    
+     .ultimo {
+      margin-left:-355px;
+      animation: slidein 5s forwards;
+    }
+    .animacion-1 {
+    animation: elevateRight 1.5s 1.5s both;
+  }
+
+@keyframes elevateRight {
+    0% {
+        transform: translateY(100%) rotate(20deg);
+        transform-origin: left;
+        opacity: 0;
+    }
+    40% {
+        transform: rotate(-2deg);
+        transform-origin: left;
+        
+    }
+    65% {
+        transform: rotate(0deg);
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+    
+    @keyframes showup {
+        0% {opacity:0;}
+        20% {opacity:1;}
+        80% {opacity:1;}
+        100% {opacity:1;}
+    }
+    
+    @keyframes slidein {
+        0% { margin-left:-100px; }
+        20% { margin-left:-100px; }
+        35% { margin-left:0px; }
+        100% { margin-left:0px; }
+    }
+    
+    @keyframes reveal {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width: 15ex;}
+        80% {opacity:1; width: 15ex;}
+        100% {opacity:1;width:15ex;}
+    }
+    @keyframes mostrar {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>

@@ -2,7 +2,7 @@
 <div>
     <b-container>
       <b-row class="justify-content-center">
-        <b-col md="8" fluid="sm" >
+        <b-col md="10" fluid="sm" >
           <b-carousel
             id="carousel-1"
             v-model="slide"
@@ -34,6 +34,7 @@
               <h2>Cable</h2>
               <template v-slot:img>
                 <img 
+                class="d-block  w-100"
                 src="@/assets/productos/Cable.jpg"
                 width="720"
                 height="320"
@@ -45,6 +46,7 @@
               <h2>Polipropileno</h2>
               <template v-slot:img>
                 <img 
+                class="d-block  w-100"
                 src="@/assets/productos/Cable_polipropileno.jpg"
                 width="720"
                 height="320"
