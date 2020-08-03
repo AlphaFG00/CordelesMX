@@ -12,7 +12,7 @@
         <div class="titulo-slogan animacion-1">
           Un solo proveedor para todas sus necesidades de amarre.
         </div>
-    
+    <br>
     <slider/>
       <p class="mt-2">
     Consulta de precios, cotizaciones, asesoría e información de nuestros productos; <router-link :to="{name: 'Contacto'}">contactenos</router-link> </p>
@@ -46,7 +46,7 @@ export default {
 .home{
   top: 0;
   /*min-width: 10vw;*/
-  height: 100vh;
+  /*height: 100vh;*/
   padding-top: 20px;
   scroll-padding-bottom: 20px;
   padding-bottom: 10px;
@@ -80,6 +80,15 @@ export default {
       font-size: x-large;
       color:#a88d39;
       font-family: 'Franklin Gothic Medium', sans-serif !important;
+    }
+    @media screen and (max-width: 500px){
+
+      .titulo-1{
+        font-size:large;
+      }
+      .titulo-slogan {
+        font-size:medium;
+      }
     }
     .primero {    
       animation: showup 5s forwards;

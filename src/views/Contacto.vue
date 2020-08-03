@@ -1,8 +1,9 @@
 <template>
     <div >
+      <b-container>
         <h1 class="cssanimation titulo">CordelesMX</h1>
         <div id="container">
-            Make 
+            Make
             <div id="flip">
                 <div><div>wOrK</div></div>
                 <div><div>lifeStyle</div></div>
@@ -10,7 +11,7 @@
             </div>
             AweSoMe!
             </div>
-
+      </b-container>
 
     </div>
 </template>
@@ -52,11 +53,11 @@
   color:#999;
   text-transform: uppercase;
   font-size:36px;
-  font-weight:bold;
-  position:fixed;
+  font-weight:bold;  
   width:100%;
   bottom:45%;
   display:block;
+  
 }
 
 #flip {

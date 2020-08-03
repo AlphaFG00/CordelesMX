@@ -1,5 +1,231 @@
 <template>
-    <div>
-        productos
+    <div class="productos">
+        <b-container class="mt-4 mb-4">
+            <div class="mi-titulo-1 primero-t">Nuestros</div> 
+            <div class="mi-titulo-1 segundo-t"> 
+                <span class="ultimo-t">prodcutos</span>
+            </div>
+        </b-container>
+        <b-container>
+        <b-row fluid>
+            <b-col align-self="center" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos" :key="index">
+                <b-card 
+                :header="producto[5]" 
+                header-border-variant="warning"
+                border-variant="warning"
+                header-bg-variant="warning"
+                header-text-variant="white"
+                tag="article" 
+                style="max-width: 15rem;" 
+                class="mb-2 ">
+                <b-card-img :src="producto[2]" alt="imagen" height="200"/>
+                <b-card-text>
+                    <div class="info-tarjeta">{{producto[3]}}</div>
+                </b-card-text>
+                    <b-button variant="dark"  v-b-toggle="['collapse-'+index]" >Acerca</b-button> 
+                    <b-button  variant="warning"   v-b-modal="'modal-'+index">Mas Detalles</b-button>
+                    <b-collapse :id="'collapse-'+index" class="mt-2">
+                        <b-card>
+                        <p class="card-text">{{producto[4]}}  </p>
+                        </b-card>
+                    </b-collapse>
+                    <b-modal 
+                    header-border-variant="primary" 
+                    header-text-variant="amarillo" 
+                    
+                    :id="'modal-'+index" 
+                    :title="'Mas Datos del Producto: '+producto[5]">
+                        <p class="my-4">{{producto[4]}}</p>
+                    <b-table head-row-variant="amarillo" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                    </b-modal> 
+                </b-card>
+            </b-col>
+        </b-row>
+        </b-container>
     </div>
 </template>
+<style>
+    .productos {
+        animation: mostrar 1s forwards;
+    }
+    .info-tarjeta {
+        overflow: auto;
+        height: 7rem;
+    }
+    .mi-titulo-1 {
+      display:inline-block;
+      overflow:hidden;
+      white-space:nowrap;
+      font-size: xx-large;
+      color: #a13a4b;
+      font-family: 'Franklin Gothic Medium', sans-serif !important;
+    }
+    @media screen and (max-width: 500px){
+      .mi-titulo-1{
+        font-size:x-large;
+      }
+    }
+    .primero-t {    
+      animation: showup 5s forwards;
+    }
+    
+    .segundo-t {
+      width:0px;
+      animation: revelar 5s forwards;
+    }
+    
+    .ultimo-t {
+      margin-left:-355px;
+      animation: slidein 5s forwards;
+    }
+    @keyframes showup {
+        0% {opacity:0;}
+        20% {opacity:1;}
+        80% {opacity:1;}
+        100% {opacity:1;}
+    }
+    
+    @keyframes slidein {
+        0% { margin-left:-100px; }
+        20% { margin-left:-100px; }
+        35% { margin-left:0px; }
+        100% { margin-left:0px; }
+    }
+    
+    @keyframes revelar {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width: 10ex;}
+        80% {opacity:1; width: 10ex;}
+        100% {opacity:1;width:10ex;}
+    }
+    @keyframes mostrar {
+        0% {opacity: 0;}
+        100% {opacity: 1;}  
+    }  
+</style>
+<script>
+export default {
+    name: 'Home',
+    data(){
+        return {
+            productos:[
+                [
+                    ['calibre','color','presentación'],
+                    [
+                        { calibre: 'Floricultura', color: 'Colores', presentación: '300 gr. 1,3 y 4 kg' },
+                        { calibre: 'Forrajera', color: 'Naranja', presentación: '3, 4 y 10 kg.' },
+                        { calibre: '2', color: 'Color y Blanca', presentación: '500 gr. 1, 3, 4 kg.' },
+                        { calibre: '3', color: 'Color y Blanca', presentación: '1, 3, 4 kg.' },
+                        { calibre: '4', color: 'Color y Blanca', presentación: '1, 3, 4 kg.' },
+                        { calibre: '6', color: 'Blanca', presentación: '3, 4 kg.' },
+                        { calibre: '7', color: 'Blanca', presentación: '3, 4 kg.' },
+                        { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
+                    ],
+                    "https://i.imgur.com/XXcQEdl.jpg",
+                    "La rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
+                    "El material de rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
+                    material. Toda nuestra rafia es 100% virgen y con protección a los rayos UVB.",
+                    "Rafia"
+                ],
+                [
+                    ['cable_de_nilon'],
+                    [
+                        { cable_de_nilon:'NYLON DE COLOR'},
+                        { cable_de_nilon:'NYLON NEGRO'},
+                        { cable_de_nilon:'HILAZA'},
+                        { cable_de_nilon:'CORDON FLOJO'},
+                        { cable_de_nilon:'CORDON FLOJO COLOR'},
+                        { cable_de_nilon:'PASTELERO'},
+                        { cable_de_nilon:'PIOLA'},
+                        { cable_de_nilon:'PIOLA BLANCA'},
+                       
+                    ],
+                    "https://i.imgur.com/9j9nsDo.jpg",
+                    "Cordeles, elaborados de fibras naturales como algodón, yute, cáñamo,sisal, henequén y fibra de coco.",
+                    "Todo tipo de cordeles:\n\
+                    Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
+                    decoración… etc.",
+                    "Cordeles"
+                ],
+                [
+                    ['tela_de_yute'],
+                    [
+                        { tela_de_yute:'1.30 Metros de ancho'},
+                        { tela_de_yute:'2.80 Metros de ancho'},
+                    ],
+                    "https://i.imgur.com/IkKvasv.jpg",
+                    "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
+                    "Se usa para la industria de la decoración, entre otros. Existen adicionalmente costales de yute. Hilo de Yute de 1 o 2 Cabos.",
+                    "Yute"
+                ],
+                [
+                    ['diametro','peso_en_kg','peso','resistencia'],
+                    [
+                        { diametro:'',peso_en_kg:"POR METRO",peso:"POR ROLLO",resistencia:"A LA TENSIÓN"},
+                        { diametro:'3 mm - 1/8”',peso_en_kg:"0.015",peso:"25",resistencia:"125"},
+                        { diametro:'4 mm - 3/16”',peso_en_kg:"0.022",peso:"25",resistencia:"157"},
+                        { diametro:'6 mm - 1/4”',peso_en_kg:"0.030",peso:"50",resistencia:"176"},
+                        { diametro:'8 mm - 35/16”',peso_en_kg:"0.043",peso:"50",resistencia:"349"},
+                        { diametro:'10 mm - 3/8”',peso_en_kg:"0.061",peso:"50",resistencia:"472"},
+                        { diametro:'11 mm - 7/16”',peso_en_kg:"0.078",peso:"50",resistencia:"610"},
+                        { diametro:'13 mm - 1/2”',peso_en_kg:"0.112",peso:"50",resistencia:"940"},
+                        { diametro:'16 mm - 5/8”',peso_en_kg:"0.198",peso:"100",resistencia:"1537"},
+                        { diametro:'19 mm - 3/4”',peso_en_kg:"0.248",peso:"100",resistencia:"1886"},
+                        { diametro:'25 mm - 1”',peso_en_kg:"0.402",peso:"100",resistencia:"3144"},
+                        { diametro:'25 mm - 1”',peso_en_kg:"0.620",peso:"500",resistencia:"4715"},
+                        { diametro:'38 mm - 1  1/2”',peso_en_kg:"0.900",peso:"500",resistencia:"6417"},
+                    ],
+                    "https://i.imgur.com/JRxyq6R.jpg",
+                    
+                    "Se extrae del agave y fue conocido como el oro verde por la cultura maya, se utiliza\
+                    para hacer cordones, telas, alfombras, uso marítimo y especialmente para la decoración hoy en día,\
+                    existe el hilo.",
+                    "Presentaciones en: Hilo Yucatán, Tomatero, Medio Cabo, 1,2,3, cabos, Titan, bambino, Hilo de color",
+                    "Henequén."
+                ],
+                [
+                    ['jaceria'],
+                    [
+                        {jaceria:'Escobas'},
+                        {jaceria:'Fibras'},
+                        {jaceria:'Despachadores'},
+                        {jaceria:'Botes para basura'},
+                        {jaceria:'Atomisadoes'},
+                        {jaceria:'Cepillos'},
+                        {jaceria:'Cubuetas'},
+                        {jaceria:'Franelas'},
+                        {jaceria:'Mechudos'},
+                        {jaceria:'Mops'},
+                        {jaceria:'Recogedores'},
+                        {jaceria:'Quimicos'},
+                    ],
+                    "https://i.imgur.com/cVSkONj.jpg",
+                    "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
+                    "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc",
+                    "Jarcieria."
+                ],
+                [
+                    ['diametro__(mm_x_pulgada)','metros_por_kilo','peso_por_royo'],
+                    [
+                        {'diametro__(mm_x_pulgada)':'4',metros_por_kilo:'3/16',peso_por_royo:'16'},
+                        {'diametro__(mm_x_pulgada)':'6',metros_por_kilo:'1/4',peso_por_royo:'20'},
+                        {'diametro__(mm_x_pulgada)':'8',metros_por_kilo:'1/16',peso_por_royo:'22'},
+                        {'diametro__(mm_x_pulgada)':'10',metros_por_kilo:'3/8',peso_por_royo:'18/30'},
+                        {'diametro__(mm_x_pulgada)':'11',metros_por_kilo:'7/16',peso_por_royo:'19/30'},
+                        {'diametro__(mm_x_pulgada)':'13',metros_por_kilo:'1/2',peso_por_royo:'19/32'},
+                        {'diametro__(mm_x_pulgada)':'16',metros_por_kilo:'5/8',peso_por_royo:'58/60'},
+                        {'diametro__(mm_x_pulgada)':'19',metros_por_kilo:'3/4',peso_por_royo:'58/60'},
+                        {'diametro__(mm_x_pulgada)':'25',metros_por_kilo:'1',peso_por_royo:'68/70'},
+                    ],
+                    "https://i.imgur.com/3zQbXwY.jpg",
+                    "Tenemos productos de Sogas y cables de polipropileno, para ver mas de click en \"Mas detalles\"",
+                    "Ofrecemos Sogas y cables de polipropileno",
+                    "Cables."
+                ],
+
+            ]
+        }
+    }
+}
+</script>

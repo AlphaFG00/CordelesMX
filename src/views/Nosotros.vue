@@ -23,7 +23,7 @@
         <div class="titulo-2 ">
             <span class="mision">Misión</span>
         </div> 
-        <b-container class="mt-3 mb-5">
+        <b-container class="mt-3 mb-4">
             <b-row align-v="center">
                 <b-col cols="12" md="6" sm="12"  lang>
                     <div class="tercera-parte">
@@ -32,7 +32,7 @@
                 </b-col>
                 <b-col cols="12" md="6" sm="12" align-self="center">
                     <div class="imagen-1">
-                        <b-img :src="require('@/assets/img/Maguey.jpg')" width="auto" height="250"/>
+                        <b-img id="img-1" :src="require('@/assets/img/Maguey.jpg')" width="335" height="250"/>
                     </div>
                 </b-col>
             </b-row>
@@ -44,7 +44,7 @@
             <b-row align-v="center">
                 <b-col cols="12" lg="6" md="6" sm="12">
                     <div class="imagen-2">
-                        <b-img :src="require('@/assets/img/burrero_rafia.jpg')" width="400" height="250"/>
+                        <b-img :src="require('@/assets/img/burrero_rafia.jpg')" width="335" height="250"/>
                     </div>
                 </b-col>
                 <b-col cols="12" lg="6" md="6" sm="12">
@@ -76,7 +76,15 @@
       color:#b0455c;
       font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
-    
+    @media screen and (max-width: 500px){
+      .titulo-1{
+        font-size:x-large;
+      }
+      .titulo-2 {
+        font-size:medium;
+        font-weight: 700;
+      }
+    }  
     .primero {    
       animation: showup 5s forwards;
     }
@@ -137,19 +145,19 @@
         animation: move-right 1.2s 6s forwards;
     }
     .imagen-1 {
-        opacity: 0;
+      opacity: 0;
       display: block;
-      text-align: left;
+      text-align: center;
       width: 100%;
       animation: move-right 1s 6.5s forwards;
-    }
+    }  
     .imagen-2 {
-        opacity: 0;
+      opacity: 0;
       display: block;
-      text-align: left;
+      text-align: center;
       width: 100%;
       animation: show-text 2.5s 7.5s forwards;
-    }
+    }    
     .vision {
         opacity: 0;
         display: block;
