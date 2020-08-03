@@ -3,10 +3,10 @@
       <b-container>
         <h1 class="cssanimation titulo">CordelesMX</h1>
         <div id="container">
-            Make
+            Amarrando Buenos
             <div id="flip">
-                <div><div>wOrK</div></div>
-                <div><div>lifeStyle</div></div>
+                <div><div>Prdoductos</div></div>
+                <div><div>Negocios</div></div>
                 <div><div>Everything</div></div>
             </div>
             AweSoMe!

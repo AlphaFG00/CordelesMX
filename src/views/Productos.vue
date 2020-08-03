@@ -202,8 +202,8 @@ export default {
                     ],
                     "https://i.imgur.com/cVSkONj.jpg",
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
-                    "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc",
-                    "Jarcieria."
+                    "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
+                    "Jarcieria"
                 ],
                 [
                     ['diametro__(mm_x_pulgada)','metros_por_kilo','peso_por_royo'],
@@ -219,9 +219,70 @@ export default {
                         {'diametro__(mm_x_pulgada)':'25',metros_por_kilo:'1',peso_por_royo:'68/70'},
                     ],
                     "https://i.imgur.com/3zQbXwY.jpg",
-                    "Tenemos productos de Sogas y cables de polipropileno, para ver mas de click en \"Mas detalles\"",
-                    "Ofrecemos Sogas y cables de polipropileno",
+                    "Tenemos productos de Sogas y cables de polipropileno, para ver mas de click en \"Mas detalles\".",
+                    "Ofrecemos Sogas y cables de polipropileno.",
                     "Cables."
+                ],
+                [
+                    ['barcinas_o_super_sacos'],
+                    [
+                        {barcinas_o_super_sacos:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
+                        {barcinas_o_super_sacos:'Manguera para agua y gas.'},
+                        {barcinas_o_super_sacos:'Petate'},
+                        {barcinas_o_super_sacos:'Pachon'},
+                    ],
+                    "https://i.imgur.com/VyATffd.jpg",
+                    "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
+                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
+                    "Varios."
+                ],
+                [
+                    ['tipo','info','menudeo','medio_mayoreo','mayoreo'],
+                    [
+                        {tipo:'',info:'',menudeo:'De 1-99 PZAS',medio_mayoreo:'100-499 PZAS',mayoreo:'A PARTIR DE 500'},
+                        {tipo:'Nuevo',info:'De 54 x 100 cm kg Nuevo sin impresión',menudeo:'$6.70',medio_mayoreo:'$5.70',mayoreo:'$5.20'},
+                        {tipo:'Azucarero',info:'De 54 x 100 cm 50kg una vaciada impresa',menudeo:'$3.70',medio_mayoreo:'$3.20',mayoreo:'$3.00'},
+                        {tipo:'Sucio',info:'De 50 kg. La medida varía y la capacidad',menudeo:'$2.70',medio_mayoreo:'$2.40',mayoreo:'$2.10'},
+                        {tipo:'Una vaciada',info:'De 25 kg con compresión',menudeo:'$3.00',medio_mayoreo:'$2.70',mayoreo:'$2.50'},
+                    ],
+                    "https://i.imgur.com/a2JwdSk.jpg",
+                    "Son sacos rígidos, ligeros y resistentes, así como reutilizables debido a la gran durabilidad y resistencia del tejido, disminuyendo el consumo.",
+                    "Son usados mayoritariamente para envasar granos, alimentos balanceados, arena, escombros, legumbres, fertilizantes, productos químicos, etc ",
+                    "Costales de rafia"
+                ],
+                [
+                    ['tipo','peso_gr','pzas_por_paca'],
+                    [
+                        {tipo:'TRIGUERO',peso_gr:'900 grs',pzas_por_paca:'100'},
+                        {tipo:'BURRERO',peso_gr:'760 grs',pzas_por_paca:'100'},
+                        {tipo:'AJONJOLÍ EXTRA',peso_gr:'1000 grs',pzas_por_paca:'100'},
+                        {tipo:'AJONJOLÍ SUPER',peso_gr:'1000 grs',pzas_por_paca:'100'},
+                        {tipo:'CACAOTERO',peso_gr:'80 grs',pzas_por_paca:'100'},
+                        {tipo:'PERGAMINO',peso_gr:'1100 grs',pzas_por_paca:'100'},
+                        {tipo:'CAFETERO',peso_gr:'1000 grs',pzas_por_paca:'100'},
+                        {tipo:'MAIZ-FRIJOL',peso_gr:'750 grs',pzas_por_paca:'100'},
+                        {tipo:'ZANAHORIA',peso_gr:'640 grs',pzas_por_paca:'100'},
+                        {tipo:'ARROCERO',peso_gr:'620 grs',pzas_por_paca:'100'},
+                        {tipo:'CACAHUATERO',peso_gr:'1000 grs',pzas_por_paca:'100'},
+                        {tipo:'PIMIENTA',peso_gr:'1000 grs',pzas_por_paca:'100'},
+                        {tipo:'DOBLE PIE',peso_gr:'1250 grs',pzas_por_paca:'50'},
+                        {tipo:'DOBLE PIE',peso_gr:'1500 grs',pzas_por_paca:'50'},
+                    ],
+                    "https://i.imgur.com/17fr8T1.jpg",
+                    "Costal hecho con fibra de Henequen varios modelos y pesaje.",
+                    "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
+                    "Costales de Henequén"
+                ],
+                [
+                    ['nombre','medidas','capacidad'],
+                    [
+                        {nombre:'Cacahuatero',medidas:'55 cm X 1.00 mts.',capacidad:'50 Kgs'},
+                        {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
+                    ],
+                    "https://i.imgur.com/2mV6yBg.jpg",
+                    "Los costales de yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
+                    "permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de arena o tierra puede servir para fabricar barreras contra la erosión o diques para evitar inundaciones.",
+                    "Costales de Yute"
                 ],
 
             ]
