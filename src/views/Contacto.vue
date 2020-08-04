@@ -7,17 +7,30 @@
             <div id="flip">
                 <div><div>Prdoductos</div></div>
                 <div><div>Negocios</div></div>
-                <div><div>Everything</div></div>
+                <div><div>Tratos</div></div>
             </div>
             AweSoMe!
             </div>
       </b-container>
-
     </div>
 </template>
+<script>
+
+export default {
+  name:'contacto',
+  components:{
+
+  }
+
+}
+</script>
 
 <style>
-
+.algo {
+  height: 320px;
+  width: 720px;
+  
+}
 .titulo {
     font-size: 3em;
     letter-spacing: -2px;

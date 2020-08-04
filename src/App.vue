@@ -21,7 +21,8 @@ export default {
 <style lang="scss">
 @import './assets/styles/custom.scss';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
-$pageBackground: #ffffff;
+$pageBackground: whitesmoke;
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

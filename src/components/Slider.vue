@@ -6,7 +6,7 @@
           <b-carousel
             id="carousel-1"
             v-model="slide"
-            :interval="4000"
+            :interval="6000"
             controls
             indicators
             background="#ababab"
@@ -17,13 +17,16 @@
               caption="Cordeles"
               text="Amplia variedad de cordeles">
               <template v-slot:img>
-                <img
-                  class="d-block  w-100 "
-                  width="720"
-                  :height="tam_img" 
-                  src="@/assets/Gifs/Presentacion.gif"
-                  alt="cordeles"
-                >
+                <div class="cont-video">
+                  <video
+                    class=" video-1"
+                    autoplay
+                    loop
+                    muted
+                    >
+                    <source src="@/assets/videos/cordeles2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </template>
             </b-carousel-slide>
             <b-carousel-slide>
@@ -116,3 +119,32 @@
 
   }
 </script>
+<style scoped>
+  .video-1 {
+    width: 1020px;
+    align-self: center;
+  }
+  .cont-video {
+    width: 1020px;
+    height: 320px;
+    background-color: brown;
+    }
+  @media screen and (max-width: 600px){
+      .cont-video {
+        height: 200px;
+        width: 420px;
+      }
+      .video-1 {
+        width: 420px;
+  }
+    }
+  @media screen and (max-width: 370px){
+      .cont-video {
+        height: 150px;
+        width: 420px;
+      }
+      .video-1 {
+        width: 420px;
+  }
+    }
+</style>

@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class="nosotros">
     <b-container >
-        <b-container class="mt-4 mb-4">
+        <b-container class="pt-4 mb-4">
             <div class="titulo-1 primero">Conoce</div> 
             <div class="titulo-1 segundo"> 
                 <span class="ultimo">nuestra historia</span>
@@ -40,7 +40,7 @@
         <div class="titulo-2 ">
             <span class="vision">Visión</span>
         </div> 
-        <b-container class="mt-3 mb-3">
+        <b-container class="mt-3 pb-3">
             <b-row align-v="center">
                 <b-col cols="12" lg="6" md="6" sm="12">
                     <div class="imagen-2">
@@ -58,7 +58,9 @@
 </div>
 </template>
 <style>
-
+    .nosotros{
+      background-color: white;
+    }
     .titulo-1 {
       display:inline-block;
       overflow:hidden;

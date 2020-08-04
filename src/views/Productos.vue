@@ -1,12 +1,12 @@
 <template>
     <div class="productos">
-        <b-container class="mt-4 mb-4">
+        <b-container class="pt-4 mb-4">
             <div class="mi-titulo-1 primero-t">Nuestros</div> 
             <div class="mi-titulo-1 segundo-t"> 
                 <span class="ultimo-t">prodcutos</span>
             </div>
         </b-container>
-        <b-container>
+        <b-container >
         <b-row fluid>
             <b-col align-self="center" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos" :key="index">
                 <b-card 
@@ -31,12 +31,12 @@
                     </b-collapse>
                     <b-modal 
                     header-border-variant="primary" 
-                    header-text-variant="amarillo" 
+                    header-text-variant="warning" 
                     
                     :id="'modal-'+index" 
                     :title="'Mas Datos del Producto: '+producto[5]">
                         <p class="my-4">{{producto[4]}}</p>
-                    <b-table head-row-variant="amarillo" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                    <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                     </b-modal> 
                 </b-card>
             </b-col>
@@ -45,8 +45,10 @@
     </div>
 </template>
 <style>
+
     .productos {
         animation: mostrar 1s forwards;
+        background-color:white;
     }
     .info-tarjeta {
         overflow: auto;

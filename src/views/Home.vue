@@ -2,13 +2,11 @@
 <div>
   <div class="home">
     <b-container id="view-inicio" class="mt-4 mb-5 p-5">
-
       <div class="titulo-1 primero">Bienvenido </div> 
             <div class="titulo-1 segundo"> 
                 <span class="ultimo">a CordelesMX</span>
             </div>
     <br>
-    
         <div class="titulo-slogan animacion-1">
           Un solo proveedor para todas sus necesidades de amarre.
         </div>
@@ -16,15 +14,18 @@
     <slider/>
       <p class="mt-2">
     Consulta de precios, cotizaciones, asesoría e información de nuestros productos; <router-link :to="{name: 'Contacto'}">contactenos</router-link> </p>
-<p>
-Dirección:
+    <p>
+    Dirección:
     Adolfo Gurrión No. 135 Col. Centro
     México, D.F. CP 15810
     Cuauhtémoc
     D.F.
     15810
     México</p>
-    
+   
+          <!--<mdb-container>
+                <mdb-carousel :interval="8000" :items="videoCarousel" indicators controlls></mdb-carousel>
+            </mdb-container> -->
     </b-container>
   </div>
 </div>
@@ -33,12 +34,19 @@ Dirección:
 <script>
 // @ is an alias to /src
 import slider from '@/components/Slider.vue'
+//import { mdbContainer, mdbCarousel } from 'mdbvue';
+
 export default {
   name: 'Home',
   components: {
-    slider
+    slider,
+
   },
-  
+  data(){
+    return{
+
+    }
+  }
 }
 </script>
 
