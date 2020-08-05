@@ -1,8 +1,8 @@
 <template>
 <div>
   <div class="home">
-    <b-container id="view-inicio" class="mt-4 mb-5 p-5">
-      <div class="titulo-1 primero">Bienvenido </div> 
+    <b-container id="view-inicio" class="mt-4 mb-5 pt-4 pb-5">
+      <div class="titulo-1 primero">Bienvenido</div> 
             <div class="titulo-1 segundo"> 
                 <span class="ultimo">a CordelesMX</span>
             </div>
@@ -11,19 +11,20 @@
           Un solo proveedor para todas sus necesidades de amarre.
         </div>
     <br>
-    <slider/>
-      <p class="mt-2">
-    Consulta de precios, cotizaciones, asesoría e información de nuestros productos; <router-link :to="{name: 'Contacto'}">contactenos</router-link> </p>
-    <p>
-    Dirección:
-    Adolfo Gurrión No. 135 Col. Centro
-    México, D.F. CP 15810
-    Cuauhtémoc
-    D.F.
-    15810
-    México</p>
+    <div class="cont-video">
+      <video
+        class=" video-1"
+        autoplay
+        loop
+        muted
+        >
+        <source src="@/assets/videos/cordeles4.mp4" type="video/mp4">
+      </video>
+    </div>  
    
-          <!--<mdb-container>
+          <!-- 
+    <slider/>
+            <mdb-container>
                 <mdb-carousel :interval="8000" :items="videoCarousel" indicators controlls></mdb-carousel>
             </mdb-container> -->
     </b-container>
@@ -73,32 +74,71 @@ export default {
     text-align: center;
     background-color: rgba(255, 255, 255,.65);
   }
-
+  .video-1 {
+    width: 1020px;
+  }
+  .cont-video {
+    width: 100%;
+    height: 320px;
+    overflow:hidden;
+    align-self: center;
+    }
   .titulo-1 {
       display:inline-block;
       overflow:hidden;
       white-space:nowrap;
-      font-size: xx-large;
+      font-size: 4em;
+      letter-spacing: -2px;
+      font-weight: 200;
       color: #a13a4b;
-      font-weight: 600;
+      
       font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
     .titulo-slogan {
       width: 100%;
-      
-      font-size: x-large;
+      white-space:nowrap;
+      font-size: xx-large;
+      font-weight: 100;
       color:#a88d39;
       font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
-    @media screen and (max-width: 500px){
-
-      .titulo-1{
-        font-size:large;
-      }
-      .titulo-slogan {
-        font-size:medium;
-      }
+  @media screen and (max-width: 990px){
+    .titulo-slogan {
+      font-size:medium;
+      font-weight: 400;
     }
+  }
+  @media screen and (max-width: 600px){
+      .cont-video {
+        height: 200px;
+      }
+      .video-1 {
+        width: 420px;
+    }
+    .titulo-slogan {
+      font-size:medium;
+    }
+  }
+  @media screen and (max-width: 500px){
+    .titulo-1{
+      font-size:1.5em;
+      
+    }
+    .segundo {
+      animation: reveal-mb 5s forwards;
+    }
+    .titulo-slogan {
+      font-size: 0.7em;
+    }
+  }
+  @media screen and (max-width: 370px){
+      .cont-video {
+        height: 150px;
+      }
+      .video-1 {
+        width: 320px;
+    }
+  }
     .primero {    
       animation: showup 5s forwards;
     }
@@ -151,9 +191,16 @@ export default {
     @keyframes reveal {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width: 15ex;}
-        80% {opacity:1; width: 15ex;}
-        100% {opacity:1;width:15ex;}
+        30% {width: 13ex;}
+        80% {opacity:1; width: 13ex;}
+        100% {opacity:1;width:13ex;}
+    }
+    @keyframes reveal-mb {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width: 9ex;}
+        80% {opacity:1; width: 9ex;}
+        100% {opacity:1;width:9ex;}
     }
     @keyframes mostrar {
     0% {

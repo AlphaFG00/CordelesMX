@@ -1,6 +1,6 @@
 <template>
 <div class="nosotros">
-    <b-container >
+    <b-container class="focus-nosotros mt-3 mb-3 p-3" >
         <b-container class="pt-4 mb-4">
             <div class="titulo-1 primero">Conoce</div> 
             <div class="titulo-1 segundo"> 
@@ -12,54 +12,82 @@
         Somos una empresa familiar, 100% mexicana, fundada hace más de 33 años; dedicada a la fabricación, distribución y servicios de todos los productos que son para empaque, amarre, embalaje y limpieza. Donde hemos combinado la mejor calidad en nuestros productos, los mejores precios del mercado, la amabilidad con el ambiente y el compromiso de lograr la satisfacción de nuestros clientes. Todo esto es lo que nos ha posicionado como líderes en el mercado.
         </div>
         </div>
-        <span class="segunda-parte">
-        <ul>
-            <li class="li-1"> Mejores precios del mercado</li>
-            <li class="li-2"> Lealtad a nuestros clientes</li>
-            <li class="li-3"> Amabilidad con el ambiente</li>
-            <li class="li-4"> Satisfacción de nuestros clientes</li>
-        </ul>
-        </span>
+        <div style="height:120px;">
+          <span class="segunda-parte">
+            <ul>
+                <li class="li-1"> Mejores precios del mercado</li>
+                <li class="li-2"> Lealtad a nuestros clientes</li>
+                <li class="li-3"> Amabilidad con el ambiente</li>
+                <li class="li-4"> Satisfacción de nuestros clientes</li>
+            </ul>
+          </span>
+        </div>
         <div class="titulo-2 ">
             <span class="mision">Misión</span>
         </div> 
-        <b-container class="mt-3 mb-4">
+        <div class="titulo-2 ">
+            <span class="vision">Visión</span>
+        </div> 
+        <b-container class="mt-3 mb-4 pr-4">
             <b-row align-v="center">
                 <b-col cols="12" md="6" sm="12"  lang>
                     <div class="tercera-parte">
                     Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
                     </div>
+                    <div class="imagen-2">
+                        <b-img id="img-2" :src="require('@/assets/img/montana_costales.jpeg')" width="335" height="250"/>
+                    </div>
+                    
                 </b-col>
                 <b-col cols="12" md="6" sm="12" align-self="center">
-                    <div class="imagen-1">
-                        <b-img id="img-1" :src="require('@/assets/img/Maguey.jpg')" width="335" height="250"/>
-                    </div>
-                </b-col>
-            </b-row>
-        </b-container>
-        <div class="titulo-2 ">
-            <span class="vision">Visión</span>
-        </div> 
-        <b-container class="mt-3 pb-3">
-            <b-row align-v="center">
-                <b-col cols="12" lg="6" md="6" sm="12">
-                    <div class="imagen-2">
-                        <b-img :src="require('@/assets/img/burrero_rafia.jpg')" width="335" height="250"/>
-                    </div>
-                </b-col>
-                <b-col cols="12" lg="6" md="6" sm="12">
+                  <div>
                     <div class="cuarta-parte">
                         Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
                     </div>
+                    <div class="imagen-1">
+                        <b-img id="img-1" :src="require('@/assets/img/Maguey.jpg')" width="335" height="250"/>
+                    </div>
+                  </div>
+    
                 </b-col>
             </b-row>
         </b-container>
+        
+        <!--
+        <b-container class="mt-3 pb-3">
+            <b-row align-v="center">
+                <b-col cols="12" lg="4" md="4" sm="12" align-self="center">
+                </b-col>
+                <b-col cols="12" lg="4" md="4" sm="12" align-self="center">
+                    <div class="cuarta-parte">
+                        Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
+                    </div>
+            
+    
+                </b-col>
+                <b-col cols="12" lg="4" md="4" sm="12" align-self="center">
+                </b-col>
+            </b-row>
+        </b-container>  -->
     </b-container>
 </div>
 </template>
 <style>
     .nosotros{
+      top: 0;
+      padding-top: 20px;
+      scroll-padding-bottom: 20px;
+      padding-bottom: 10px;
       background-color: white;
+      background-image: url('../assets/img/Maguey.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .focus-nosotros {
+      background-color:transparent;
+      text-align: center;
+      background-color: rgba(255, 255, 255,.75);
     }
     .titulo-1 {
       display:inline-block;
@@ -142,39 +170,42 @@
   }
   .mision {
         opacity: 0;
+        position: absolute;
         display: block;
         text-align: left;
-        animation: move-right 1.2s 6s forwards;
+        animation: mision 15s 6s forwards;
     }
     .imagen-1 {
       opacity: 0;
       display: block;
       text-align: center;
       width: 100%;
-      animation: move-right 1s 6.5s forwards;
+      animation: mision-img 15s 6.5s forwards;
     }  
     .imagen-2 {
       opacity: 0;
       display: block;
       text-align: center;
       width: 100%;
-      animation: show-text 2.5s 7.5s forwards;
+      animation: show-text 2.5s 21.5s forwards;
     }    
     .vision {
         opacity: 0;
         display: block;
         text-align: left;
         width: 100%;
-        animation: move-right 1.2s 8s forwards;
+        animation: move-right 1.2s 23s forwards;
     }
     
   .tercera-parte{
       opacity: 0;
+      position: absolute;
+      top: 20%;
       display: block;
       text-align: left;
       margin-bottom: 1em;
       width: 100%;
-      animation: move-right 1.5s 6.5s forwards;
+      animation: mision 15.5s 6.5s forwards;
     }
   .li-1{
     opacity: 0;
@@ -195,12 +226,67 @@
   }
 .cuarta-parte{
       opacity: 0;
-      display: block;
       text-align: left;
+      position: absolute;
+      display: block;
+      top: 20%;
       margin-top: 1em;
       width: 100%;
-      animation: show-text 2.5s 7.5s forwards;
+      animation: show-text 2.5s 21.5s forwards;
     }
+
+
+
+@keyframes vision {
+  0% {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  20% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+  90%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes mision {
+  0% {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  20% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+  90%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes mision-img {
+  0% {
+    opacity: 0;
+    margin-left: 200px;
+  }
+  20% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+  90%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 
 @keyframes move-right {

@@ -9,8 +9,11 @@
                 <div><div>Negocios</div></div>
                 <div><div>Tratos</div></div>
             </div>
-            AweSoMe!
+            Con nuestros clientes
             </div>
+            <p class="mt-2">
+    Consulta de precios, cotizaciones, asesoría e información de nuestros productos </p>
+    <p>La dirección es Jesús Maria 153 local b colonia centro  cp 06000 delegacion Cuauhtemoc</p>
       </b-container>
     </div>
 </template>
