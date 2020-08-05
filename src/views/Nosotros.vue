@@ -35,9 +35,7 @@
                     <div class="tercera-parte">
                     Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
                     </div>
-                    <div class="imagen-2">
-                        <b-img id="img-2" :src="require('@/assets/img/natural.jpg')" width="450" height="250"/>
-                    </div>
+                    
                 </b-col>
                 <b-col cols="12" md="6" sm="12" align-self="center">
                   <div>
@@ -45,7 +43,7 @@
                         Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
                     </div>
                     <div class="imagen-1">
-                        <b-img id="img-1" :src="require('@/assets/img/Maguey.jpg')" width="335" height="250"/>
+                        <b-img id="img-1" :src="require('@/assets/img/natural.jpg')" width="400" height="200"/>
                     </div>
                   </div>
     
@@ -140,7 +138,7 @@
       opacity: 0;
       display: block;
       text-align: left;
-      
+      padding: 1.4ex;
       width: 100%;
       animation: show-text 2.5s 1.5s forwards;
     }
@@ -150,12 +148,11 @@
     font-size: medium;
     width: 100%;
     color: rgb(12, 52, 105);
-    padding: 5px;
+    padding: 10px;
     text-align: left;
   }
   .mision {
         opacity: 0;
-        position: absolute;
         display: block;
         text-align: left;
         animation: mision 15s 6s forwards;
@@ -179,12 +176,13 @@
         display: block;
         text-align: left;
         width: 100%;
+        
         animation: move-right 1.2s 23s forwards;
     }
     
   .tercera-parte{
       opacity: 0;
-      position: absolute;
+      
       top: 35%;
       display: block;
       text-align: left;

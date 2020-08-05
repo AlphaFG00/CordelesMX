@@ -96,6 +96,7 @@
         overflow: auto;
         height: 7rem;
         color: #343a40;
+        margin-top: 10px;
         font-size: small;
     }
     .mi-titulo-1 {
