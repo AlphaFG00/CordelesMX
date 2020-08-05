@@ -2,9 +2,9 @@
 <div class="nosotros">
     <b-container class="focus-nosotros mt-3 mb-3 p-4" >
         <b-container class="pt-4 mb-4">
-            <div class="titulo-1 primero">Conoce</div> 
+            <div class="titulo-1 primero">CONOCE</div> 
             <div class="titulo-1 segundo"> 
-                <span class="ultimo">nuestra historia</span>
+                <span class="ultimo">NUESTRA HISTORIA</span>
             </div>
         </b-container>
         <div>
@@ -129,9 +129,9 @@
     @keyframes reveal {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width: 15ex;}
-        80% {opacity:1; width: 15ex;}
-        100% {opacity:1;width:15ex;}
+        30% {width: 18.5ex;}
+        80% {opacity:1; width: 18.5ex;}
+        100% {opacity:1;width:18.5ex;}
     }
     
     .primera-parte{

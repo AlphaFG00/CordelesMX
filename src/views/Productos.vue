@@ -1,8 +1,8 @@
 <template>
     <div class="productos">
-                <div class="mi-titulo-1 primero-t">Nuestros</div> 
+                <div class="mi-titulo-1 primero-t">NUESTROS</div> 
                 <div class="mi-titulo-1 segundo-t"> 
-                    <span class="ultimo-t">prodcutos</span>
+                    <span class="ultimo-t">PRODUCTOS</span>
                 </div>
                 <b-carousel
                     id="CarouselProductos"
@@ -143,9 +143,9 @@
     @keyframes revelar {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width: 10ex;}
-        80% {opacity:1; width: 10ex;}
-        100% {opacity:1;width:10ex;}
+        30% {width: 12.5ex;}
+        80% {opacity:1; width: 12.5ex;}
+        100% {opacity:1;width:12.5ex;}
     }
     @keyframes mostrar {
         0% {opacity: 0;}
