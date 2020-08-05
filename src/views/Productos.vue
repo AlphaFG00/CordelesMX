@@ -9,9 +9,8 @@
         <b-carousel
           id="CarouselProductos"
           v-model="slide"
-          :interval="4000"
+          :interval="9000"
           ref="CarouselProductos"
-          controls
           @sliding-start="sliding = true"
           @sliding-end="sliding = false"
         >
@@ -32,18 +31,18 @@
                         <b-card-text>
                             <div class="info-tarjeta">{{producto[3]}}</div>
                         </b-card-text>
-                            <b-button variant="dark"  v-b-toggle="['collapse-'+index]" >Acerca</b-button> 
-                            <b-button  variant="warning"   v-b-modal="'modal-'+index">Mas Detalles</b-button>
-                            <b-collapse :id="'collapse-'+index" class="mt-2">
+                            <b-button variant="dark"  v-b-toggle="['collapse-'+index+'-'+i]" >Acerca</b-button> 
+                            <b-button  variant="warning"   v-b-modal="'modal-'+index+'-'+i">Mas Detalles</b-button>
+                            <b-collapse :id="'collapse-'+index+'-'+i" class="mt-2">
                                 <b-card>
                                 <p class="card-text">{{producto[4]}}  </p>
                                 </b-card>
                             </b-collapse>
-                            <b-modal 
+                            <b-modal
                             header-border-variant="primary" 
                             header-text-variant="warning" 
                             
-                            :id="'modal-'+index" 
+                            :id="'modal-'+index+'-'+i" 
                             :title="'Mas Datos del Producto: '+producto[5]">
                                 <p class="my-4">{{producto[4]}}</p>
                             <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
@@ -53,6 +52,14 @@
                 </b-row>
             </template>
         </b-carousel-slide>
+        <a class="carousel-control-prev" href="#" role="button" aria-controls="CarouselProyectos" @click="prev()">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#" role="button" aria-controls="carouselProyectos" @click="next()">
+            <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
         </b-carousel>
     </div>
 </template>
@@ -60,12 +67,14 @@
 /*Mucho que ajustar aqui */
     .carousel-item {
         min-height: 1000px !important;
-        background-color: rgb(206, 206, 206);
     }
     p.card-text{
         color: black;
     }
-
+    .carousel-control-next > span,
+    .carousel-control-prev > span{
+        filter: invert(100%) !important;
+    }
     .productos {
         animation: mostrar 1s forwards;
         background-color:white;
@@ -323,7 +332,13 @@ export default {
         },
         myCeil(number) {
             return Math.ceil(number)
-        }
+        },
+        prev() {
+            this.$refs.CarouselProductos.prev()
+        },
+        next() {
+            this.$refs.CarouselProductos.next()
+        },
     }
 }
 </script>
