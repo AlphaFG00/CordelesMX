@@ -2,60 +2,60 @@
 <div>
     <b-container>
       <b-row class="justify-content-center">
-        <b-col md="8" fluid="sm" >
+        <b-col xs="12" sm="12" md="10" fluid="sm" >
           <b-carousel
             id="carousel-1"
             v-model="slide"
-            :interval="4000"
+            :interval="6000"
             controls
             indicators
             background="#ababab"
             style="text-shadow: 3px 3px 3px #000;"
-            @sliding-start="onSlideStart"
-            @sliding-end="onSlideEnd"
-          >
+            @sliding-start="onSlideStart">
             <!-- Text slides with image -->
             <b-carousel-slide
               caption="Cordeles"
-              text="Amplia variedad de cordeles"
-            >
-            <template v-slot:img>
-                <img
-                  class="d-block  w-100"
-                  width="720"
-                  height="320"
-                  src="@/assets/Gifs/Presentacion.gif"
-                  alt="cordeles"
-                >
+              text="Amplia variedad de cordeles">
+              <template v-slot:img>
+                <div class="cont-video">
+                  <video
+                    class=" video-1"
+                    autoplay
+                    loop
+                    muted
+                    >
+                    <source src="@/assets/videos/cordeles2.mp4" type="video/mp4">
+                  </video>
+                </div>
               </template>
             </b-carousel-slide>
-
             <b-carousel-slide>
               <h2>Cable</h2>
               <template v-slot:img>
                 <img 
+                class="d-block  w-100 "
                 src="@/assets/productos/Cable.jpg"
                 width="720"
-                height="320"
+                :height="tam_img"                 
                 alt="Cable.jpg"/>
               </template>
             </b-carousel-slide>
-
             <b-carousel-slide>
               <h2>Polipropileno</h2>
               <template v-slot:img>
                 <img 
+                class="d-block  w-100 "
                 src="@/assets/productos/Cable_polipropileno.jpg"
                 width="720"
-                height="320"
+                :height="tam_img"                                 
                 alt="Cable_polipropileno.jpg"/>
               </template>
             </b-carousel-slide>
-
           </b-carousel>
         </b-col>
       </b-row>
     </b-container>
+    
 </div>
 </template>
 
@@ -65,17 +65,86 @@
       return {
         slide: 0,
         sliding: null,
+        windowWidth: window.innerWidth,
+        txt: '',
+        heigth_img:320
       }
+    },
+    onCreate(){
+      
+    },
+    computed:{
+      tam_img(){
+        this.windowWidth = window.innerWidth
+          if(this.windowWidth <= 600){
+            if(this.windowWidth <= 370){ 
+                this.heigth_img = 150
+                return 150
+            }else{return 200}
+          }else{return 320}
+        }
     },
     methods: {
       onSlideStart() {
         this.sliding = true
       },
       onSlideEnd() {
-        this.sliding = true
+        this.sliding = false
+      },
+      onResize() {
+        this.windowWidth = window.innerWidth
+        if(this.windowWidth <= 600){
+          if(this.windowWidth <= 370){ 
+              this.heigth_img = 150
+          }else{this.heigth_img = 200}
+            
+        }else{this.heigth_img = 320}
       }
-    }
+    },
+    watch: {
+      windowWidth(newWidht, oldWidth) {
+      this.txt = `cambio a ${newWidht} de ${oldWidth}`;
+      }
+    },
+
+    mounted() {
+      this.$nextTick(() => {
+        window.addEventListener('resize', this.onResize);
+      })
+    },
+
+    beforeDestroy() { 
+      window.removeEventListener('resize', this.onResize); 
+    },
+
   }
 </script>
-<style lang="scss" scoped>
+<style scoped>
+  .video-1 {
+    width: 1020px;
+    align-self: center;
+  }
+  .cont-video {
+    width: 1020px;
+    height: 320px;
+    background-color: brown;
+    }
+  @media screen and (max-width: 600px){
+      .cont-video {
+        height: 200px;
+        width: 420px;
+      }
+      .video-1 {
+        width: 420px;
+  }
+    }
+  @media screen and (max-width: 370px){
+      .cont-video {
+        height: 150px;
+        width: 420px;
+      }
+      .video-1 {
+        width: 420px;
+  }
+    }
 </style>

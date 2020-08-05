@@ -19,7 +19,10 @@ export default {
 </script>
 
 <style lang="scss">
-$pageBackground: #ffffff;
+@import './assets/styles/custom.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+$pageBackground: whitesmoke;
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

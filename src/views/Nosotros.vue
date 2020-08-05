@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class="nosotros">
     <b-container >
-        <b-container class="mt-4 mb-4">
+        <b-container class="pt-4 mb-4">
             <div class="titulo-1 primero">Conoce</div> 
             <div class="titulo-1 segundo"> 
                 <span class="ultimo">nuestra historia</span>
@@ -23,16 +23,16 @@
         <div class="titulo-2 ">
             <span class="mision">Misión</span>
         </div> 
-        <b-container class="mt-3 mb-5">
+        <b-container class="mt-3 mb-4">
             <b-row align-v="center">
-                <b-col cols="6" md="6" sm="12" lang>
+                <b-col cols="12" md="6" sm="12"  lang>
                     <div class="tercera-parte">
                     Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
                     </div>
                 </b-col>
-                <b-col cols="6" md="6" sm="12" align-self="center">
+                <b-col cols="12" md="6" sm="12" align-self="center">
                     <div class="imagen-1">
-                        <b-img :src="require('@/assets/img/Maguey.jpg')" width="auto" height="250"/>
+                        <b-img id="img-1" :src="require('@/assets/img/Maguey.jpg')" width="335" height="250"/>
                     </div>
                 </b-col>
             </b-row>
@@ -40,14 +40,14 @@
         <div class="titulo-2 ">
             <span class="vision">Visión</span>
         </div> 
-        <b-container class="mt-3 mb-3">
+        <b-container class="mt-3 pb-3">
             <b-row align-v="center">
-                <b-col cols="6" lg="6" md="6" sm="12">
+                <b-col cols="12" lg="6" md="6" sm="12">
                     <div class="imagen-2">
-                        <b-img :src="require('@/assets/img/burrero_rafia.jpg')" width="400" height="250"/>
+                        <b-img :src="require('@/assets/img/burrero_rafia.jpg')" width="335" height="250"/>
                     </div>
                 </b-col>
-                <b-col cols="6" lg="6" md="6" sm="12">
+                <b-col cols="12" lg="6" md="6" sm="12">
                     <div class="cuarta-parte">
                         Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
                     </div>
@@ -58,7 +58,9 @@
 </div>
 </template>
 <style>
-
+    .nosotros{
+      background-color: white;
+    }
     .titulo-1 {
       display:inline-block;
       overflow:hidden;
@@ -76,17 +78,25 @@
       color:#b0455c;
       font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
-    
-    .titulo-1.primero {    
+    @media screen and (max-width: 500px){
+      .titulo-1{
+        font-size:x-large;
+      }
+      .titulo-2 {
+        font-size:medium;
+        font-weight: 700;
+      }
+    }  
+    .primero {    
       animation: showup 5s forwards;
     }
     
-    .titulo-1.segundo {
+    .segundo {
       width:0px;
       animation: reveal 5s forwards;
     }
     
-    .titulo-1 .ultimo {
+     .ultimo {
       margin-left:-355px;
       animation: slidein 5s forwards;
     }
@@ -137,19 +147,19 @@
         animation: move-right 1.2s 6s forwards;
     }
     .imagen-1 {
-        opacity: 0;
+      opacity: 0;
       display: block;
-      text-align: left;
+      text-align: center;
       width: 100%;
       animation: move-right 1s 6.5s forwards;
-    }
+    }  
     .imagen-2 {
-        opacity: 0;
+      opacity: 0;
       display: block;
-      text-align: left;
+      text-align: center;
       width: 100%;
       animation: show-text 2.5s 7.5s forwards;
-    }
+    }    
     .vision {
         opacity: 0;
         display: block;
