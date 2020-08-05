@@ -1,84 +1,103 @@
 <template>
     <div class="productos">
-        <b-container class="pt-4 mb-4">
-            <div class="mi-titulo-1 primero-t">Nuestros</div> 
-            <div class="mi-titulo-1 segundo-t"> 
-                <span class="ultimo-t">prodcutos</span>
-            </div>
-        </b-container>
-        <b-carousel
-          id="CarouselProductos"
-          v-model="slide"
-          :interval="4000"
-          ref="CarouselProductos"
-          controls
-          @sliding-start="sliding = true"
-          @sliding-end="sliding = false"
-        >
-        <b-carousel-slide v-for="i in myCeil(productos.length / show_each)" :key="i">
-            <template>
-                <b-row fluid>
-                    <b-col align-self="center" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(show_each),i*show_each)" :key="index">
-                        <b-card
-                        :header="producto[5]"
-                        header-border-variant="warning"
-                        border-variant="warning"
-                        header-bg-variant="warning"
-                        header-text-variant="white"
-                        tag="article" 
-                        style="max-width: 15rem;"
-                        class="mb-2 ">
-                        <b-card-img :src="producto[2]" alt="imagen" height="200"/>
-                        <b-card-text>
-                            <div class="info-tarjeta">{{producto[3]}}</div>
-                        </b-card-text>
-                            <b-button variant="dark"  v-b-toggle="['collapse-'+index]" >Acerca</b-button> 
-                            <b-button  variant="warning"   v-b-modal="'modal-'+index">Mas Detalles</b-button>
-                            <b-collapse :id="'collapse-'+index" class="mt-2">
-                                <b-card>
-                                <p class="card-text">{{producto[4]}}  </p>
-                                </b-card>
-                            </b-collapse>
-                            <b-modal 
-                            header-border-variant="primary" 
-                            header-text-variant="warning" 
-                            
-                            :id="'modal-'+index" 
-                            :title="'Mas Datos del Producto: '+producto[5]">
-                                <p class="my-4">{{producto[4]}}</p>
-                            <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                            </b-modal>
-                        </b-card>
-                    </b-col>
-                </b-row>
-            </template>
-        </b-carousel-slide>
-        </b-carousel>
+            <b-container class="focus-productos mt-3 pt-4 mb-4"> 
+        
+                <div class="mi-titulo-1 primero-t">Nuestros</div> 
+                <div class="mi-titulo-1 segundo-t"> 
+                    <span class="ultimo-t">prodcutos</span>
+                </div>
+                <b-carousel
+                    id="CarouselProductos"
+                    v-model="slide"
+                    :interval="4000"
+                    src="CarouselProductos"
+                    controls
+                    class="carrusel"
+                    @sliding-start="sliding = true"
+                    @sliding-end="sliding = false">
+                    <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
+                        <template>
+                            <b-row align-v="center" fluid>
+                                <b-col align-self="left" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
+                                    <b-card
+                                        :header="producto[5]"
+                                        header-border-variant="warning"
+                                        border-variant="warning"
+                                        header-bg-variant="warning"
+                                        header-text-variant="white"
+                                        tag="article"
+                                        :style="['width: 12rem;']"
+                                        class="mb-2 ">
+                                        <b-card-img :src="producto[2]" alt="imagen" height="150" />
+                                        <b-card-text>
+                                            <div class="info-tarjeta">{{producto[3]}}</div>
+                                        </b-card-text>
+                                            <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Acerca</b-button> 
+                                            <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Mas Detalles</b-button>
+                                            <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
+                                                <b-card>
+                                                <p class="card-text">{{producto[4]}}  </p>
+                                                </b-card>
+                                            </b-collapse>
+                                            <b-modal 
+                                            header-border-variant="primary" 
+                                            header-text-variant="warning" 
+                                            
+                                            :id="'modal-'+i+'-'+index" 
+                                            :title="'Mas Datos del Producto: '+producto[5]">
+                                                <p class="my-4">{{producto[4]}}</p>
+                                            <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            </b-modal>
+                                    </b-card>
+                                </b-col>
+                            </b-row>
+                        </template>
+                    </b-carousel-slide>
+                </b-carousel>
+            </b-container>
+        
     </div>
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
+
     .carousel-item {
-        min-height: 1000px !important;
-        background-color: rgb(206, 206, 206);
+        min-height: 35em !important;
+        /*background-color: rgb(206, 206, 206);*/
+        
     }
     p.card-text{
-        color: black;
+        color: #343a40;
+        font-size: small;
     }
 
     .productos {
+        padding-top: 20px;
+        padding-bottom: 10px;
         animation: mostrar 1s forwards;
         background-color:white;
+        background-image: url('../assets/img/Portada_cordel.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .focus-productos  {
+        background-color:transparent;
+        background-color: rgba(255, 255, 255,.70);
+    }
+    .carrusel {
+        width: 100%;
     }
     .info-tarjeta {
         overflow: auto;
         height: 7rem;
-        color: black;
+        color: #343a40;
+        font-size: small;
     }
     .mi-titulo-1 {
       display:inline-block;
       overflow:hidden;
       white-space:nowrap;
+      font-weight: 200;
       font-size: xx-large;
       color: #a13a4b;
       font-family: 'Franklin Gothic Medium', sans-serif !important;
@@ -134,7 +153,8 @@ export default {
         return {
             slide: 0,
             sliding: null,
-            show_each: 8,
+            show_each: 4,
+            window_width: window.innerWidth,
             productos:[
                 [
                     ['calibre','color','presentación'],
@@ -297,7 +317,7 @@ export default {
                     "https://i.imgur.com/17fr8T1.jpg",
                     "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
-                    "Costales de Henequén"
+                    "Costal Henequén"
                 ],
                 [
                     ['nombre','medidas','capacidad'],
@@ -314,6 +334,9 @@ export default {
             ]
         }
     },
+    onCreate(){
+        this.show_each = this.show_each2()
+    },
     methods: {
         onSlideStart(slide) {
             this.sliding = true
@@ -322,8 +345,61 @@ export default {
             this.sliding = false
         },
         myCeil(number) {
+            console.log(this.productos.length)
             return Math.ceil(number)
+        },
+        onResize() {
+            this.window_width = window.innerWidth
         }
-    }
+        /* Debbugeo del responsive
+        onResize() {
+            this.window_width = window.innerWidth
+            if(this.window_width <= 1199){
+                if(this.window_width <= 770){ 
+                    if(this.window_width <= 580){
+                        this.show_each = 1
+                    }
+                        else{
+                            this.show_each = 2
+                        }
+                }else{
+                    this.show_each = 3
+                    }
+            }else{this.show_each = 4}
+        }*/
+        
+    },
+    computed: {
+        each(){
+        this.window_width = window.innerWidth
+            if(this.window_width <= 1199){
+                if(this.window_width <= 770){ 
+                    if(this.window_width < 580){
+                        this.show_each = 1
+                        return 1
+                    }else{
+                        this.show_each = 2
+                        return 2
+                    }
+                }else{
+                    this.show_each = 3
+                    return 3
+                    }
+            }else{
+                this.show_each = 4
+                return 4
+                }
+        }
+    },
+    
+    mounted() {
+      this.$nextTick(() => {
+        window.addEventListener('resize', this.onResize);
+      })
+    },
+
+    beforeDestroy() { 
+      window.removeEventListener('resize', this.onResize); 
+    },
 }
 </script>

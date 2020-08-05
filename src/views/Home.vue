@@ -60,6 +60,7 @@ export default {
   scroll-padding-bottom: 20px;
   padding-bottom: 10px;
   
+  /*background-image: url('../assets/img/Portada.jpg');*/
   background-image: url('../assets/img/Portada.jpg');
   background-color: white;
   background-position: center;

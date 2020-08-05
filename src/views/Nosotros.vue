@@ -1,6 +1,6 @@
 <template>
 <div class="nosotros">
-    <b-container class="focus-nosotros mt-3 mb-3 p-3" >
+    <b-container class="focus-nosotros mt-3 mb-3 p-4" >
         <b-container class="pt-4 mb-4">
             <div class="titulo-1 primero">Conoce</div> 
             <div class="titulo-1 segundo"> 
@@ -35,7 +35,7 @@
                     Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
                     </div>
                     <div class="imagen-2">
-                        <b-img id="img-2" :src="require('@/assets/img/montana_costales.jpeg')" width="335" height="250"/>
+                        <b-img id="img-2" :src="require('@/assets/img/natural.jpg')" width="335" height="250"/>
                     </div>
                     
                 </b-col>
@@ -79,15 +79,17 @@
       scroll-padding-bottom: 20px;
       padding-bottom: 10px;
       background-color: white;
-      background-image: url('../assets/img/Maguey.jpg');
+      background-image: url('../assets/img/Maguey_fix.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      animation: mostrar 1s forwards;
     }
     .focus-nosotros {
       background-color:transparent;
       text-align: center;
       background-color: rgba(255, 255, 255,.75);
+      font-weight: 200;
     }
     .titulo-1 {
       display:inline-block;
@@ -200,7 +202,7 @@
   .tercera-parte{
       opacity: 0;
       position: absolute;
-      top: 20%;
+      top: 35%;
       display: block;
       text-align: left;
       margin-bottom: 1em;
@@ -226,6 +228,7 @@
   }
 .cuarta-parte{
       opacity: 0;
+      padding: 1.1ex;
       text-align: left;
       position: absolute;
       display: block;
@@ -328,7 +331,13 @@
     opacity: 1;
   }
 }
-
-
+  @keyframes mostrar {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 </style>
