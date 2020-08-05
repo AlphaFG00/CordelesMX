@@ -11,6 +11,8 @@
           Un solo proveedor para todas sus necesidades de amarre.
         </div>
     <br>
+    <slider/>
+    <!--
     <div class="cont-video">
       <video
         class=" video-1"
@@ -21,12 +23,7 @@
         <source src="@/assets/videos/cordeles4.mp4" type="video/mp4">
       </video>
     </div>  
-   
-          <!-- 
-    <slider/>
-            <mdb-container>
-                <mdb-carousel :interval="8000" :items="videoCarousel" indicators controlls></mdb-carousel>
-            </mdb-container> -->
+    -->
     </b-container>
   </div>
 </div>

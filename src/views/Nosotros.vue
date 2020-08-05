@@ -12,6 +12,7 @@
         Somos una empresa familiar, 100% mexicana, fundada hace más de 33 años; dedicada a la fabricación, distribución y servicios de todos los productos que son para empaque, amarre, embalaje y limpieza. Donde hemos combinado la mejor calidad en nuestros productos, los mejores precios del mercado, la amabilidad con el ambiente y el compromiso de lograr la satisfacción de nuestros clientes. Todo esto es lo que nos ha posicionado como líderes en el mercado.
         </div>
         </div>
+        <br><br>
         <div style="height:120px;">
           <span class="segunda-parte">
             <ul>
@@ -35,7 +36,7 @@
                     Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
                     </div>
                     <div class="imagen-2">
-                        <b-img id="img-2" :src="require('@/assets/img/natural.jpg')" width="335" height="250"/>
+                        <b-img id="img-2" :src="require('@/assets/img/natural.jpg')" width="450" height="250"/>
                     </div>
                     
                 </b-col>

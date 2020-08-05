@@ -1,6 +1,6 @@
 <template>
     <div class="productos">
-            <b-container class="focus-productos mt-3 pt-4 mb-4"> 
+            
                 <div class="mi-titulo-1 primero-t">Nuestros</div> 
                 <div class="mi-titulo-1 segundo-t"> 
                     <span class="ultimo-t">prodcutos</span>
@@ -9,8 +9,7 @@
                     id="CarouselProductos"
                     v-model="slide"
                     :interval="9000"
-                    src="CarouselProductos"
-                    controls
+                    ref="CarouselProductos"
                     @sliding-start="sliding = true"
                     @sliding-end="sliding = false">
                     <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
@@ -22,7 +21,7 @@
                                         header-border-variant="warning"
                                         border-variant="warning"
                                         header-bg-variant="warning"
-                                        header-text-variant="white"
+                                        header-text-variant="dark"
                                         tag="article"
                                         :style="['width: 12rem;']"
                                         class="mb-2 ">
@@ -55,20 +54,20 @@
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#" role="button" aria-controls="carouselProyectos" @click="next()">
+                    <a class="carousel-control-next" role="button" aria-controls="carouselProyectos" @click="next()">
                         <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </b-carousel>
-            </b-container>
+            
     </div>
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
 
     .carousel-item {
-        min-height: 35em !important;
-        /*background-color: rgb(206, 206, 206);*/
+        min-height: 32em !important;
+        //background-color: rgb(206, 206, 206);
         //min-height: 1000px !important;
     }
     p.card-text{
@@ -84,7 +83,7 @@
         padding-bottom: 10px;
         animation: mostrar 1s forwards;
         background-color:white;
-        background-image: url('../assets/img/Portada_cordel.jpg');
+        //background-image: url('../assets/img/Portada_cordel.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -236,7 +235,7 @@ export default {
                     para hacer cordones, telas, alfombras, uso marítimo y especialmente para la decoración hoy en día,\
                     existe el hilo.",
                     "Presentaciones en: Hilo Yucatán, Tomatero, Medio Cabo, 1,2,3, cabos, Titan, bambino, Hilo de color",
-                    "Henequén."
+                    "Henequén"
                 ],
                 [
                     ['jaceria'],
@@ -275,7 +274,7 @@ export default {
                     "https://i.imgur.com/3zQbXwY.jpg",
                     "Tenemos productos de Sogas y cables de polipropileno, para ver mas de click en \"Mas detalles\".",
                     "Ofrecemos Sogas y cables de polipropileno.",
-                    "Cables."
+                    "Cables"
                 ],
                 [
                     ['barcinas_o_super_sacos'],
@@ -288,7 +287,7 @@ export default {
                     "https://i.imgur.com/VyATffd.jpg",
                     "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
-                    "Varios."
+                    "Varios"
                 ],
                 [
                     ['tipo','info','menudeo','medio_mayoreo','mayoreo'],
@@ -335,7 +334,7 @@ export default {
                     ],
                     "https://i.imgur.com/2mV6yBg.jpg",
                     "Los costales de yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
-                    "permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de arena o tierra puede servir para fabricar barreras contra la erosión o diques para evitar inundaciones.",
+                    "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de arena o tierra puede servir para fabricar barreras contra la erosión o diques para evitar inundaciones.",
                     "Costales de Yute"
                 ],
 

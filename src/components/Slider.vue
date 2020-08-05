@@ -6,13 +6,12 @@
           <b-carousel
             id="carousel-1"
             v-model="slide"
-            :interval="6000"
-            controls
-            indicators
+            :interval="4000"
+            fade
             background="#ababab"
             style="text-shadow: 3px 3px 3px #000;"
             @sliding-start="onSlideStart">
-            <!-- Text slides with image -->
+            <!-- Text slides with image 
             <b-carousel-slide
               caption="Cordeles"
               text="Amplia variedad de cordeles">
@@ -28,7 +27,7 @@
                   </video>
                 </div>
               </template>
-            </b-carousel-slide>
+            </b-carousel-slide> -->
             <b-carousel-slide>
               <h2>Cable</h2>
               <template v-slot:img>
@@ -37,7 +36,7 @@
                 src="@/assets/productos/Cable.jpg"
                 width="720"
                 :height="tam_img"                 
-                alt="Cable.jpg"/>
+                alt="imagen"/>
               </template>
             </b-carousel-slide>
             <b-carousel-slide>
@@ -67,7 +66,10 @@
         sliding: null,
         windowWidth: window.innerWidth,
         txt: '',
-        heigth_img:320
+        heigth_img:320,
+        slider_content:[
+
+        ],
       }
     },
     onCreate(){
