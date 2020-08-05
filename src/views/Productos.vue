@@ -1,7 +1,6 @@
 <template>
     <div class="productos">
             <b-container class="focus-productos mt-3 pt-4 mb-4"> 
-        
                 <div class="mi-titulo-1 primero-t">Nuestros</div> 
                 <div class="mi-titulo-1 segundo-t"> 
                     <span class="ultimo-t">prodcutos</span>
@@ -9,10 +8,9 @@
                 <b-carousel
                     id="CarouselProductos"
                     v-model="slide"
-                    :interval="4000"
+                    :interval="9000"
                     src="CarouselProductos"
                     controls
-                    class="carrusel"
                     @sliding-start="sliding = true"
                     @sliding-end="sliding = false">
                     <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
@@ -53,9 +51,16 @@
                             </b-row>
                         </template>
                     </b-carousel-slide>
+                    <a class="carousel-control-prev" role="button" aria-controls="CarouselProyectos" @click="prev()">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#" role="button" aria-controls="carouselProyectos" @click="next()">
+                        <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </b-carousel>
             </b-container>
-        
     </div>
 </template>
 <style scoped lang="scss">
@@ -64,13 +69,16 @@
     .carousel-item {
         min-height: 35em !important;
         /*background-color: rgb(206, 206, 206);*/
-        
+        //min-height: 1000px !important;
     }
     p.card-text{
         color: #343a40;
         font-size: small;
     }
-
+    .carousel-control-next > span,
+    .carousel-control-prev > span{
+        filter: invert(100%) !important;
+    }
     .productos {
         padding-top: 20px;
         padding-bottom: 10px;
@@ -347,6 +355,12 @@ export default {
         myCeil(number) {
             console.log(this.productos.length)
             return Math.ceil(number)
+        },
+        prev() {
+            this.$refs.CarouselProductos.prev()
+        },
+        next() {
+            this.$refs.CarouselProductos.next()
         },
         onResize() {
             this.window_width = window.innerWidth
