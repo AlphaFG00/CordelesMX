@@ -6,45 +6,65 @@
                 <span class="ultimo-t">prodcutos</span>
             </div>
         </b-container>
-        <b-container >
-        <b-row fluid>
-            <b-col align-self="center" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos" :key="index">
-                <b-card 
-                :header="producto[5]" 
-                header-border-variant="warning"
-                border-variant="warning"
-                header-bg-variant="warning"
-                header-text-variant="white"
-                tag="article" 
-                style="max-width: 15rem;" 
-                class="mb-2 ">
-                <b-card-img :src="producto[2]" alt="imagen" height="200"/>
-                <b-card-text>
-                    <div class="info-tarjeta">{{producto[3]}}</div>
-                </b-card-text>
-                    <b-button variant="dark"  v-b-toggle="['collapse-'+index]" >Acerca</b-button> 
-                    <b-button  variant="warning"   v-b-modal="'modal-'+index">Mas Detalles</b-button>
-                    <b-collapse :id="'collapse-'+index" class="mt-2">
-                        <b-card>
-                        <p class="card-text">{{producto[4]}}  </p>
+        <b-carousel
+          id="CarouselProductos"
+          v-model="slide"
+          :interval="4000"
+          ref="CarouselProductos"
+          controls
+          @sliding-start="sliding = true"
+          @sliding-end="sliding = false"
+        >
+        <b-carousel-slide v-for="i in myCeil(productos.length / show_each)" :key="i">
+            <template>
+                <b-row fluid>
+                    <b-col align-self="center" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(show_each),i*show_each)" :key="index">
+                        <b-card
+                        :header="producto[5]"
+                        header-border-variant="warning"
+                        border-variant="warning"
+                        header-bg-variant="warning"
+                        header-text-variant="white"
+                        tag="article" 
+                        style="max-width: 15rem;"
+                        class="mb-2 ">
+                        <b-card-img :src="producto[2]" alt="imagen" height="200"/>
+                        <b-card-text>
+                            <div class="info-tarjeta">{{producto[3]}}</div>
+                        </b-card-text>
+                            <b-button variant="dark"  v-b-toggle="['collapse-'+index]" >Acerca</b-button> 
+                            <b-button  variant="warning"   v-b-modal="'modal-'+index">Mas Detalles</b-button>
+                            <b-collapse :id="'collapse-'+index" class="mt-2">
+                                <b-card>
+                                <p class="card-text">{{producto[4]}}  </p>
+                                </b-card>
+                            </b-collapse>
+                            <b-modal 
+                            header-border-variant="primary" 
+                            header-text-variant="warning" 
+                            
+                            :id="'modal-'+index" 
+                            :title="'Mas Datos del Producto: '+producto[5]">
+                                <p class="my-4">{{producto[4]}}</p>
+                            <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                            </b-modal>
                         </b-card>
-                    </b-collapse>
-                    <b-modal 
-                    header-border-variant="primary" 
-                    header-text-variant="warning" 
-                    
-                    :id="'modal-'+index" 
-                    :title="'Mas Datos del Producto: '+producto[5]">
-                        <p class="my-4">{{producto[4]}}</p>
-                    <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                    </b-modal> 
-                </b-card>
-            </b-col>
-        </b-row>
-        </b-container>
+                    </b-col>
+                </b-row>
+            </template>
+        </b-carousel-slide>
+        </b-carousel>
     </div>
 </template>
-<style>
+<style scoped lang="scss">
+/*Mucho que ajustar aqui */
+    .carousel-item {
+        min-height: 1000px !important;
+        background-color: rgb(206, 206, 206);
+    }
+    p.card-text{
+        color: black;
+    }
 
     .productos {
         animation: mostrar 1s forwards;
@@ -53,6 +73,7 @@
     .info-tarjeta {
         overflow: auto;
         height: 7rem;
+        color: black;
     }
     .mi-titulo-1 {
       display:inline-block;
@@ -111,6 +132,9 @@ export default {
     name: 'Home',
     data(){
         return {
+            slide: 0,
+            sliding: null,
+            show_each: 8,
             productos:[
                 [
                     ['calibre','color','presentación'],
@@ -288,6 +312,17 @@ export default {
                 ],
 
             ]
+        }
+    },
+    methods: {
+        onSlideStart(slide) {
+            this.sliding = true
+        },
+        onSlideEnd(slide) {
+            this.sliding = false
+        },
+        myCeil(number) {
+            return Math.ceil(number)
         }
     }
 }

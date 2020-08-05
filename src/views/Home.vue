@@ -36,7 +36,6 @@
 // @ is an alias to /src
 import slider from '@/components/Slider.vue'
 //import { mdbContainer, mdbCarousel } from 'mdbvue';
-
 export default {
   name: 'Home',
   components: {
