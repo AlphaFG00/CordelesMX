@@ -8,6 +8,7 @@
             v-model="slide"
             :interval="4000"
             fade
+            controls
             background="#ababab"
             style="text-shadow: 3px 3px 3px #000;"
             @sliding-start="onSlideStart">
@@ -28,8 +29,8 @@
                 </div>
               </template>
             </b-carousel-slide> -->
-            <b-carousel-slide>
-              <h2>Cable</h2>
+            <b-carousel-slide >
+              <h2>Cable de Henequén</h2>
               <template v-slot:img>
                 <img 
                 class="d-block  w-100 "
@@ -39,15 +40,48 @@
                 alt="imagen"/>
               </template>
             </b-carousel-slide>
-            <b-carousel-slide>
-              <h2>Polipropileno</h2>
+            <b-carousel-slide >
+              <h2>Cable de Polipropileno</h2>
               <template v-slot:img>
                 <img 
                 class="d-block  w-100 "
                 src="@/assets/productos/Cable_polipropileno.jpg"
                 width="720"
-                :height="tam_img"                                 
-                alt="Cable_polipropileno.jpg"/>
+                :height="tam_img"                 
+                alt="imagen"/>
+              </template>
+            </b-carousel-slide>
+            <b-carousel-slide >
+              <h2>Jarcería</h2>
+              <template v-slot:img>
+                <img 
+                class="d-block  w-100 "
+                src="@/assets/productos/Jarciería.jpeg"
+                width="720"
+                :height="tam_img"                 
+                alt="imagen"/>
+              </template>
+            </b-carousel-slide>
+            <b-carousel-slide >
+              <h2>Cordel</h2>
+              <template v-slot:img>
+                <img 
+                class="d-block  w-100 "
+                src="@/assets/productos/cordel.jpg"
+                width="720"
+                :height="tam_img"                 
+                alt="imagen"/>
+              </template>
+            </b-carousel-slide>
+            <b-carousel-slide >
+              <h2>Costales</h2>
+              <template v-slot:img>
+                <img 
+                class="d-block  w-100 "
+                src="@/assets/productos/montana_costales.jpeg"
+                width="720"
+                :height="tam_img"                 
+                alt="imagen"/>
               </template>
             </b-carousel-slide>
           </b-carousel>
@@ -68,7 +102,31 @@
         txt: '',
         heigth_img:320,
         slider_content:[
-
+          [
+            "Cable Henequén",
+            "../assets/productos/Cable.jpg"
+          ],
+          [
+            "Cable de polipropileno",
+            "@/assets/productos/Cable_polipropileno.jpg"
+          ],
+          [
+            "Rafia",
+            "@/assets/productos/Rafia_1.jpg"
+          ],
+          [
+            "Cordel",
+            "@/assets/productos/Cordel.jpg"
+          ],
+          [
+            "Jarcería",
+            "@/assets/productos/Jarcería.jpg"
+          ],
+          [
+            "Barcina",
+            "@/assets/productos/Barcinas.jpg"
+          ],
+          
         ],
       }
     },

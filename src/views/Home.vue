@@ -12,18 +12,6 @@
         </div>
     <br>
     <slider/>
-    <!--
-    <div class="cont-video">
-      <video
-        class=" video-1"
-        autoplay
-        loop
-        muted
-        >
-        <source src="@/assets/videos/cordeles4.mp4" type="video/mp4">
-      </video>
-    </div>  
-    -->
     </b-container>
   </div>
 </div>

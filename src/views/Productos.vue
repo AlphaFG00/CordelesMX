@@ -1,6 +1,5 @@
 <template>
     <div class="productos">
-            
                 <div class="mi-titulo-1 primero-t">Nuestros</div> 
                 <div class="mi-titulo-1 segundo-t"> 
                     <span class="ultimo-t">prodcutos</span>
@@ -59,7 +58,6 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </b-carousel>
-            
     </div>
 </template>
 <style scoped lang="scss">
@@ -176,9 +174,9 @@ export default {
                         { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
                     ],
                     "https://i.imgur.com/XXcQEdl.jpg",
-                    "La rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
-                    "El material de rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
-                    material. Toda nuestra rafia es 100% virgen y con protección a los rayos UVB.",
+                    "La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
+                    "El material de Rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
+                    material. Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
                     "Rafia"
                 ],
                 [
@@ -195,8 +193,8 @@ export default {
                        
                     ],
                     "https://i.imgur.com/9j9nsDo.jpg",
-                    "Cordeles, elaborados de fibras naturales como algodón, yute, cáñamo,sisal, henequén y fibra de coco.",
-                    "Todo tipo de cordeles:\n\
+                    "Cordeles, elaborados de fibras naturales como algodón, Yute, Cáñamo, Sisal, Henequén y fibra de Coco.",
+                    "Todo tipo de Cordeles:\n\
                     Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
                     decoración… etc.",
                     "Cordeles"
@@ -301,7 +299,7 @@ export default {
                     "https://i.imgur.com/a2JwdSk.jpg",
                     "Son sacos rígidos, ligeros y resistentes, así como reutilizables debido a la gran durabilidad y resistencia del tejido, disminuyendo el consumo.",
                     "Son usados mayoritariamente para envasar granos, alimentos balanceados, arena, escombros, legumbres, fertilizantes, productos químicos, etc ",
-                    "Costales de rafia"
+                    "Costales de Rafia"
                 ],
                 [
                     ['tipo','peso_gr','pzas_por_paca'],
@@ -333,7 +331,7 @@ export default {
                         {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
                     ],
                     "https://i.imgur.com/2mV6yBg.jpg",
-                    "Los costales de yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
+                    "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de arena o tierra puede servir para fabricar barreras contra la erosión o diques para evitar inundaciones.",
                     "Costales de Yute"
                 ],

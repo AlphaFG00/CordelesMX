@@ -38,7 +38,6 @@
                     <div class="imagen-2">
                         <b-img id="img-2" :src="require('@/assets/img/natural.jpg')" width="450" height="250"/>
                     </div>
-                    
                 </b-col>
                 <b-col cols="12" md="6" sm="12" align-self="center">
                   <div>
@@ -53,23 +52,6 @@
                 </b-col>
             </b-row>
         </b-container>
-        
-        <!--
-        <b-container class="mt-3 pb-3">
-            <b-row align-v="center">
-                <b-col cols="12" lg="4" md="4" sm="12" align-self="center">
-                </b-col>
-                <b-col cols="12" lg="4" md="4" sm="12" align-self="center">
-                    <div class="cuarta-parte">
-                        Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
-                    </div>
-            
-    
-                </b-col>
-                <b-col cols="12" lg="4" md="4" sm="12" align-self="center">
-                </b-col>
-            </b-row>
-        </b-container>  -->
     </b-container>
 </div>
 </template>
