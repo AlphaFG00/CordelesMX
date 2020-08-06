@@ -12,78 +12,19 @@
             background="#ababab"
             style="text-shadow: 3px 3px 3px #000;"
             @sliding-start="onSlideStart">
-            <!-- Text slides with image 
-            <b-carousel-slide
-              caption="Cordeles"
-              text="Amplia variedad de cordeles">
-              <template v-slot:img>
-                <div class="cont-video">
-                  <video
-                    class=" video-1"
-                    autoplay
-                    loop
-                    muted
-                    >
-                    <source src="@/assets/videos/cordeles2.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </template>
-            </b-carousel-slide> -->
-            <b-carousel-slide >
-              <h2>Cable de Henequén</h2>
-              <template v-slot:img>
+            
+            <b-carousel-slide :caption="item[0]" v-for="(item , index) of slider_content" :key="index">
+            <template v-slot:img>
                 <img 
                 class="d-block  w-100 "
-                src="@/assets/productos/Cable.jpg"
+                :src="item[1]"
                 width="720"
-                :height="tam_img"                 
+                :height="tam_img"            
                 alt="imagen"/>
               </template>
             </b-carousel-slide>
-            <b-carousel-slide >
-              <h2>Cable de Polipropileno</h2>
-              <template v-slot:img>
-                <img 
-                class="d-block  w-100 "
-                src="@/assets/productos/Cable_polipropileno.jpg"
-                width="720"
-                :height="tam_img"                 
-                alt="imagen"/>
-              </template>
-            </b-carousel-slide>
-            <b-carousel-slide >
-              <h2>Jarcería</h2>
-              <template v-slot:img>
-                <img 
-                class="d-block  w-100 "
-                src="@/assets/productos/Jarciería.jpeg"
-                width="720"
-                :height="tam_img"                 
-                alt="imagen"/>
-              </template>
-            </b-carousel-slide>
-            <b-carousel-slide >
-              <h2>Cordel</h2>
-              <template v-slot:img>
-                <img 
-                class="d-block  w-100 "
-                src="@/assets/productos/cordel.jpg"
-                width="720"
-                :height="tam_img"                 
-                alt="imagen"/>
-              </template>
-            </b-carousel-slide>
-            <b-carousel-slide >
-              <h2>Costales</h2>
-              <template v-slot:img>
-                <img 
-                class="d-block  w-100 "
-                src="@/assets/productos/montana_costales.jpeg"
-                width="720"
-                :height="tam_img"                 
-                alt="imagen"/>
-              </template>
-            </b-carousel-slide>
+
+            
           </b-carousel>
         </b-col>
       </b-row>
@@ -104,27 +45,27 @@
         slider_content:[
           [
             "Cable Henequén",
-            "../assets/productos/Cable.jpg"
+            require('@/assets/productos/Cable.jpg')
           ],
           [
             "Cable de polipropileno",
-            "@/assets/productos/Cable_polipropileno.jpg"
+            require('@/assets/productos/Cable_polipropileno.jpg')
           ],
           [
-            "Rafia",
-            "@/assets/productos/Rafia_1.jpg"
+            "Costales",
+            require('@/assets/productos/montana_costales.jpeg')
           ],
           [
-            "Cordel",
-            "@/assets/productos/Cordel.jpg"
+            "Cordeles",
+            require('@/assets/productos/cordel.jpg')
           ],
           [
             "Jarcería",
-            "@/assets/productos/Jarcería.jpg"
+            require('@/assets/productos/Jarciería.jpeg')
           ],
           [
-            "Barcina",
-            "@/assets/productos/Barcinas.jpg"
+            "Barcinas",
+            require('@/assets/productos/Barcinas.jpg')
           ],
           
         ],

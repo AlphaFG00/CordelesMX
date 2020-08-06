@@ -1,68 +1,67 @@
 <template>
     <div class="productos">
-                <div class="mi-titulo-1 primero-t">NUESTROS</div> 
-                <div class="mi-titulo-1 segundo-t"> 
-                    <span class="ultimo-t">PRODUCTOS</span>
-                </div>
-                <b-carousel
-                    id="CarouselProductos"
-                    v-model="slide"
-                    :interval="9000"
-                    ref="CarouselProductos"
-                    @sliding-start="sliding = true"
-                    @sliding-end="sliding = false">
-                    <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
-                        <template>
-                            <b-row align-v="center" fluid>
-                                <b-col align-self="left" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
-                                    <b-card
-                                        :header="producto[5]"
-                                        header-border-variant="warning"
-                                        border-variant="warning"
-                                        header-bg-variant="warning"
-                                        header-text-variant="dark"
-                                        tag="article"
-                                        :style="['width: 12rem;']"
-                                        class="mb-2 ">
-                                        <b-card-img :src="producto[2]" alt="imagen" height="150" />
-                                        <b-card-text>
-                                            <div class="info-tarjeta">{{producto[3]}}</div>
-                                        </b-card-text>
-                                            <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Acerca</b-button> 
-                                            <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Mas Detalles</b-button>
-                                            <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
-                                                <b-card>
-                                                <p class="card-text">{{producto[4]}}  </p>
-                                                </b-card>
-                                            </b-collapse>
-                                            <b-modal 
-                                            header-border-variant="primary" 
-                                            header-text-variant="warning" 
-                                            
-                                            :id="'modal-'+i+'-'+index" 
-                                            :title="'Mas Datos del Producto: '+producto[5]">
-                                                <p class="my-4">{{producto[4]}}</p>
-                                            <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            </b-modal>
-                                    </b-card>
-                                </b-col>
-                            </b-row>
-                        </template>
-                    </b-carousel-slide>
-                    <a class="carousel-control-prev" role="button" aria-controls="CarouselProyectos" @click="prev()">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" role="button" aria-controls="carouselProyectos" @click="next()">
-                        <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </b-carousel>
+        <div class="mi-titulo-1 primero-t">Nuestros</div>
+        <div class="mi-titulo-1 segundo-t">
+            <span class="ultimo-t">Productos</span>
+        </div>
+        <b-carousel
+            id="CarouselProductos"
+            v-model="slide"
+            :interval="9000"
+            ref="CarouselProductos"
+            @sliding-start="sliding = true"
+            @sliding-end="sliding = false">
+            <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
+                <template>
+                    <b-row align-v="center" fluid>
+                        <b-col align-self="left" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
+                            <b-card
+                                :header="producto[5]"
+                                header-border-variant="warning"
+                                border-variant="warning"
+                                header-bg-variant="warning"
+                                header-text-variant="dark"
+                                tag="article"
+                                :style="['width: 12rem;']"
+                                class="mb-2 ">
+                                <b-card-img :src="producto[2]" alt="imagen" height="150" />
+                                <b-card-text>
+                                    <div class="info-tarjeta">{{producto[3]}}</div>
+                                </b-card-text>
+                                    <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Acerca</b-button> 
+                                    <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Mas Detalles</b-button>
+                                    <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
+                                        <b-card>
+                                        <p class="card-text">{{producto[4]}}  </p>
+                                        </b-card>
+                                    </b-collapse>
+                                    <b-modal 
+                                    header-border-variant="primary" 
+                                    header-text-variant="warning" 
+                                    
+                                    :id="'modal-'+i+'-'+index" 
+                                    :title="'Mas Datos del Producto: '+producto[5]">
+                                        <p class="my-4">{{producto[4]}}</p>
+                                    <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                    </b-modal>
+                            </b-card>
+                        </b-col>
+                    </b-row>
+                </template>
+            </b-carousel-slide>
+            <a class="carousel-control-prev" role="button" aria-controls="CarouselProyectos" @click="prev()">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" role="button" aria-controls="carouselProyectos" @click="next()">
+                <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </b-carousel>
     </div>
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
-
     .carousel-item {
         min-height: 32em !important;
         //background-color: rgb(206, 206, 206);
@@ -108,23 +107,24 @@
       color: #a13a4b;
       font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
-    @media screen and (max-width: 500px){
-      .mi-titulo-1{
-        font-size:x-large;
-      }
-    }
     .primero-t {    
       animation: showup 5s forwards;
     }
-    
     .segundo-t {
       width:0px;
       animation: revelar 5s forwards;
     }
-    
     .ultimo-t {
       margin-left:-355px;
       animation: slidein 5s forwards;
+    }
+    @media screen and (max-width: 500px){
+      .mi-titulo-1{
+        font-size:x-large;
+      }
+      .segundo-t {
+        animation: revelar-mb 5s forwards;
+        }
     }
     @keyframes showup {
         0% {opacity:0;}
@@ -143,9 +143,16 @@
     @keyframes revelar {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width: 12.5ex;}
-        80% {opacity:1; width: 12.5ex;}
-        100% {opacity:1;width:12.5ex;}
+        30% {width: 180px;}
+        80% {opacity:1; width: 180px;}
+        100% {opacity:1;width:180px;}
+    }
+    @keyframes revelar-mb {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width: 145px;}
+        80% {opacity:1; width: 145px;}
+        100% {opacity:1;width:145px;}
     }
     @keyframes mostrar {
         0% {opacity: 0;}
