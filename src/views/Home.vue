@@ -2,12 +2,12 @@
 <div>
   <div class="home">
     <b-container id="view-inicio" class="mt-4 mb-5 pt-4 pb-5">
-      <div class="titulo-1">Bienvenido</div> 
-      <div class="titulo-2"> 
+      <div class="mi-titulo-1">Bienvenido</div> 
+      <div class="mi-titulo-2"> 
           <span> a CordelesMX</span>
       </div>
       <br>
-      <div class="titulo-slogan animacion-1">
+      <div class="mi-titulo-slogan animacion-1">
         Un solo proveedor para todas sus necesidades de amarre.
       </div>
     <br>
@@ -48,7 +48,7 @@ export default {
   text-align: center;
   background-color: rgba(255, 255, 255,.65);
 }
-.titulo-1, .titulo-2 {
+.mi-titulo-1, .mi-titulo-2 {
     display:inline-block;
     overflow:hidden;
     white-space:nowrap;
@@ -59,14 +59,14 @@ export default {
     color: #a13a4b;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
-  .titulo-1{
+  .mi-titulo-1{
     animation: showup 5s forwards;
   }
-  .titulo-2{
+  .mi-titulo-2{
     width: 0px;
     animation: reveal 5s .4s forwards;
   }
-  .titulo-2 span{
+  .mi-titulo-2 span{
     margin-left: -50px;
     animation: slidein 5s .4s forwards;
   }
@@ -91,10 +91,10 @@ export default {
     }
   }
   @media screen and (max-width: 500px){
-    .titulo-1, .titulo-2{
-      font-size:1.7em;    
+    .mi-titulo-1, .mi-titulo-2{
+      font-size:1.7em;  
     }
-    .titulo-2 {
+    .mi-titulo-2 {
       animation: reveal-mb 5s forwards;
       
     }
