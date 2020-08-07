@@ -55,7 +55,7 @@ export default {
     padding: 1px;
     font-size: 4em;
     letter-spacing: -2px;
-    font-weight: 200;
+    font-weight: 400;
     color: #a13a4b;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
@@ -74,7 +74,7 @@ export default {
     width: 100%;
     
     font-size: xx-large;
-    font-weight: 100;
+    font-weight: 400;
     color:#a88d39;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
