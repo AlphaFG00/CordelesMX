@@ -1,6 +1,6 @@
 <template>
     <div class="productos">
-        <div class="mi-titulo-1 primero-t">Nuestros</div>
+        <!--<div class="mi-titulo-1 primero-t">Nuestros</div>-->
         <div class="mi-titulo-1 segundo-t">
             <span class="ultimo-t">Productos</span>
         </div>
@@ -13,8 +13,8 @@
             @sliding-end="sliding = false">
             <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
                 <template>
-                    <b-row align-v="center" fluid>
-                        <b-col align-self="left" cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
+                    <b-row align-v="end" fluid>
+                        <b-col cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
                             <b-card
                                 :header="producto[5]"
                                 header-border-variant="warning"

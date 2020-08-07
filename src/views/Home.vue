@@ -52,13 +52,13 @@ export default {
     display:inline-block;
     overflow:hidden;
     white-space:nowrap;
+    padding: 1px;
     font-size: 4em;
     letter-spacing: -2px;
     font-weight: 200;
     color: #a13a4b;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
-  /**aqui */
   .titulo-1{
     animation: showup 5s forwards;
   }
@@ -70,9 +70,6 @@ export default {
     margin-left: -50px;
     animation: slidein 5s .4s forwards;
   }
-  /*
-  */
-
   .titulo-slogan {
     width: 100%;
     white-space:nowrap;
@@ -95,10 +92,11 @@ export default {
   }
   @media screen and (max-width: 500px){
     .titulo-1, .titulo-2{
-      font-size:1.5em;    
+      font-size:1.7em;    
     }
     .titulo-2 {
       animation: reveal-mb 5s forwards;
+      
     }
     .titulo-slogan {
       font-size: 0.7em;
@@ -150,9 +148,9 @@ export default {
     @keyframes reveal-mb {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        25% {width: 151px;}
-        80% {opacity:1; width: 151px;}
-        100% {opacity:1;width:151px;}
+        25% {width: 12em;}
+        80% {opacity:1; width: 12em;}
+        100% {opacity:1;width:12em;}
     }
     @keyframes mostrar {
     0% {
