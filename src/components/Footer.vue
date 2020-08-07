@@ -26,7 +26,7 @@
     </b-row>
   </b-container>
 </template>
-<style>
+<style scoped lang="scss">
 .foot-body {
   border-top: double 4px #a13a4b;
   margin-top: 0em;

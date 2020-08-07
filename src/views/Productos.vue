@@ -7,13 +7,13 @@
         <b-carousel
             id="CarouselProductos"
             v-model="slide"
-            :interval="9000"
+            :interval="900000"
             ref="CarouselProductos"
             @sliding-start="sliding = true"
             @sliding-end="sliding = false">
             <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
                 <template>
-                    <b-row align-v="end" fluid>
+                    <b-row align-v="end" fluid class="correction-al">
                         <b-col cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
                             <b-card
                                 :header="producto[5]"
@@ -23,7 +23,7 @@
                                 header-text-variant="dark"
                                 tag="article"
                                 :style="['width: 12rem;']"
-                                class="mb-2 ">
+                                class="mb-2">
                                 <b-card-img :src="producto[2]" alt="imagen" height="150" />
                                 <b-card-text>
                                     <div class="info-tarjeta">{{producto[3]}}</div>
@@ -62,6 +62,10 @@
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
+    .correction-al{
+        display: flex;
+        justify-content: center;
+    }
     .carousel-item {
         min-height: 32em !important;
         //background-color: rgb(206, 206, 206);
@@ -124,6 +128,11 @@
       }
       .segundo-t {
         animation: revelar-mb 5s forwards;
+        }
+    }
+    @media screen and (min-width: 0px)and (max-width: 576px){
+        .correction-al > div > article{
+            margin: 0 auto;
         }
     }
     @keyframes showup {

@@ -120,7 +120,7 @@
 
   }
 </script>
-<style scoped>
+<style scoped lang="scss">
   .video-1 {
     width: 1020px;
     align-self: center;
