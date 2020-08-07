@@ -95,13 +95,9 @@
     color:#b0455c;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 450px){
     .titulo-1{
       font-size:x-large;
-    }
-    .titulo-2 {
-      font-size:medium;
-      font-weight: 700;
     }
   }  
   .primero {    

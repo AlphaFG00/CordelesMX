@@ -1,6 +1,6 @@
 <template>
     <div class="productos">
-        <div class="mi-titulo-1 primero-t">Nuestros</div>
+        <!--<div class="mi-titulo-1 primero-t">Nuestros</div>-->
         <div class="mi-titulo-1 segundo-t">
             <span class="ultimo-t">Productos</span>
         </div>
