@@ -57,7 +57,7 @@
     </b-container>
 </div>
 </template>
-<style>
+<style scoped lang="scss">
   .nosotros{
     top: 0;
     padding-top: 20px;

@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 .algo {
   height: 320px;
   width: 720px;
