@@ -7,7 +7,7 @@
           <span> a CordelesMX</span>
       </div>
       <br>
-      <div class="mi-titulo-slogan animacion-1">
+      <div class="titulo-slogan animacion-1">
         Un solo proveedor para todas sus necesidades de amarre.
       </div>
     <br>
@@ -72,34 +72,33 @@ export default {
   }
   .titulo-slogan {
     width: 100%;
-    white-space:nowrap;
+    
     font-size: xx-large;
     font-weight: 100;
     color:#a88d39;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
-
   @media screen and (max-width: 990px){
     .titulo-slogan {
-      font-size:medium;
+      font-size:2em;
       font-weight: 400;
     }
   }
   @media screen and (max-width: 600px){
     .titulo-slogan {
-      font-size:medium;
+      font-size:1.7em;
     }
   }
   @media screen and (max-width: 500px){
     .mi-titulo-1, .mi-titulo-2{
-      font-size:1.7em;  
+      font-size:1.75em;  
+      margin-top: -10px;
     }
     .mi-titulo-2 {
       animation: reveal-mb 5s forwards;
-      
     }
     .titulo-slogan {
-      font-size: 0.7em;
+      font-size: .9em;
     }
   }
   .animacion-1 {
