@@ -53,7 +53,7 @@
           ],
           [
             "Costales",
-            require('@/assets/productos/costales2.jpeg')
+            require('@/assets/productos/monton_costales.jpeg')
           ],
           [
             "Cordeles",
