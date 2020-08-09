@@ -53,7 +53,7 @@
           ],
           [
             "Costales",
-            require('@/assets/productos/montana_costales.jpeg')
+            require('@/assets/productos/monton_costales.jpeg')
           ],
           [
             "Cordeles",
@@ -65,7 +65,7 @@
           ],
           [
             "Barcinas",
-            require('@/assets/productos/Barcinas.jpg')
+            require('@/assets/productos/montana_costales.jpeg')
           ],
           
         ],

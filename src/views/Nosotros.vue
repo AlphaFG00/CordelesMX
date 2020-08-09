@@ -1,61 +1,54 @@
 <template>
-<div class="nosotros">
-    <b-container class="focus-nosotros mt-3 mb-3 p-4" >
-        <b-container class="pt-4 mb-4">
-            <div class="titulo-1 primero">Conoce</div> 
-            <div class="titulo-1 segundo"> 
-                <span class="ultimo">Nuestra Historia</span>
-            </div>
-        </b-container>
-        <div>
-        <div class="primera-parte">
-        Somos una empresa familiar, 100% mexicana, fundada hace más de 33 años; dedicada a la fabricación, distribución y servicios de todos los productos que son para empaque, amarre, embalaje y limpieza. Donde hemos logrado combinar la mejor calidad en nuestros productos, los mejores precios del mercado, la amabilidad con el ambiente y el compromiso de lograr la satisfacción de nuestros clientes. Todo esto es lo que nos ha posicionado como líderes en el mercado.
-        </div>
-        </div>
-        <br><br>
-        <div style="height:120px;">
-          <span class="segunda-parte">
-            <ul>
-                <li class="li-1"> Mejores precios del mercado</li>
-                <li class="li-2"> Lealtad a nuestros clientes</li>
-                <li class="li-3"> Amabilidad con el ambiente</li>
-                <li class="li-4"> Satisfacción de nuestros clientes</li>
-            </ul>
-          </span>
-        </div>
-        <br>
-        <br>
-        
-        <b-row>
-          <b-col>
-            <div class="titulo-2 ">
-                <span class="mision">Misión</span>
+  <div class="nosotros">
+      <b-container class="focus-nosotros mt-3 mb-3 p-4" >
+          <b-container class="pt-4 mb-4">
+              <div class="titulo-1 primero">Conoce</div> 
+              <div class="titulo-1 segundo"> 
+                  <span class="ultimo">Nuestra Historia</span>
+              </div>
+          </b-container>
+          <div>
+          <div class="primera-parte">
+          Somos una empresa familiar, 100% mexicana, fundada hace más de 33 años; dedicada a la fabricación, distribución y servicios de todos los productos que son para empaque, amarre, embalaje y limpieza. Donde hemos logrado combinar la mejor calidad en nuestros productos, los mejores precios del mercado, la amabilidad con el ambiente y el compromiso de lograr la satisfacción de nuestros clientes. Todo esto es lo que nos ha posicionado como líderes en el mercado.
+          </div>
+          </div>
+          <br><br>
+          <div style="height:120px;">
+            <span class="segunda-parte">
+              <ul>
+                  <li class="li-1"> Mejores precios del mercado</li>
+                  <li class="li-2"> Lealtad a nuestros clientes</li>
+                  <li class="li-3"> Amabilidad con el ambiente</li>
+                  <li class="li-4"> Satisfacción de nuestros clientes</li>
+              </ul>
+            </span>
+          </div>
+          <b-row fluid align-v="center">
+            <b-col>
+              <div class="titulo-2 ">
+                  <span class="mision">Misión</span>
+              </div>
+              <div class="tercera-parte">
+                Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
+              </div>
+              <div class="titulo-2">
                 <span class="vision">Visión</span>
-            </div> 
-          </b-col>
-        </b-row>
-        <b-container class="mt-3 mb-4 pr-4">
-            <b-row align-v="center">
-                <b-col cols="12" md="6" sm="12"  lang>
-                    <div class="tercera-parte">
-                    Generar productos y ofrecer servicios 100% mexicanos, conjugando la eficiencia y calidad de éstos, promoviendo la satisfacción del cliente al combinar nuestro mejor esfuerzo y dedicación para cumplir sus más grandes expectativas.
-                    </div>
-                     <div class="cuarta-parte">
-                        Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
-                    </div>
-                </b-col>
-                <b-col cols="12" md="6" sm="12" align-self="center">
-                  <div>
-                    <div class="imagen-1">
-                        <b-img id="img-1" :src="require('@/assets/img/natural.jpg')" />
-                    </div>
-                  </div>
-    
-                </b-col>
-            </b-row>
-        </b-container>
-    </b-container>
-</div>
+              </div>
+              <div class="cuarta-parte">
+                Ser una empresa innovadora, con una mejora continua a través de una cultura basada en el esfuerzo, lealtad y compromiso hacia cada uno de nuestros clientes, no dejando atrás el desarrollo sustentable de nuestro país.
+              </div>
+            </b-col>
+            <b-col cols="12" md="6" sm="12" align-self="center">
+              <div>
+                <div class="imagen-1">
+                    <b-img id="img-1" :src="require('@/assets/img/natural.jpg')" />
+                </div>
+              </div>
+            </b-col>
+          </b-row>
+         
+      </b-container>
+  </div>
 </template>
 <style scoped lang="scss">
   .nosotros{
@@ -74,7 +67,7 @@
     background-color:transparent;
     text-align: center;
     background-color: rgba(255, 255, 255,.75);
-    font-weight: 200;
+    font-weight: 400;
   }
   .titulo-1 {
     display:inline-block;
@@ -88,8 +81,8 @@
   .titulo-2 {
     display:inline-block;
     overflow:hidden;
-    padding-right: 3em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+    margin-top:2.5em;
     white-space:nowrap;
     font-size: x-large;
     color:#b0455c;
@@ -98,6 +91,9 @@
   @media screen and (max-width: 450px){
     .titulo-1{
       font-size:x-large;
+    }
+    .focus-nosotros{
+      font-size: .95em;
     }
   }  
   .primero {    
@@ -157,44 +153,42 @@
     opacity: 0;
     display: block;
     text-align: left;
-    position: absolute;
-    animation: mision 15s 6s forwards;
+    animation: move-right 1s 5s forwards;
   }
   .imagen-1 {
     opacity: 0;
     display: block;
     overflow: hidden;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 50px;
     width: 100%;
-    animation: mision-img 15s 6.5s forwards;
+    animation: mision-img 2.5s 6.5s forwards;
   }
   #img-1{
     width:400px; 
-    height:200px;
+    height:230px;
   }  
   .imagen-2 {
     opacity: 0;
     display: block;
     text-align: center;
     width: 100%;
-    animation: show-text 2.5s 21.5s forwards;
+    animation: show-text 2.5s 7.5s forwards;
   }    
   .vision {
     opacity: 0;
     display: block;
-    position: absolute;
     text-align: left;
-    animation: move-right 1.2s 22s forwards;
+    animation: move-right 1s 5s forwards;
   }
   .tercera-parte{
     opacity: 0;
-    top: 35%;
     display: block;
     text-align: left;
-    margin-bottom: 1em;
+    padding-left: .8em;
+    padding-right: .8em;
     width: 100%;
-    animation: mision 15s 6s forwards;
+    animation: mision 2s 6s forwards;
   }
   .li-1{
     opacity: 0;
@@ -216,12 +210,12 @@
 .cuarta-parte{
     opacity: 0;
     text-align: left;
-    position: absolute;
     display: block;
-    top: 0%;
-    padding-right: 1em;
+    padding-left: .8em;
+    padding-bottom: 1em;
+    padding-right: .8em;
     width: 100%;
-    animation: show-text 2.5s 21.5s forwards;
+    animation: mision 2s 6s forwards;
   }
 
 @keyframes vision {
@@ -254,7 +248,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 

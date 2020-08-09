@@ -42,7 +42,7 @@
                                     :id="'modal-'+i+'-'+index" 
                                     :title="'Mas Datos del Producto: '+producto[5]">
                                         <p class="my-4">{{producto[4]}}</p>
-                                    <b-table head-row-variant="warning" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                    <b-table head-row-variant="warning" small responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                     </b-modal>
                             </b-card>
                         </b-col>
@@ -85,15 +85,12 @@
         animation: mostrar 1s forwards;
         background-color:whitesmoke;
         //background-image: url('../assets/img/Portada_cordel.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        //background-repeat: no-repeat;
+        //background-size: cover;
     }
     .focus-productos  {
         background-color:transparent;
         background-color: rgba(255, 255, 255,.70);
-    }
-    .carrusel {
-        width: 100%;
     }
     .info-tarjeta {
         overflow: auto;
@@ -349,7 +346,7 @@ export default {
                     ],
                     "https://i.imgur.com/2mV6yBg.jpg",
                     "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
-                    "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de arena o tierra puede servir para fabricar barreras contra la erosión o diques para evitar inundaciones.",
+                    "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
                     "Costales de Yute"
                 ],
 
@@ -379,7 +376,7 @@ export default {
         onResize() {
             this.window_width = window.innerWidth
         }
-        /* Debbugeo del responsive
+        /* Debbugeo de items responsive
         onResize() {
             this.window_width = window.innerWidth
             if(this.window_width <= 1199){

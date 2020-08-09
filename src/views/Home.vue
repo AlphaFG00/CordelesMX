@@ -2,8 +2,8 @@
 <div>
   <div class="home">
     <b-container id="view-inicio" class="mt-4 mb-5 pt-4 pb-5">
-      <div class="titulo-1">Bienvenido</div> 
-      <div class="titulo-2"> 
+      <div class="mi-titulo-1">Bienvenido</div> 
+      <div class="mi-titulo-2"> 
           <span> a CordelesMX</span>
       </div>
       <br>
@@ -48,58 +48,57 @@ export default {
   text-align: center;
   background-color: rgba(255, 255, 255,.65);
 }
-.titulo-1, .titulo-2 {
+.mi-titulo-1, .mi-titulo-2 {
     display:inline-block;
     overflow:hidden;
     white-space:nowrap;
     padding: 1px;
     font-size: 4em;
     letter-spacing: -2px;
-    font-weight: 200;
+    font-weight: 400;
     color: #a13a4b;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
-  .titulo-1{
+  .mi-titulo-1{
     animation: showup 5s forwards;
   }
-  .titulo-2{
+  .mi-titulo-2{
     width: 0px;
     animation: reveal 5s .4s forwards;
   }
-  .titulo-2 span{
+  .mi-titulo-2 span{
     margin-left: -50px;
     animation: slidein 5s .4s forwards;
   }
   .titulo-slogan {
     width: 100%;
-    white-space:nowrap;
+    
     font-size: xx-large;
-    font-weight: 100;
+    font-weight: 400;
     color:#a88d39;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
   }
-
   @media screen and (max-width: 990px){
     .titulo-slogan {
-      font-size:medium;
+      font-size:2em;
       font-weight: 400;
     }
   }
   @media screen and (max-width: 600px){
     .titulo-slogan {
-      font-size:medium;
+      font-size:1.7em;
     }
   }
   @media screen and (max-width: 500px){
-    .titulo-1, .titulo-2{
-      font-size:1.7em;    
+    .mi-titulo-1, .mi-titulo-2{
+      font-size:1.75em;  
+      margin-top: -10px;
     }
-    .titulo-2 {
+    .mi-titulo-2 {
       animation: reveal-mb 5s forwards;
-      
     }
     .titulo-slogan {
-      font-size: 0.7em;
+      font-size: .9em;
     }
   }
   .animacion-1 {
