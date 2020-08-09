@@ -30,9 +30,9 @@
                                 </b-card-text>
                                     <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Acerca</b-button> 
                                     <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Mas Detalles</b-button>
-                                    <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
+                                    <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2 about-space">
                                         <b-card>
-                                        <p class="card-text">{{producto[4]}}  </p>
+                                        <p class="card-text">{{producto[4]}}</p>
                                         </b-card>
                                     </b-collapse>
                                     <b-modal 
@@ -75,6 +75,29 @@
         color: #343a40;
         font-size: small;
     }
+
+    .about-space,.card-text{
+        .card-body{
+            max-height: 240px;
+            overflow: auto;
+        }
+        ::-webkit-scrollbar-track
+        {
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+        ::-webkit-scrollbar
+        {
+            width: 7px;
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar-thumb
+        {
+            background-color:#e7bf47;
+        }
+    }
+
     .carousel-control-next > span,
     .carousel-control-prev > span{
         filter: invert(100%) !important;
