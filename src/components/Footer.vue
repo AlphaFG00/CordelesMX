@@ -1,24 +1,31 @@
 <template>
-  <b-container fluid class="pt-2 pb-2 foot-body">
-    <b-row align-v="center">
-      <b-col sm="4" class="text-center mt-2 " order="3" order-sm="1">
-        <router-link :to="{name: 'home'}">Inicio</router-link>&nbsp;
-        <router-link :to="{name: 'Nosotros'}">Nosotros</router-link>&nbsp;
-        <router-link :to="{name: 'Productos'}">Productos</router-link>&nbsp;
+  <b-container fluid class="pt-2 pb-2 principal">
+    <b-row align-v="center" class="foot-body clear-side">
+      <b-col sm="12" lg="6" class="mt-2" order="1">
+        <router-link class="link-footer" :to="{name: 'Nosotros'}">Nosotros</router-link>
+        <router-link class="link-footer" :to="{name: 'home'}">Inicio</router-link>
+        <router-link class="link-footer" :to="{name: 'Productos'}">Productos</router-link>
       </b-col>
-      <b-col sm="4" class="text-center " order="2">
-       
+      <b-col sm="12" lg="12" class="credits mt-2" order="3">
+        <p>© 2020 CordelesMX. Todos los derechos reservados</p>
+        <p>Designed by "Company of the web design"</p>
       </b-col>
-     <b-col sm="4" class="text-center" order="1" order-sm="3">
-        <a href="https://twitter.com/" target="_blank">
-          Twitter
-        </a>
-        <a href="https://www.facebook.com/atlasjarcieria" target="_blank">
-          Facebook
-        </a>
-        <a href="https://api.WhatsApp.com/send?phone=+525584813993" target="_blank">
-          WhatsApp
-        </a><br>
+      <b-col sm="12" lg="6" class="social-media" order="2">
+        <div class="animation-space">
+          <a href="https://twitter.com/" target="_blank">
+            Twitter
+          </a>
+        </div>
+        <div class="animation-space">
+          <a href="https://www.facebook.com/atlasjarcieria" target="_blank">
+            Facebook
+          </a>
+        </div>
+        <div class="animation-space">
+          <a href="https://api.WhatsApp.com/send?phone=+525584813993" target="_blank">
+            WhatsApp
+          </a>
+        </div>
         <span class="block">
           <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">tel: 55-50-86-50-08</span>
         </span>
@@ -27,19 +34,125 @@
   </b-container>
 </template>
 <style scoped lang="scss">
-.foot-body {
-  border-top: double 4px #a13a4b;
-  margin-top: 0em;
-  width: 100%;
-  position: relative;
-  background:whitesmoke;
-  /*height: 20px; /**quitar cuando se le de estilo */
-}
 
-.rights-reserved {
-display:block;
-font-family:'Times New Roman', Times, serif;
-font-size: .8em;
-margin-top: .8em;
+.credits {
+  padding-top: .2rem;
+  display:block;
+  font-family:'Times New Roman', Times, serif;
+  p :first-child{
+    font-size: .8em;
+    margin-top: .8em;
+  }
+}
+.social-media{
+  padding-top: .2rem;
+  .animation-space{
+    display: inline-block;
+    width: 33.3%;
+  }
+}
+.link-footer{
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.principal{
+  position:relative;
+  padding-bottom: 0 !important;
+  bottom: 0;
+  .foot-body {
+      background-color: whitesmoke;
+
+      background-image:
+          /* Top jagged */
+          linear-gradient(135deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 50%, rgba(245,245,245,0) 50%, rgba(245,245,245,0) 100%),
+          linear-gradient(-135deg, rgba(245,245,245,1) 0%, rgba(245,245,245,1) 50%, rgba(245,245,245,0) 50%, rgba(245,245,245,0) 100%),
+          /* Bottom jagged */
+          linear-gradient(rgba(245,245,245,1) 0%, rgba(245,245,245,1) 50%, rgba(245,245,245,0) 50%, rgba(245,245,245,0) 100%),
+          linear-gradient(rgba(245,245,245,1) 0%, rgba(245,245,245,1) 50%, rgba(245,245,245,0) 50%, rgba(245,245,245,0) 100%),
+          /* Top and bottom fade  */
+          linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%),
+          linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+      background-position:
+          /* Top jagged */
+          top center, top center,
+          /* Bottom jagged */
+          bottom center, bottom center,
+          /* Top fade */
+          top center,
+          /* Bottom fade */
+          bottom center;
+      background-size:
+          /* Top + bottom jagged */
+          0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem,
+          /* Top + bottom fade */
+          100% 1rem, 100% 1rem;
+      background-repeat: repeat-x;
+      color: #ccc;
+      letter-spacing: 1px;
+
+      padding: 1rem 0 0 0;
+      position: relative;
+      text-align: center;
+      transition: all .25s ease-in-out;
+
+    &.clear-side {
+      background-color: #a13a4b;
+      background-image:
+          /* Top jagged */
+          linear-gradient(135deg, rgb(245, 245, 245) 50%, rgba(245,245,245,0) 50%),
+          linear-gradient(-135deg,rgb(245, 245, 245) 50%, rgba(245,245,245,0) 50%),
+          /* Bottom jagged */
+          linear-gradient(#f7f1f200 50%, rgba(255,255,255,0) 50%),
+          linear-gradient(#f7f1f200 50%, rgba(255,255,255,0) 50%),
+          /* Top and bottom fade  */
+          linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0,0,0,0) 100%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0) 100%),
+          /* Sides */
+          linear-gradient(90deg, rgba(245,245,245,1) 2%, rgba(200,200,200,0) 2%, rgba(200,200,200,0) 97%, rgba(245,245,245,1) 97%);
+      background-position:
+          /* Top jagged */
+          top center, top center,
+          /* Bottom jagged */
+          bottom center, bottom center,
+          /* Top fade */
+          top center,
+          /* Bottom fade */
+          bottom center,
+          /* Sides */
+          center center;
+      background-size:
+          /* Top + bottom jagged */
+          0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem, 0.75rem 0.75rem,
+          /* Top + bottom fade */
+          100% 1rem, 100% 1rem,
+          /* Sides */
+          100% 100%;
+      background-repeat:
+          /* All jagged and fade */
+          repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x,
+          /* Sides */
+          repeat-y;
+    }
+
+    & a {
+      background: none;
+      background-color: rgba(0,0,0,.5);
+      border-radius: 1rem;
+      border: none;
+      color: #eee;
+      display: inline-block;
+      line-height: 2rem;
+      padding: 0 1.5rem;
+      margin:.2rem 0;
+      text-decoration: none;
+      transition: all .125s ease-in-out;
+    
+      &:hover {
+        background-color: rgba(0,0,0,.75);
+      }
+    }
+  }
 }
 </style>

@@ -83,7 +83,7 @@
         padding-top: 20px;
         padding-bottom: 10px;
         animation: mostrar 1s forwards;
-        background-color:white;
+        background-color:whitesmoke;
         //background-image: url('../assets/img/Portada_cordel.jpg');
         background-repeat: no-repeat;
         background-size: cover;
