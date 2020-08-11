@@ -1,7 +1,7 @@
 <template>
     <div >
       <b-container>
-        <h1 class="cssanimation titulo">CordelesMX</h1>
+        <h1 class="cssanimation titulo">Contacto</h1>
         <div id="container">
             Amarrando Buenos
             <div id="flip">
@@ -14,16 +14,26 @@
             <p class="mt-2">
     Consulta de precios, cotizaciones, asesoría e información de nuestros productos </p>
     <p>La dirección es Jesús Maria 153 local b colonia centro  cp 06000 delegacion Cuauhtemoc</p>
+    
+   <contact-form/>
       </b-container>
     </div>
 </template>
 <script>
-
+import myForm from "@/components/ContactForm.vue";
 export default {
   name:'contacto',
   components:{
-
-  }
+    'contact-form': myForm,
+  },
+  data(){
+    return{
+      form :{
+          email:'',
+          name:''
+      }
+    }
+  },
 
 }
 </script>
