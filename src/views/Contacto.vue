@@ -16,22 +16,21 @@
     <p>La dirección es Jesús Maria 153 local b colonia centro  cp 06000 delegacion Cuauhtemoc</p>
     
    <contact-form/>
+   <myMap :coordinates="[19.425618, -99.128960]" :height="220"/>
       </b-container>
     </div>
 </template>
 <script>
 import myForm from "@/components/ContactForm.vue";
+import myMap from "@/components/Map.vue";
 export default {
   name:'contacto',
   components:{
     'contact-form': myForm,
+    myMap
   },
   data(){
     return{
-      form :{
-          email:'',
-          name:''
-      }
     }
   },
 
