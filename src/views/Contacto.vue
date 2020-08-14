@@ -1,23 +1,36 @@
 <template>
     <div >
       <b-container>
-        <h1 class="cssanimation titulo">Contacto</h1>
-        <div id="container">
-            Amarrando Buenos
-            <div id="flip">
-                <div><div>Prdoductos</div></div>
-                <div><div>Negocios</div></div>
-                <div><div>Tratos</div></div>
-            </div>
-            Con nuestros clientes
-            </div>
-            <p class="mt-2">
-    Consulta de precios, cotizaciones, asesoría e información de nuestros productos </p>
-    <p>La dirección es Jesús Maria 153 local b colonia centro  cp 06000 delegacion Cuauhtemoc</p>
-    
-   <contact-form/>
-   <myMap :coordinates="[19.425618, -99.128960]" :height="220"/>
-      </b-container>
+        <h1 class="cssanimation titulo">Contacto</h1>  
+        <br>
+        <b-row fluid>
+          <b-col cols="12" md="6" sm="12" align-self="center">
+            <b-card>
+              
+              <div id="container">
+                Amarrando Buenos
+                <div id="flip">
+                    <div><div>Prdoductos</div></div>
+                    <div><div>Negocios</div></div>
+                    <div><div>Tratos</div></div>
+                </div>
+                Con nuestros clientes
+              </div>
+            </b-card>
+          </b-col>
+          <b-col cols="12" md="6" sm="12" align-self="center">
+              <b-card  title="Consulta de precios, cotizaciones, asesoría e información de nuestros productos.">
+                <contact-form/>
+              </b-card>
+          </b-col>
+        </b-row>
+        <br>
+        <b-card>
+          <span class="direccion"> Jesús Maria 153 local b colonia centro  cp 06000 delegacion Cuauhtemoc</span>
+        <myMap :coordinates="[19.425618, -99.128960]" :height="220"/>
+        </b-card>
+        <br>
+    </b-container>
     </div>
 </template>
 <script>
@@ -33,10 +46,8 @@ export default {
     return{
     }
   },
-
 }
 </script>
-
 <style scoped lang="scss">
 .algo {
   height: 320px;
@@ -77,7 +88,7 @@ export default {
 #container {
   color:#999;
   text-transform: uppercase;
-  font-size:36px;
+  font-size:30px;
   font-weight:bold;  
   width:100%;
   bottom:45%;

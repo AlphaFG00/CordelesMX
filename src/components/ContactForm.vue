@@ -64,6 +64,17 @@ export default {
                 text: ''
             },
         }
-    }
+    },
+    methods: {
+        onReset(){
+            this.form.email = ''
+            this.form.name = ''
+            this.form.number = ''
+            this.form.text = ''
+        },
+        onSubmit(){
+            
+        }
+    },
 }
 </script>
