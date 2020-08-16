@@ -3,9 +3,11 @@
         <div class="fondo">
         <!--<div class="mi-titulo-1 primero-t">Nuestros</div>-->
         <br>
+        <br>
         <div class="titulo segundo-t knockout">
-            <span class="ultimo-t">Productos</span>
+            <span class="ultimo-t">Lo mejor en Jarcieria</span>
         </div>
+        <br>
         <br>
             <b-carousel
                 id="CarouselProductos"
@@ -44,7 +46,7 @@
                                         
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
-                                            <p class="my-4">{{producto[4]}}</p>
+                                            <p class="my-4">{{producto[3]}}</p>
                                         <b-table head-row-variant="warning" small responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
@@ -72,13 +74,14 @@
         
     }
     .carousel-item {
-        min-height: 36em !important;
-        
+        min-height: 36em !important;   
     }
     
     .fondo{
-        background-color: rgb(245, 245, 245,0.8);
+        background-color: rgb(245, 245, 245,0.85);
         min-height: 60vh;
+        margin-left: 6em;
+        margin-right: 6em;
     }
     p.card-text{
         color: #343a40;
@@ -110,7 +113,7 @@
         margin-top: 10px;
         font-size: small;
     }
-    .mi-titulo-1 {
+    /*.mi-titulo-1 {
       //background: url('../assets/img/carretes_rafia.jpg');
       background-size: cover;
       //-webkit-text-fill-color: transparent;
@@ -121,14 +124,14 @@
       white-space:nowrap;
       font-size: 4.5rem;
       font-family: arial, helvetica !important;
-    }
+    }*/
     .titulo{
         display:inline-block;
-    overflow:hidden;
-    white-space:nowrap;
-    font-size: xx-large;
-    color: #a13a4b;
-    font-family: 'Franklin Gothic Medium', sans-serif !important;
+        overflow:hidden;
+        white-space:nowrap;
+        font-size: xx-large;
+        color: #a13a4b;
+        font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
     .primero-t {    
       animation: showup 5s forwards;
@@ -141,9 +144,13 @@
       margin-left:-355px;
       animation: slidein 5s forwards;
     }
-    @media screen and (max-width: 500px){
-      .mi-titulo-1{
-        font-size:3rem;
+    @media screen and (max-width: 565px){
+      .titulo{
+        font-size:x-large;
+      }
+      .fondo{
+          margin-left: 1em;
+          margin-right: 1em;
       }
       .segundo-t {
         animation: revelar-mb 5s forwards;
@@ -210,9 +217,9 @@ export default {
                         { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
                     ],
                     "https://i.imgur.com/XXcQEdl.jpg",
-                    "La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
                     "El material de Rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
-                    material. Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
+                    material. La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
+                    "Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
                     "Rafia"
                 ],
                 [
@@ -356,8 +363,8 @@ export default {
                         {tipo:'DOBLE PIE',peso_gr:'1500 grs',pzas_por_paca:'50'},
                     ],
                     "https://i.imgur.com/17fr8T1.jpg",
-                    "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
+                    "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Costal Henequén"
                 ],
                 [
@@ -367,8 +374,8 @@ export default {
                         {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
                     ],
                     "https://i.imgur.com/2mV6yBg.jpg",
-                    "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
+                    "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Costales de Yute"
                 ],
 
@@ -422,8 +429,8 @@ export default {
             if(this.window_width <= 1199){
                 if(this.window_width <= 770){ 
                     if(this.window_width < 580){
-                        this.show_each = 1
-                        return 1
+                        this.show_each = 2
+                        return 2
                     }else{
                         this.show_each = 4
                         return 4
