@@ -2,10 +2,11 @@
     <div class="productos">
         <div class="fondo">
         <!--<div class="mi-titulo-1 primero-t">Nuestros</div>-->
-        <div class="mi-titulo-1 segundo-t knockout">
+        <br>
+        <div class="titulo segundo-t knockout">
             <span class="ultimo-t">Productos</span>
         </div>
-
+        <br>
             <b-carousel
                 id="CarouselProductos"
                 v-model="slide"
@@ -26,12 +27,12 @@
                                     tag="article"
                                     :style="['width: 12rem;']"
                                     class="mb-2">
-                                    <b-card-img :src="producto[2]" alt="imagen" height="150" />
+                                    <b-card-img :src="producto[2]" alt="imagen" height="110" />
                                     <b-card-text>
-                                        <div class="info-tarjeta">{{producto[3]}}</div>
+                                        <!--<div class="info-tarjeta">{{producto[3]}}</div>-->
                                     </b-card-text>
-                                        <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Acerca</b-button> 
-                                        <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Mas Detalles</b-button>
+                                        <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
+                                        <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
                                         <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
                                             <b-card>
                                             <p class="card-text">{{producto[4]}}  </p>
@@ -68,12 +69,15 @@
     .correction-al{
         display: flex;
         justify-content: center;
+        
     }
     .carousel-item {
-        min-height: 32em !important;
+        min-height: 36em !important;
+        
     }
+    
     .fondo{
-        background-color: rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245,0.8);
         min-height: 60vh;
     }
     p.card-text{
@@ -107,9 +111,9 @@
         font-size: small;
     }
     .mi-titulo-1 {
-      background: url('../assets/img/carretes_rafia.jpg');
+      //background: url('../assets/img/carretes_rafia.jpg');
       background-size: cover;
-      -webkit-text-fill-color: transparent;
+      //-webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       display:inline-block;
       overflow:hidden;
@@ -117,6 +121,14 @@
       white-space:nowrap;
       font-size: 4.5rem;
       font-family: arial, helvetica !important;
+    }
+    .titulo{
+        display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size: xx-large;
+    color: #a13a4b;
+    font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
     .primero-t {    
       animation: showup 5s forwards;
@@ -182,7 +194,7 @@ export default {
         return {
             slide: 0,
             sliding: null,
-            show_each: 4,
+            show_each: 8,
             window_width: window.innerWidth,
             productos:[
                 [
@@ -413,16 +425,16 @@ export default {
                         this.show_each = 1
                         return 1
                     }else{
-                        this.show_each = 2
-                        return 2
+                        this.show_each = 4
+                        return 4
                     }
                 }else{
-                    this.show_each = 3
-                    return 3
+                    this.show_each = 6
+                    return 6
                     }
             }else{
-                this.show_each = 4
-                return 4
+                this.show_each = 8
+                return 8
                 }
         }
     },

@@ -22,7 +22,7 @@
               <b-card  title="Consulta de precios, cotizaciones, asesoría e información de nuestros productos.">
                 <contact-form/>
               </b-card>
-          </b-col>
+          </b-col> 
         </b-row>
         <br>
         <b-card>
