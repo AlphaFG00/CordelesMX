@@ -33,7 +33,7 @@
                                     <b-card-text>
                                         <!--<div class="info-tarjeta">{{producto[3]}}</div>-->
                                     </b-card-text>
-                                        <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
+                                        <b-button variant="info"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
                                         <b-button  variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
                                         <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
                                             <b-card>
@@ -47,7 +47,7 @@
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                        <b-table head-row-variant="warning" small responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                        <b-table head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -79,9 +79,10 @@
     
     .fondo{
         background-color: rgb(245, 245, 245,0.85);
-        min-height: 60vh;
+        min-height: 0vh;
         margin-left: 6em;
         margin-right: 6em;
+        margin-top: 2ex;
     }
     p.card-text{
         color: #343a40;
