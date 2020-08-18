@@ -21,7 +21,6 @@
           </b-col> 
         </b-row>
         <br>
-        
         <br>
     </b-container>
     </div>

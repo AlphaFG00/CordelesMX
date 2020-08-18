@@ -22,10 +22,10 @@
                             <b-col cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
                                 <b-card
                                     :header="producto[5]"
-                                    header-border-variant="warning"
-                                    border-variant="warning"
-                                    header-bg-variant="warning"
-                                    header-text-variant="dark"
+                                    header-border-variant="primary"
+                                    border-variant="primary"
+                                    header-bg-variant="primary"
+                                    header-text-variant="light"
                                     tag="article"
                                     :style="['width: 12rem;']"
                                     class="mb-2">
@@ -34,7 +34,7 @@
                                         <!--<div class="info-tarjeta">{{producto[3]}}</div>-->
                                     </b-card-text>
                                         <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
-                                        <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
+                                        <b-button  variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
                                         <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
                                             <b-card>
                                             <p class="card-text">{{producto[4]}}  </p>
