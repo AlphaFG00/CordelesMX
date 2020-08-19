@@ -1,8 +1,6 @@
 <template>
-    <div >
-      <b-container>
-        <br>
-        <br>
+    <div class="contacto">
+      <b-container class="focus-contacto mt-3 mb-3 p-5">
         <h1 class="cssanimation titulo">Contacto</h1>  
         <br>
         <br>
@@ -21,7 +19,6 @@
           </b-col> 
         </b-row>
         <br>
-        
         <br>
     </b-container>
     </div>
@@ -70,10 +67,22 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.algo {
-  height: 320px;
-  width: 720px;
-  
+.contacto{
+    top: 0;
+    padding-top: 20px;
+    scroll-padding-bottom: 20px;
+    padding-bottom: 10px;
+    background-color: white;
+    background-image: url('../assets/img/distribucion_fix.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.focus-contacto{
+    background-color:transparent;
+    text-align: center;
+    background-color: rgba(255, 255, 255,.75);
+    font-weight: 400;
 }
 .titulo {
     display:inline-block;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-card>
+        <b-card align="left">
             <b-form @submit="onSubmit" @reset="onReset" >
 
                 <b-form-group id="input-group-1" label="Nombre:" label-for="input-1">
