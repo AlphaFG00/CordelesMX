@@ -2,9 +2,13 @@
     <div class="productos">
         <div class="fondo">
         <!--<div class="mi-titulo-1 primero-t">Nuestros</div>-->
-        <div class="mi-titulo-1 segundo-t knockout">
-            <span class="ultimo-t">Productos</span>
+        <br>
+        <br>
+        <div class="titulo segundo-t knockout">
+            <span class="ultimo-t">Lo mejor en Jarcieria</span>
         </div>
+        <br>
+        <br>
             <b-carousel
                 id="CarouselProductos"
                 v-model="slide"
@@ -25,13 +29,13 @@
                                     tag="article"
                                     :style="['width: 12rem;']"
                                     class="mb-2">
-                                    <b-card-img :src="producto[2]" alt="imagen" height="150" />
+                                    <b-card-img :src="producto[2]" alt="imagen" height="110" />
                                     <b-card-text>
-                                        <div class="info-tarjeta">{{producto[3]}}</div>
+                                        <!--<div class="info-tarjeta">{{producto[3]}}</div>-->
                                     </b-card-text>
-                                        <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Acerca</b-button> 
-                                        <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Mas Detalles</b-button>
-                                        <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2  about-space">
+                                        <b-button variant="dark"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
+                                        <b-button  variant="warning"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
+                                        <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
                                             <b-card>
                                             <p class="card-text">{{producto[4]}}</p>
                                             </b-card>
@@ -42,7 +46,7 @@
                                         
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
-                                            <p class="my-4">{{producto[4]}}</p>
+                                            <p class="my-4">{{producto[3]}}</p>
                                         <b-table head-row-variant="warning" small responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
@@ -68,12 +72,18 @@
         display: flex;
         justify-content: center;
     }
+
     .carousel-item {
-        min-height: 32em !important;
+        align-items: stretch !important;
+        min-height: 36em !important;
+        vertical-align: middle !important;
     }
+
     .fondo{
-        background-color: rgb(245, 245, 245);
+        background-color: rgb(245, 245, 245,0.85);
         min-height: 60vh;
+        margin-left: 6em;
+        margin-right: 6em;
     }
     p.card-text{
         color: #343a40;
@@ -128,17 +138,13 @@
         margin-top: 10px;
         font-size: small;
     }
-    .mi-titulo-1 {
-      background: url('../assets/img/carretes_rafia.jpg');
-      background-size: cover;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      display:inline-block;
-      overflow:hidden;
-      font-weight: bold;
-      white-space:nowrap;
-      font-size: 4.5rem;
-      font-family: arial, helvetica !important;
+    .titulo{
+        display:inline-block;
+        overflow:hidden;
+        white-space:nowrap;
+        font-size: xx-large;
+        color: #a13a4b;
+        font-family: 'Franklin Gothic Medium', sans-serif !important;
     }
     .primero-t {    
       animation: showup 5s forwards;
@@ -151,9 +157,13 @@
       margin-left:-355px;
       animation: slidein 5s forwards;
     }
-    @media screen and (max-width: 500px){
-      .mi-titulo-1{
-        font-size:3rem;
+    @media screen and (max-width: 565px){
+      .titulo{
+        font-size:x-large;
+      }
+      .fondo{
+          margin-left: 1em;
+          margin-right: 1em;
       }
       .segundo-t {
         animation: revelar-mb 5s forwards;
@@ -204,7 +214,7 @@ export default {
         return {
             slide: 0,
             sliding: null,
-            show_each: 4,
+            show_each: 8,
             window_width: window.innerWidth,
             productos:[
                 [
@@ -220,9 +230,9 @@ export default {
                         { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
                     ],
                     "https://i.imgur.com/XXcQEdl.jpg",
-                    "La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
                     "El material de Rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
-                    material. Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
+                    material. La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
+                    "Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
                     "Rafia"
                 ],
                 [
@@ -366,8 +376,8 @@ export default {
                         {tipo:'DOBLE PIE',peso_gr:'1500 grs',pzas_por_paca:'50'},
                     ],
                     "https://i.imgur.com/17fr8T1.jpg",
-                    "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
+                    "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Costal Henequén"
                 ],
                 [
@@ -377,8 +387,8 @@ export default {
                         {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
                     ],
                     "https://i.imgur.com/2mV6yBg.jpg",
-                    "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
+                    "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Costales de Yute"
                 ],
 
@@ -432,19 +442,19 @@ export default {
             if(this.window_width <= 1199){
                 if(this.window_width <= 770){ 
                     if(this.window_width < 580){
-                        this.show_each = 1
-                        return 1
-                    }else{
                         this.show_each = 2
                         return 2
+                    }else{
+                        this.show_each = 4
+                        return 4
                     }
                 }else{
-                    this.show_each = 3
-                    return 3
+                    this.show_each = 6
+                    return 6
                     }
             }else{
-                this.show_each = 4
-                return 4
+                this.show_each = 8
+                return 8
                 }
         }
     },

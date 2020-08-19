@@ -123,7 +123,7 @@
       transition: all .25s ease-in-out;
 
     &.clear-side {
-      background-color: #a13a4b;
+      background-color: #efdde4;
       background-image:
           /* Top jagged */
           linear-gradient(135deg, rgb(245, 245, 245) 50%, rgba(245,245,245,0) 50%),
