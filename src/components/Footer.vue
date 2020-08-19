@@ -8,7 +8,7 @@
       </b-col>
       <b-col sm="12" lg="12" class="credits mt-2" order="3">
         <p>© 2020 CordelesMX. Todos los derechos reservados</p>
-        <p>Designed by "Company of the web design"</p>
+        <p>Desarrollado por "" </p>
       </b-col>
       <b-col sm="12" lg="4" class="social-media" order="2">
         <div class="animation-space">
@@ -39,6 +39,7 @@
   padding-top: .2rem;
   display:block;
   font-family:'Times New Roman', Times, serif;
+  color: #a4181a;
   p :first-child{
     font-size: .8em;
     margin-top: .8em;
@@ -69,7 +70,10 @@
       vertical-align: middle;
     }
     i{font-size: 2.5em;}
-    span{font-size: 1.2em;}
+    span{
+      font-size: 1.2em;
+      color:black;
+    }
   }
     .color-phone { color: rgb(32, 39, 131) !important; }
     .color-tw { color: rgb(0, 174, 255) !important; }
@@ -78,7 +82,7 @@
 }
 .link-footer{
   display: block;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   padding: 0 auto;
 }
@@ -176,7 +180,7 @@
             transition: all .125s ease-in-out;
           
             &:hover {
-              background-color: rgba(0,0,0,.75);
+              background-color: #a4181a9d;
             }
       }
     }
