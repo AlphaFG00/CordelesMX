@@ -27,7 +27,7 @@
           </a>
         </div>
         <span class="phone-div">
-          <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">tel: 55-50-86-50-08</span>
+          <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">Tel: 55-50-86-50-08</span>
         </span>
       </b-col>
     </b-row>
@@ -72,7 +72,7 @@
     i{font-size: 2.5em;}
     span{
       font-size: 1.2em;
-      color:black;
+      color:rgb(32, 39, 131);
     }
   }
     .color-phone { color: rgb(32, 39, 131) !important; }

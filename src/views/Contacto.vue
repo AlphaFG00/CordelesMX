@@ -7,14 +7,15 @@
         <b-row fluid>
           <b-col cols="12" md="6" sm="12" align-self="center">
             <b-card>
-                <span class="titulo-card">Envianos un mensaje para consulta de precios, cotizaciones, asesoría e información de nuestros productos.</span>
+                <span class="titulo-card">Déjanos conocerte</span>
                 <contact-form/>
             </b-card>
           </b-col>
           <b-col cols="12" md="6" sm="12" align-self="center">
             <b-card >
-              <span class="titulo-card">Ubicación: Jesús Maria 153 local B, colonia centro  cp 06000 delegacion Cuauhtemoc </span>
+              <span class="titulo-card">Visitanos</span>
               <myMap :coordinates="[19.425618, -99.128960]" :height="map_height"/>
+              <span>Ubicación: Jesús Maria 153 local B, colonia centro  cp 06000 delegacion Cuauhtemoc</span>
             </b-card>
           </b-col> 
         </b-row>
