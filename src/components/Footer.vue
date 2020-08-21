@@ -2,9 +2,9 @@
   <b-container fluid class="pt-2 pb-2 principal">
     <b-row align-v="center" class="foot-body clear-side">
       <b-col sm="12" lg="8" class="mt-2 link-pages" order="1">
-        <router-link class="link-footer" :to="{name: 'Nosotros'}">Nosotros</router-link>
         <router-link class="link-footer" :to="{name: 'home'}">Inicio</router-link>
         <router-link class="link-footer" :to="{name: 'Productos'}">Productos</router-link>
+        <router-link class="link-footer" :to="{name: 'Nosotros'}">Nosotros</router-link>
       </b-col>
       <b-col sm="12" lg="12" class="credits mt-2" order="3">
         <p>© 2020 CordelesMX. Todos los derechos reservados</p>
@@ -12,8 +12,8 @@
       </b-col>
       <b-col sm="12" lg="4" class="social-media" order="2">
         <div class="animation-space">
-          <a href="https://twitter.com/" target="_blank">
-            <i class="fab fa-twitter-square color-tw"></i>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram color-in"></i>
           </a>
         </div>
         <div class="animation-space">
@@ -40,9 +40,12 @@
   display:block;
   font-family:'Times New Roman', Times, serif;
   color: #a4181a;
+  margin:0 !important;
+  p{
+        margin: 0 !important;
+  }
   p :first-child{
     font-size: .8em;
-    margin-top: .8em;
   }
 }
 .social-media{
@@ -50,10 +53,10 @@
  .animation-space, .phone-div{
     display: inline-block;
     vertical-align: middle;
-    min-height: 4.5em;
  }
  .animation-space{
     width: 20%;
+    min-height: 4.5em;
     >a{
       font-size: 2.5em;
       transition-duration: .5s;
@@ -76,15 +79,30 @@
     }
   }
     .color-phone { color: rgb(32, 39, 131) !important; }
-    .color-tw { color: rgb(0, 174, 255) !important; }
+    .color-in { color: rgb(255, 0, 136) !important; }
     .color-fb { color: rgb(0, 60, 255) !important; }
     .color-wa { color: rgb(15, 153, 3) !important; }
 }
-.link-footer{
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  padding: 0 auto;
+
+@media screen and (min-width: 992px){
+  .link-footer{
+    display: block;
+    margin: 0 15px !important;
+  }
+  .phone-div{
+    max-height: 3em !important;
+  }
+}
+@media screen and (min-width:0px) and (max-width: 991px){
+  .link-footer{
+    display: block;
+    width: 70%;
+  }
+  .credits{
+    p{
+      margin-top: 1em !important;
+    }
+  }
 }
 .principal{
   position:relative;
