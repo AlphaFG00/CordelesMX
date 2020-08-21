@@ -37,7 +37,7 @@
                                         <b-button  variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
                                         <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
                                             <b-card>
-                                            <p class="card-text">{{producto[4]}}  </p>
+                                            <p class="card-text">{{producto[4]}}</p>
                                             </b-card>
                                         </b-collapse>
                                         <b-modal 
@@ -71,12 +71,14 @@
     .correction-al{
         display: flex;
         justify-content: center;
-        
     }
+
     .carousel-item {
-        min-height: 36em !important;   
+        align-items: stretch !important;
+        min-height: 36em !important;
+        vertical-align: middle !important;
     }
-    
+
     .fondo{
         background-color: rgb(245, 245, 245,0.85);
         min-height: 0vh;
@@ -88,6 +90,29 @@
         color: #343a40;
         font-size: small;
     }
+
+    .about-space,.card-text{
+        .card-body{
+            max-height: 240px;
+            overflow: auto;
+        }
+        ::-webkit-scrollbar-track
+        {
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+        ::-webkit-scrollbar
+        {
+            width: 7px;
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar-thumb
+        {
+            background-color:#e7bf47;
+        }
+    }
+
     .carousel-control-next > span,
     .carousel-control-prev > span{
         filter: invert(100%) !important;
@@ -114,18 +139,6 @@
         margin-top: 10px;
         font-size: small;
     }
-    /*.mi-titulo-1 {
-      //background: url('../assets/img/carretes_rafia.jpg');
-      background-size: cover;
-      //-webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      display:inline-block;
-      overflow:hidden;
-      font-weight: bold;
-      white-space:nowrap;
-      font-size: 4.5rem;
-      font-family: arial, helvetica !important;
-    }*/
     .titulo{
         display:inline-block;
         overflow:hidden;
