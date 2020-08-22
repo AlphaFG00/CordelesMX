@@ -3,22 +3,42 @@
     <b-container>
       <b-navbar-brand :to="{name: 'home'}" class="brillo">
         <!-- Logo de empresa-->
-        <span></span>
+        <img src="@/assets/logo.png" alt="Logo" class="logo-empresa">
       </b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-        
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item :to="{name: 'home'}">     <div class="link-efect">Inicio</div></b-nav-item>
           <b-nav-item :to="{name: 'Nosotros'}"> <div class="link-efect">Nosotros</div></b-nav-item>
           <b-nav-item :to="{name: 'Productos'}" ><div class="link-efect"> Productos</div></b-nav-item>
-            <b-nav-item :to="{name: 'Contacto'}" ><div class="link-efect"> Contacto</div></b-nav-item>
+          <b-nav-item :to="{name: 'Contacto'}" ><div class="link-efect"> Contacto</div></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
+      <b-navbar-brand :to="{name: 'home'}" class="brillo">
+        <!-- Logo de empresa-->
+        <img src="@/assets/logo.png" alt="Logo" class="logo-empresa">
+      </b-navbar-brand>
     </b-container>
   </b-navbar>
 </template>
 <style scoped lang="scss">
+
+.logo-empresa{
+  width: 120px;
+  max-height: 100%;
+}
+
+@media screen and (min-width:992px){
+  #nav-bg .container .navbar-brand:nth-child(1){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px){
+  #nav-bg .container .navbar-brand:nth-child(4){
+        display: none;
+  }
+}
 
 %selectState{
   border-radius: 0;

@@ -13,7 +13,7 @@
       <b-col sm="12" lg="4" class="social-media" order="2">
         <div class="animation-space">
           <a href="https://www.instagram.com" target="_blank">
-            <i class="fab fa-instagram color-in"></i>
+            <i class="fab fa-instagram-square color-in"></i>
           </a>
         </div>
         <div class="animation-space">
