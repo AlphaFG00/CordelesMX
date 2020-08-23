@@ -35,9 +35,9 @@
                                     </b-card-text>
                                         <b-button variant="info"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
                                         <b-button  variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
-                                        <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2">
+                                        <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2 text-structure">
                                             <b-card>
-                                            <p class="card-text">{{producto[4]}}</p>
+                                            <p class="my-card-text">{{producto[4]}}</p>
                                             </b-card>
                                         </b-collapse>
                                         <b-modal 
@@ -46,7 +46,7 @@
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                        <b-table class="pruebaclase" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                        <b-table class="table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -67,13 +67,33 @@
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
-    .pruebaclase{
+    .table-correction{
         max-height: 60vh !important;
         overflow: auto !important;
+
+        &::-webkit-scrollbar-track
+        {
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar
+        {
+            width: 10px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            background-color:#e7bf47;
+        }
     }
     .correction-al{
         display: flex;
         justify-content: center;
+        >div{
+            max-height: 263px;
+            bottom: 0;
+        }
     }
 
     .carousel-item {
@@ -89,28 +109,28 @@
         margin-right: 6em;
         margin-top: 2ex;
     }
-    p.card-text{
+    p.my-card-text{
         color: #343a40;
-        font-size: small;
+        font-size: medium;
+        margin: 0;
     }
-
-    .about-space,.card-text{
+    .text-structure{
+        max-height: 180px !important;
+        overflow: auto;
         .card-body{
-            max-height: 240px;
-            overflow: auto;
+            padding: 10px;
         }
-        ::-webkit-scrollbar-track
+        &::-webkit-scrollbar-track
         {
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-            background-color: #F5F5F5;
+        box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
         }
-        ::-webkit-scrollbar
+        &::-webkit-scrollbar
         {
             width: 7px;
             background-color: #F5F5F5;
         }
-
-        ::-webkit-scrollbar-thumb
+        &::-webkit-scrollbar-thumb
         {
             background-color:#e7bf47;
         }
