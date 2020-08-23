@@ -18,8 +18,8 @@
                 @sliding-end="sliding = false">
                 <b-carousel-slide v-for="i in myCeil(productos.length / each)" :key="i">
                     <template>
-                        <b-row align-v="end" fluid class="correction-al">
-                            <b-col cols="12" xs="12" sm="6" md="4" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
+                        <b-row align-v="center" fluid class="correction-al">
+                            <b-col cols="12" xs="12" sm="8" md="6" lg="4" xl="3" v-for="(producto, index) of productos.slice((i-1)*(each),(i)*each)" :key="index">
                                 <b-card
                                     :header="producto[5]"
                                     header-border-variant="primary"
@@ -86,13 +86,26 @@
         }
     }
     .correction-al{
+        align-self: center;
+        position: relative;
         display: flex;
+        max-width: 100%;
+        margin: 0;
         justify-content: center;
         >div{
+            align-items: center;
             max-height: 263px;
-            bottom: 0;
+            min-height: 263px;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            >article{
+                position: absolute;
+                bottom: 0;
+            }
         }
     }
+
     .carousel-item {
         align-items: stretch !important;
         min-height: 36em !important;
@@ -190,9 +203,33 @@
         animation: revelar-mb 5s forwards;
         }
     }
-    @media screen and (min-width: 0px)and (max-width: 576px){
-        .correction-al > div > article{
-            margin: 0 auto;
+    @media screen and (min-width: 767px)and (max-width: 991px){
+        .correction-al >div{
+            >article{
+                left: 5%;
+            }
+        }
+    }
+    @media screen and (min-width: 577px)and (max-width: 766px){
+        .correction-al >div{
+            >article{
+                left: 0%;
+            }
+        }
+    }
+    @media screen and (min-width: 426) and (max-width:565px){
+        .correction-al >div{
+            >article{
+                left: 25%;
+            }
+        }
+
+    }
+    @media screen and (min-width:0) and (max-width: 425px){
+        .correction-al >div{
+            >article{
+                left:15%;
+            }
         }
     }
     @keyframes showup {
@@ -470,8 +507,8 @@ export default {
         each(){
         this.window_width = window.innerWidth
             if(this.window_width <= 1199){
-                if(this.window_width <= 770){ 
-                    if(this.window_width < 580){
+                if(this.window_width <= 991){ 
+                    if(this.window_width <= 767){
                         this.show_each = 2
                         return 2
                     }else{
