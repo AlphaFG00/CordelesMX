@@ -77,6 +77,7 @@
         align-items: stretch !important;
         min-height: 36em !important;
         vertical-align: middle !important;
+        
     }
 
     .fondo{
@@ -219,16 +220,16 @@ export default {
             window_width: window.innerWidth,
             productos:[
                 [
-                    ['barcinas'],
+                    ['capacidad','medidas'],
                     [
-                        {barcinas:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
-                        {barcinas:'Manguera para agua y gas.'},
-                        {barcinas:'Petate'},
-                        {barcinas:'Pachon'},
+                        {capacidad:'800 kg',medidas:'1.00 x 1.00 x 1.00'},
+                        {capacidad:'1000 kg',medidas:'0.90 x 0.90 x 1.20'},
+                        {capacidad:'1200 kg',medidas:'0.90 x 0.90 x 1.60'},
+                        {capacidad:'1500 kg',medidas:'0.90 x 0.90 x 1.80'},
                     ],
-                    "https://i.imgur.com/gLqJdiE.jpg",
-                    "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
-                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
+                    require('@/assets/productos/Barcinas.jpg'),
+                    "Productos que habitualmente se transportan en súper sacos son: cemento, productos mineros, granos, semillas, harina, yeso, plásticos, entre otros.",
+                    "El Súper saco es uno de los medios de envasado, almacenaje y transporte más eficaces y económicos. ",
                     "Barcinas"
                 ],
                 [
@@ -244,7 +245,7 @@ export default {
                         {'diametro__(mm_x_pulgada)':'19',metros_por_kilo:'3/4',peso_por_royo:'58/60'},
                         {'diametro__(mm_x_pulgada)':'25',metros_por_kilo:'1',peso_por_royo:'68/70'},
                     ],
-                    "https://i.imgur.com/3zQbXwY.jpg",
+                    require('@/assets/productos/Cable.jpg'),
                     "Tenemos productos de Sogas y cables de polipropileno, para ver mas de click en \"Mas detalles\".",
                     "Ofrecemos Sogas y cables de polipropileno.",
                     "Cables"
@@ -262,7 +263,7 @@ export default {
                         { cable_de_nilon:'PIOLA BLANCA'},
                         
                     ],
-                    "https://i.imgur.com/9j9nsDo.jpg",
+                    require('@/assets/productos/cordel.jpg'),
                     "Cordeles, elaborados de fibras naturales como algodón, Yute, Cáñamo, Sisal, Henequén y fibra de Coco.",
                     "Todo tipo de Cordeles:\n\
                     Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
@@ -283,7 +284,7 @@ export default {
                         {costal:'PERGAMINO','medida(CM)':'70x110',peso_gr:'1000 grs',pzas_por_paca:'100'},
                         {costal:'CAFETERO','medida(CM)':'70x100',peso_gr:'950 grs',pzas_por_paca:'50'},
                     ],
-                    "https://i.imgur.com/17fr8T1.jpg",
+                    require('@/assets/productos/Costal_henequen02.jpg'),
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
                     "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Costal Henequén"
@@ -294,7 +295,7 @@ export default {
                         {nombre:'Cacahuatero',medidas:'55 cm X 1.00 mts.',capacidad:'50 Kgs'},
                         {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
                     ],
-                    "https://i.imgur.com/2mV6yBg.jpg",
+                    require('@/assets/productos/Costal_yute01.jpg'),
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
                     "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Costales de Yute"
@@ -308,7 +309,7 @@ export default {
                         {tipo:'Sucio',info:'De 50 kg. La medida varía y la capacidad',menudeo:'$2.70',medio_mayoreo:'$2.40',mayoreo:'$2.10'},
                         {tipo:'Una vaciada',info:'De 25 kg con compresión',menudeo:'$3.00',medio_mayoreo:'$2.70',mayoreo:'$2.50'},
                     ],
-                    "https://i.imgur.com/a2JwdSk.jpg",
+                    require('@/assets/productos/Costal_rafia.jpg'),
                     "Son sacos rígidos, ligeros y resistentes, así como reutilizables debido a la gran durabilidad y resistencia del tejido, disminuyendo el consumo.",
                     "Son usados mayoritariamente para envasar granos, alimentos balanceados, arena, escombros, legumbres, fertilizantes, productos químicos, etc ",
                     "Costales de Rafia"
@@ -330,7 +331,7 @@ export default {
                         { diametro:'25 mm - 1”',peso_en_kg:"0.620",peso:"500",resistencia:"4715"},
                         { diametro:'38 mm - 1  1/2”',peso_en_kg:"0.900",peso:"500",resistencia:"6417"},
                     ],
-                    "https://i.imgur.com/JRxyq6R.jpg",
+                    require('@/assets/productos/Henequen2.jpg'),
                     
                     "Se extrae del agave y fue conocido como el oro verde por la cultura maya, se utiliza\
                     para hacer cordones, telas, alfombras, uso marítimo y especialmente para la decoración hoy en día,\
@@ -354,7 +355,7 @@ export default {
                         {jaceria:'Recogedores'},
                         {jaceria:'Quimicos'},
                     ],
-                    "https://i.imgur.com/cVSkONj.jpg",
+                    require('@/assets/productos/jarcieria02.jpg'),
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
                     "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
                     "Jarcieria"
@@ -371,24 +372,24 @@ export default {
                         { calibre: '7', color: 'Blanca', presentación: '3, 4 kg.' },
                         { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
                     ],
-                    "https://i.imgur.com/XXcQEdl.jpg",
+                    require('@/assets/productos/Rafia 2.jpg'),
                     "El material de Rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
                     material. La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
                     "Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
                     "Rafia"
                 ],
                 [
-                    ['super_sacos'],
+                    ['varios'],
                     [
-                        {super_sacos:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
-                        {super_sacos:'Manguera para agua y gas.'},
-                        {super_sacos:'Petate'},
-                        {super_sacos:'Pachon'},
+                        {varios:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
+                        {varios:'Manguera para agua y gas.'},
+                        {varios:'Petate'},
+                        {varios:'Pachon'},
                     ],
-                    "https://i.imgur.com/VyATffd.jpg",
-                    "El Súper saco es uno de los medios de envasado, almacenaje y transporte más eficaces y económicos.",
+                    require('@/assets/productos/varios02.jpg'),
+                    "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
-                    "Super sacos"
+                    "Varios"
                 ],
                 [
                     ['tela_de_yute'],
@@ -396,7 +397,7 @@ export default {
                         { tela_de_yute:'1.30 Metros de ancho'},
                         { tela_de_yute:'2.80 Metros de ancho'},
                     ],
-                    "https://i.imgur.com/IkKvasv.jpg",
+                    require('@/assets/productos/yute.jpg'),
                     "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
                     "Se usa para la industria de la decoración, entre otros. Existen adicionalmente costales de yute. Hilo de Yute de 1 o 2 Cabos.",
                     "Yute"
