@@ -227,7 +227,7 @@ export default {
                         {capacidad:'1200 kg',medidas:'0.90 x 0.90 x 1.60'},
                         {capacidad:'1500 kg',medidas:'0.90 x 0.90 x 1.80'},
                     ],
-                    require('@/assets/productos/Barcinas.jpg'),
+                    require('@/assets/productos/barcinas.gif'),
                     "Productos que habitualmente se transportan en súper sacos son: cemento, productos mineros, granos, semillas, harina, yeso, plásticos, entre otros.",
                     "El Súper saco es uno de los medios de envasado, almacenaje y transporte más eficaces y económicos. ",
                     "Barcinas"
