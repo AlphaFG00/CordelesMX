@@ -30,9 +30,9 @@
                                     :style="['width: 12rem;']"
                                     class="mb-2">
                                     <b-card-img :src="producto[2]" alt="imagen" height="110" />
-                                    <b-card-text>
+                                    <!--<b-card-text>-->
                                         <!--<div class="info-tarjeta">{{producto[3]}}</div>-->
-                                    </b-card-text>
+                                    <!--</b-card-text>-->
                                         <b-button variant="info"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
                                         <b-button  variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
                                         <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2 text-structure">
@@ -70,7 +70,6 @@
     .table-correction{
         max-height: 60vh !important;
         overflow: auto !important;
-
         &::-webkit-scrollbar-track
         {
             box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
@@ -81,7 +80,6 @@
             width: 10px;
             background-color: #F5F5F5;
         }
-
         &::-webkit-scrollbar-thumb
         {
             background-color:#e7bf47;
@@ -95,13 +93,11 @@
             bottom: 0;
         }
     }
-
     .carousel-item {
         align-items: stretch !important;
         min-height: 36em !important;
         vertical-align: middle !important;
     }
-
     .fondo{
         background-color: rgb(245, 245, 245,0.85);
         min-height: 0vh;
