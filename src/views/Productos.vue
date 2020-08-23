@@ -42,12 +42,11 @@
                                         </b-collapse>
                                         <b-modal 
                                         header-border-variant="primary" 
-                                        header-text-variant="warning" 
-                                        
+                                        header-text-variant="warning"
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                        <b-table head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                        <b-table class="pruebaclase" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -68,6 +67,10 @@
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
+    .pruebaclase{
+        max-height: 60vh !important;
+        overflow: auto !important;
+    }
     .correction-al{
         display: flex;
         justify-content: center;
