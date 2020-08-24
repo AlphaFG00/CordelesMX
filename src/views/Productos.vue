@@ -357,10 +357,16 @@ export default {
                 [
                     ['costal','medida(CM)','peso','capacidad'],
                     [
-                        {costal:'NUEVO','medida(CM)':'70x110',peso_gr:'930 g',capacidad:'70 kg'},
-                        {costal:'USADO','medida(CM)':'65x100',peso_gr:'750 g',capacidad:'60 kg'},
-                        {costal:'DELGADO','medida(CM)':'60x110',peso_gr:'500 g',capacidad:'60 kg'},
-                        {costal:'CACAHUATERO','medida(CM)':'55x100',peso_gr:'750 g',capacidad:'50 kg'},
+                        {costal:'TRIGUERO','medida(CM)':'70x110',peso_gr:'900 g',capacidad:'100 kg'},
+                        {costal:'BURRERO','medida(CM)':'60x100',peso_gr:'760 g',capacidad:'100 kg'},
+                        {costal:'CACAO','medida(CM)':'70x110',peso_gr:'800 g',capacidad:'100 kg'},
+                        {costal:'ZANAHORIA','medida(CM)':'67x100',peso_gr:'640 g',capacidad:'100 kg'},
+                        {costal:'MAÍZ-FRIJOL','medida(CM)':'62x102',peso_gr:'750 g',capacidad:'100 kg'},
+                        {costal:'JICAMA','medida(CM)':'65x100',peso_gr:'500 g',capacidad:'100 kg'},
+                        {costal:'DOBLE PIE','medida(CM)':'70x100',peso_gr:'1250 g',capacidad:'50 kg'},
+                        {costal:'CEBOLLA','medida(CM)':'60x80',peso_gr:'300 g',capacidad:'100 kg'},
+                        {costal:'PERGAMINO','medida(CM)':'70x110',peso_gr:'1000 g',capacidad:'100 kg'},
+                        {costal:'CAFETERO','medida(CM)':'70x100',peso_gr:'950 g',capacidad:'50 kg'},
                     ],
                     require('@/assets/Gifs/costal_henequen.gif'),
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
@@ -368,10 +374,12 @@ export default {
                     "Costal Henequén"
                 ],
                 [
-                    ['nombre','medidas','capacidad'],
+                    ['costal','medida(CM)','peso','capacidad'],
                     [
-                        {nombre:'Cacahuatero',medidas:'55 cm X 1.00 mts.',capacidad:'50 Kgs'},
-                        {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
+                        {costal:'NUEVO','medida(CM)':'70x110',peso_gr:'930 g',capacidad:'70 kg'},
+                        {costal:'USADO','medida(CM)':'65x100',peso_gr:'750 g',capacidad:'60 kg'},
+                        {costal:'DELGADO','medida(CM)':'60x110',peso_gr:'500 g',capacidad:'60 kg'},
+                        {costal:'CACAHUATERO','medida(CM)':'55x100',peso_gr:'750 g',capacidad:'50 kg'},
                     ],
                     require('@/assets/Gifs/costal_yute.gif'),
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
@@ -393,22 +401,44 @@ export default {
                     "Costales de Rafia"
                 ],
                 [
+                    ['HENEQUEN'],
+                    [
+                        {HENEQUEN:'Hilo Yucantán'},
+                        {HENEQUEN:'Tomatero'},
+                        {HENEQUEN:'Medio Cabo'},
+                        {HENEQUEN:'1,2,3 Cabos'},
+                        {HENEQUEN:'Titan'},
+                        {HENEQUEN:'Bambino'},
+                        {HENEQUEN:'Hilo de color'},
+                        {HENEQUEN:'Tela de henequen de 1.40 *100 mtrs'},
+                    ],
+                    require('@/assets/Gifs/henequen.gif'),
+                    "La fibra es primero extraída de la planta y posteriormente procesada en diversas formas racterísticas tales que favorecen su hilado y su tratamiento textil.",
+                    "Son utilizados para el amarre del enfardelado y del embalaje de la paja, del heno, entre otros.",
+                    "Henequén"
+                ],
+                [
                     ['jaceria'],
                     [
-                        {jaceria:'Escobas'},
-                        {jaceria:'Fibras'},
-                        {jaceria:'Despachadores'},
+                        {jaceria:'Atomizadoes'},
                         {jaceria:'Botes para basura'},
-                        {jaceria:'Atomisadoes'},
                         {jaceria:'Cepillos'},
                         {jaceria:'Cubuetas'},
+                        {jaceria:'Despachadores'},
+                        {jaceria:'Destapa caños'},
+                        {jaceria:'Escobas'},
+                        {jaceria:'Esponjas'},
+                        {jaceria:'Fibras'},
                         {jaceria:'Franelas'},
+                        {jaceria:'Guantes'},
+                        {jaceria:'Jaladores'},
+                        {jaceria:'Jerga'},
                         {jaceria:'Mechudos'},
                         {jaceria:'Mops'},
                         {jaceria:'Recogedores'},
                         {jaceria:'Quimicos'},
                     ],
-                    require('@/assets/productos/jarcieria02.jpg'),
+                    require('@/assets/Gifs/jarcieria.gif'),
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
                     "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
                     "Jarcieria"
@@ -432,6 +462,17 @@ export default {
                     "Rafia"
                 ],
                 [
+                    ['tela_de_yute'],
+                    [
+                        { tela_de_yute:'1.30 Metros de ancho'},
+                        { tela_de_yute:'2.80 Metros de ancho'},
+                    ],
+                    require('@/assets/Gifs/yute.gif'),
+                    "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
+                    "Se usa para la industria de la decoración, entre otros. Existen adicionalmente costales de yute. Hilo de Yute de 1 o 2 Cabos.",
+                    "Yute"
+                ],
+                [
                     ['varios'],
                     [
                         {varios:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
@@ -439,21 +480,10 @@ export default {
                         {varios:'Petate'},
                         {varios:'Pachon'},
                     ],
-                    require('@/assets/productos/varios02.jpg'),
+                    require('@/assets/Gifs/varios.gif'),
                     "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
                     "Varios"
-                ],
-                [
-                    ['tela_de_yute'],
-                    [
-                        { tela_de_yute:'1.30 Metros de ancho'},
-                        { tela_de_yute:'2.80 Metros de ancho'},
-                    ],
-                    require('@/assets/productos/yute.jpg'),
-                    "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
-                    "Se usa para la industria de la decoración, entre otros. Existen adicionalmente costales de yute. Hilo de Yute de 1 o 2 Cabos.",
-                    "Yute"
                 ],
 
             ]
