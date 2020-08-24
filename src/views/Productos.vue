@@ -46,7 +46,11 @@
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                        <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <template v-if="producto[5]=='Cordeles'">
+                                                <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" :fields="producto[6]"></b-table>
+                                                <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" :fields="producto[8]"></b-table>
+                                            </template>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -394,7 +398,25 @@ export default {
                     "Todo tipo de Cordeles:\n\
                     Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
                     decoración… etc.",
-                    "Cordeles"
+                    "Cordeles",
+                    ['CABLE_DE_NYLON'],
+                    [
+                        { CABLE_DE_NYLON:'NYLON DE COLOR'},
+                        { CABLE_DE_NYLON:'NYLON NEGRO'},
+                        { CABLE_DE_NYLON:'HILAZA'},
+                        { CABLE_DE_NYLON:'CORDON FLOJO'},
+                        { CABLE_DE_NYLON:'CORDON FLOJO COLOR'},
+                        { CABLE_DE_NYLON:'PASTELERO'},
+                        { CABLE_DE_NYLON:'PIOLA'},
+                        { CABLE_DE_NYLON:'PIOLA BLANCA'},
+                    ],
+                    ['TIPOS_DE_CORDELES'],
+                    [
+                        { TIPOS_DE_CORDELES:'CABLE DE NAYLON',TIPOS_DE_CORDELES:'HILO DE NAYLON'},
+                        { TIPOS_DE_CORDELES:'HILAZA',TIPOS_DE_CORDELES:'PASTELERO'},
+                        { TIPOS_DE_CORDELES:'CUERDA DE VIDA',TIPOS_DE_CORDELES:'CORDON FLOJO BL. Y COLOR'},
+                        { TIPOS_DE_CORDELES:'CAÑAMO',TIPOS_DE_CORDELES:'PIOLA'},
+                    ]
                 ],
                 [
                     ['costal','medida(CM)','peso','capacidad'],
