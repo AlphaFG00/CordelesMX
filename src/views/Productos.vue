@@ -46,7 +46,8 @@
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                            <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-table v-if="producto[5]=='Cordeles'" class="table-correction table-bordered primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-table v-else class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                             <template v-if="producto[5]=='Cordeles'">
                                                 <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" :fields="producto[6]"></b-table>
                                                 <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" :fields="producto[8]"></b-table>
@@ -71,6 +72,20 @@
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
+.primera-tabla{
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "PIOLA POLIESTER BLANCA, NEGRA Y DE COLOR";
+        background-color: #f3de9f;
+        width: 100%;
+        height: 3em;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
     .table-correction{
         text-align: center;
         max-height: 60vh !important;
@@ -216,6 +231,7 @@
             }
         }
     }
+
     @media screen and (min-width: 704px)and (max-width: 767px){
         .correction-al >div{
             >article{
