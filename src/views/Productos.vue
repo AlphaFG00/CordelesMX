@@ -46,7 +46,7 @@
                                         :id="'modal-'+i+'-'+index" 
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                        <b-table class="table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                        <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -68,8 +68,10 @@
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
     .table-correction{
+        text-align: center;
         max-height: 60vh !important;
         overflow: auto !important;
+
         &::-webkit-scrollbar-track
         {
             box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
