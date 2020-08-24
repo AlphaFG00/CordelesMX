@@ -508,6 +508,18 @@ export default {
                     "Jarcieria"
                 ],
                 [
+                    ['LONAS'],
+                    [
+                        { LONAS: 'lona 1' },
+                        { LONAS: 'lona 2' },
+                        { LONAS: 'lona 3' },
+                    ],
+                    require('@/assets/productos/varios02.jpg'),
+                    "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
+                    "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
+                    "Lonas"
+                ],
+                [
                     ['calibre','color','presentación'],
                     [
                         { calibre: 'Floricultura', color: 'Colores', presentación: '300 gr. 1,3 y 4 kg' },
@@ -539,13 +551,18 @@ export default {
                 [
                     ['varios'],
                     [
-                        {varios:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
-                        {varios:'Manguera para agua y gas.'},
-                        {varios:'Petate'},
-                        {varios:'Pachon'},
-                        {varios:'Rascadores para gatos'},
-                        {varios:'Cubrebocas'},
+                        {varios:'Ahuja de arrea (varias medidas)'},
+                        {varios:'Bidones,  botes ,cubetas industriales '},
                         {varios:'Caretas'},
+                        {varios:'Cintas canela y transparente'},
+                        {varios:'Cubrebocas'},
+                        {varios:'Hule negro '},
+                        {varios:'Manguera para agua y gas.'},
+                        {varios:'Pachon'},
+                        {varios:'Petate'},
+                        {varios:'Playo o polistretch'},
+                        {varios:'Rascadores para gatos'},
+                        {varios:'Tarimas'},
                         
                     ],
                     require('@/assets/Gifs/varios.gif'),
