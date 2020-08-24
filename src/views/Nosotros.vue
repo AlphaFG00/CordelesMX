@@ -127,9 +127,9 @@
   @keyframes reveal {
     0% {opacity:0;width:0px;}
     20% {opacity:1;width:0px;}
-    30% {width: 281px;}
-    80% {opacity:1; width: 281px;}
-    100% {opacity:1;width:281px;}
+    30% {width: 250px;}
+    80% {opacity:1; width: 250px;}
+    100% {opacity:1;width:250px;}
   }
     
   .primera-parte{

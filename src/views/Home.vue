@@ -140,9 +140,9 @@ export default {
     @keyframes reveal {
       0% {opacity: 0; width: 0px;}
       10% {opacity: 1; width: 0px;}
-      25% {width: 450px;}
+      25% {width: 420px;}
       80% {opacity: 1;}
-      100% {opacity: 1;width: 450px;}
+      100% {opacity: 1;width: 420px;}
     }
     @keyframes reveal-mb {
         0% {opacity:0;width:0px;}
