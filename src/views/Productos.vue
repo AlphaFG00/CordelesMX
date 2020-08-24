@@ -543,6 +543,10 @@ export default {
                         {varios:'Manguera para agua y gas.'},
                         {varios:'Petate'},
                         {varios:'Pachon'},
+                        {varios:'Rascadores para gatos'},
+                        {varios:'Cubrebocas'},
+                        {varios:'Caretas'},
+                        
                     ],
                     require('@/assets/Gifs/varios.gif'),
                     "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
