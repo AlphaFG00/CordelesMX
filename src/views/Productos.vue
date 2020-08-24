@@ -289,37 +289,63 @@ export default {
                     "Barcinas"
                 ],
                 [
-                    ['diametro__(mm_x_pulgada)','metros_por_kilo','peso_por_royo'],
+                    ['diametro','peso_en_kg','peso','resistencia'],
                     [
-                        {'diametro__(mm_x_pulgada)':'4',metros_por_kilo:'3/16',peso_por_royo:'16'},
-                        {'diametro__(mm_x_pulgada)':'6',metros_por_kilo:'1/4',peso_por_royo:'20'},
-                        {'diametro__(mm_x_pulgada)':'8',metros_por_kilo:'1/16',peso_por_royo:'22'},
-                        {'diametro__(mm_x_pulgada)':'10',metros_por_kilo:'3/8',peso_por_royo:'18/30'},
-                        {'diametro__(mm_x_pulgada)':'11',metros_por_kilo:'7/16',peso_por_royo:'19/30'},
-                        {'diametro__(mm_x_pulgada)':'13',metros_por_kilo:'1/2',peso_por_royo:'19/32'},
-                        {'diametro__(mm_x_pulgada)':'16',metros_por_kilo:'5/8',peso_por_royo:'58/60'},
-                        {'diametro__(mm_x_pulgada)':'19',metros_por_kilo:'3/4',peso_por_royo:'58/60'},
-                        {'diametro__(mm_x_pulgada)':'25',metros_por_kilo:'1',peso_por_royo:'68/70'},
+                        { diametro:'',peso_en_kg:"POR METRO",peso:"POR ROLLO",resistencia:"A LA TENSIÓN"},
+                        { diametro:'3 mm - 1/8”',peso_en_kg:"0.015",peso:"25",resistencia:"125"},
+                        { diametro:'4 mm - 3/16”',peso_en_kg:"0.022",peso:"25",resistencia:"157"},
+                        { diametro:'6 mm - 1/4”',peso_en_kg:"0.030",peso:"50",resistencia:"176"},
+                        { diametro:'8 mm - 35/16”',peso_en_kg:"0.043",peso:"50",resistencia:"349"},
+                        { diametro:'10 mm - 3/8”',peso_en_kg:"0.061",peso:"50",resistencia:"472"},
+                        { diametro:'11 mm - 7/16”',peso_en_kg:"0.078",peso:"50",resistencia:"610"},
+                        { diametro:'13 mm - 1/2”',peso_en_kg:"0.112",peso:"50",resistencia:"940"},
+                        { diametro:'16 mm - 5/8”',peso_en_kg:"0.198",peso:"100",resistencia:"1537"},
+                        { diametro:'19 mm - 3/4”',peso_en_kg:"0.248",peso:"100",resistencia:"1886"},
+                        { diametro:'25 mm - 1”',peso_en_kg:"0.402",peso:"100",resistencia:"3144"},
+                        { diametro:'25 mm - 1”',peso_en_kg:"0.620",peso:"500",resistencia:"4715"},
+                        { diametro:'38 mm - 1  1/2”',peso_en_kg:"0.900",peso:"500",resistencia:"6417"},
                     ],
-                    require('@/assets/productos/Cable.jpg'),
-                    "Tenemos productos de Sogas y cables de polipropileno, para ver mas de click en \"Mas detalles\".",
-                    "Ofrecemos Sogas y cables de polipropileno.",
-                    "Cables"
+                    require('@/assets/Gifs/cable_henequen.gif'),
+                    
+                    "Se extrae del agave y fue conocido como el oro verde por la cultura maya, se utiliza\
+                    para hacer cordones, telas, alfombras, uso marítimo y especialmente para la decoración hoy en día,\
+                    existe el hilo.",
+                    "Presentaciones en: Hilo Yucatán, Tomatero, Medio Cabo, 1,2,3, cabos, Titan, bambino, Hilo de color",
+                    "Cables Henequén"
                 ],
                 [
-                    ['cable_de_nilon'],
+                    ['milimetros','pulgadas','metros_por_kilo','peso_por_royo','resistencia_a_la_tension'],
                     [
-                        { cable_de_nilon:'NYLON DE COLOR'},
-                        { cable_de_nilon:'NYLON NEGRO'},
-                        { cable_de_nilon:'HILAZA'},
-                        { cable_de_nilon:'CORDON FLOJO'},
-                        { cable_de_nilon:'CORDON FLOJO COLOR'},
-                        { cable_de_nilon:'PASTELERO'},
-                        { cable_de_nilon:'PIOLA'},
-                        { cable_de_nilon:'PIOLA BLANCA'},
+                        {'milimetros':'4',pulgadas:'3/16',metros_por_kilo:'110',peso_por_royo:'16 kg',resistencia_a_la_tension:'330 kg'},
+                        {'milimetros':'6',pulgadas:'1/4',metros_por_kilo:'62',peso_por_royo:'20 kg',resistencia_a_la_tension:'440 kg'},
+                        {'milimetros':'8',pulgadas:'1/16',metros_por_kilo:'34',peso_por_royo:'22 kg',resistencia_a_la_tension:'550 kg'},
+                        {'milimetros':'10',pulgadas:'3/8',metros_por_kilo:'20',peso_por_royo:'18/30 kg',resistencia_a_la_tension:'930 kg'},
+                        {'milimetros':'11',pulgadas:'7/16',metros_por_kilo:'16',peso_por_royo:'19/30 kg',resistencia_a_la_tension:'1020 kg'},
+                        {'milimetros':'13',pulgadas:'1/2',metros_por_kilo:'14',peso_por_royo:'19/32 kg',resistencia_a_la_tension:'1815 kg'},
+                        {'milimetros':'16',pulgadas:'5/8',metros_por_kilo:'9',peso_por_royo:'58/60 kg',resistencia_a_la_tension:'2585 kg'},
+                        {'milimetros':'19',pulgadas:'3/4',metros_por_kilo:'6',peso_por_royo:'58/60 kg',resistencia_a_la_tension:'3630 kg'},
+                        {'milimetros':'25',pulgadas:'1',metros_por_kilo:'3.4',peso_por_royo:'68/70 kg',resistencia_a_la_tension:'7590 kg'},
+                    ],
+                    require('@/assets/Gifs/cable_polipropileno.gif'),
+                    "Tenemos productos de Sogas y cables de polipropileno.",
+                    "Ofrecemos Sogas y cables de polipropileno.",
+                    "Cables Polipropileno"
+                ],
+                [
+                    ['MEDIDA_Y_CALIBRE','RENDIMIENTO_APROX._EN_METROS_POR_KG','RESISTENCIA_A_LA_RUPTURA','PESO_APROX._POR_ROYO'],
+                    [
+                        { MEDIDA_Y_CALIBRE:'3 mm (1/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'166 m',RESISTENCIA_A_LA_RUPTURA:'43 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'4 mm (5/32")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'95 m',RESISTENCIA_A_LA_RUPTURA:'115 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'5 mm (3/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'52 m',RESISTENCIA_A_LA_RUPTURA:'207 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'6 mm (1/4")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'38 m',RESISTENCIA_A_LA_RUPTURA:'314 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'8 mm (5/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'25 m',RESISTENCIA_A_LA_RUPTURA:'420 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'10 mm (3/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'25 m',RESISTENCIA_A_LA_RUPTURA:'630 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'12 mm (1/2")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'13 m',RESISTENCIA_A_LA_RUPTURA:'790 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'14 mm (9/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'8 m',RESISTENCIA_A_LA_RUPTURA:'1000 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'16 mm (5/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'7 m',RESISTENCIA_A_LA_RUPTURA:'1200 kg','PESO_APROX._POR_ROYO':'10 kg'},
                         
                     ],
-                    require('@/assets/productos/cordel.jpg'),
+                    require('@/assets/Gifs/cordeles.gif'),
                     "Cordeles, elaborados de fibras naturales como algodón, Yute, Cáñamo, Sisal, Henequén y fibra de Coco.",
                     "Todo tipo de Cordeles:\n\
                     Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
@@ -327,20 +353,14 @@ export default {
                     "Cordeles"
                 ],
                 [
-                    ['costal','medida(CM)','peso_gr','pzas_por_paca'],
+                    ['costal','medida(CM)','peso','capacidad'],
                     [
-                        {costal:'TRIGUERO','medida(CM)':'70x110',peso_gr:'900 grs',pzas_por_paca:'100'},
-                        {costal:'BURRERO','medida(CM)':'60x100',peso_gr:'760 grs',pzas_por_paca:'100'},
-                        {costal:'CACAO','medida(CM)':'70x110',peso_gr:'800 grs',pzas_por_paca:'100'},
-                        {costal:'ZANAHORIA','medida(CM)':'67x100',peso_gr:'640 grs',pzas_por_paca:'100'},
-                        {costal:'MAIZ-FRIJOL','medida(CM)':'62x102',peso_gr:'750 grs',pzas_por_paca:'100'},
-                        {costal:'JICAMA','medida(CM)':'65x100',peso_gr:'500 grs',pzas_por_paca:'100'},
-                        {costal:'DOBLE PIE','medida(CM)':'70x100',peso_gr:'1250 grs',pzas_por_paca:'50'},
-                        {costal:'CEBOLLA','medida(CM)':'60x80',peso_gr:'300 grs',pzas_por_paca:'100'},
-                        {costal:'PERGAMINO','medida(CM)':'70x110',peso_gr:'1000 grs',pzas_por_paca:'100'},
-                        {costal:'CAFETERO','medida(CM)':'70x100',peso_gr:'950 grs',pzas_por_paca:'50'},
+                        {costal:'NUEVO','medida(CM)':'70x110',peso_gr:'930 g',capacidad:'70 kg'},
+                        {costal:'USADO','medida(CM)':'65x100',peso_gr:'750 g',capacidad:'60 kg'},
+                        {costal:'DELGADO','medida(CM)':'60x110',peso_gr:'500 g',capacidad:'60 kg'},
+                        {costal:'CACAHUATERO','medida(CM)':'55x100',peso_gr:'750 g',capacidad:'50 kg'},
                     ],
-                    require('@/assets/productos/Costal_henequen02.jpg'),
+                    require('@/assets/Gifs/costal_henequen.gif'),
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
                     "Costal hecho con fibra de Henequen varios modelos y pesaje.",
                     "Costal Henequén"
@@ -351,7 +371,7 @@ export default {
                         {nombre:'Cacahuatero',medidas:'55 cm X 1.00 mts.',capacidad:'50 Kgs'},
                         {nombre:'Africano',medidas:'70 cm X 1.05 mts.',capacidad:'70 Kgs'},
                     ],
-                    require('@/assets/productos/Costal_yute01.jpg'),
+                    require('@/assets/Gifs/costal_yute.gif'),
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
                     "Los costales de Yute natural son un envase cómodo y flexible, ideales para el almacenamiento de Café, Cacao, Semillas, Granos, Verduras, Especias, Piñones, etc",
                     "Costales de Yute"
@@ -369,31 +389,6 @@ export default {
                     "Son sacos rígidos, ligeros y resistentes, así como reutilizables debido a la gran durabilidad y resistencia del tejido, disminuyendo el consumo.",
                     "Son usados mayoritariamente para envasar granos, alimentos balanceados, arena, escombros, legumbres, fertilizantes, productos químicos, etc ",
                     "Costales de Rafia"
-                ],
-                [
-                    ['diametro','peso_en_kg','peso','resistencia'],
-                    [
-                        { diametro:'',peso_en_kg:"POR METRO",peso:"POR ROLLO",resistencia:"A LA TENSIÓN"},
-                        { diametro:'3 mm - 1/8”',peso_en_kg:"0.015",peso:"25",resistencia:"125"},
-                        { diametro:'4 mm - 3/16”',peso_en_kg:"0.022",peso:"25",resistencia:"157"},
-                        { diametro:'6 mm - 1/4”',peso_en_kg:"0.030",peso:"50",resistencia:"176"},
-                        { diametro:'8 mm - 35/16”',peso_en_kg:"0.043",peso:"50",resistencia:"349"},
-                        { diametro:'10 mm - 3/8”',peso_en_kg:"0.061",peso:"50",resistencia:"472"},
-                        { diametro:'11 mm - 7/16”',peso_en_kg:"0.078",peso:"50",resistencia:"610"},
-                        { diametro:'13 mm - 1/2”',peso_en_kg:"0.112",peso:"50",resistencia:"940"},
-                        { diametro:'16 mm - 5/8”',peso_en_kg:"0.198",peso:"100",resistencia:"1537"},
-                        { diametro:'19 mm - 3/4”',peso_en_kg:"0.248",peso:"100",resistencia:"1886"},
-                        { diametro:'25 mm - 1”',peso_en_kg:"0.402",peso:"100",resistencia:"3144"},
-                        { diametro:'25 mm - 1”',peso_en_kg:"0.620",peso:"500",resistencia:"4715"},
-                        { diametro:'38 mm - 1  1/2”',peso_en_kg:"0.900",peso:"500",resistencia:"6417"},
-                    ],
-                    require('@/assets/productos/Henequen2.jpg'),
-                    
-                    "Se extrae del agave y fue conocido como el oro verde por la cultura maya, se utiliza\
-                    para hacer cordones, telas, alfombras, uso marítimo y especialmente para la decoración hoy en día,\
-                    existe el hilo.",
-                    "Presentaciones en: Hilo Yucatán, Tomatero, Medio Cabo, 1,2,3, cabos, Titan, bambino, Hilo de color",
-                    "Henequén"
                 ],
                 [
                     ['jaceria'],
