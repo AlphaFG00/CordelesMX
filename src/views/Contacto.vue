@@ -12,21 +12,19 @@
         </div>
         Con Nuestros Clientes
       </div>
-
         <br>
         <br>
         <b-row fluid>
           <b-col cols="12" md="6" sm="12" align-self="center">
             <b-card>
                 <div class="titulo-card">Déjanos conocerte</div>
-
                 <contact-form/>
             </b-card>
           </b-col>
-          <b-col cols="12" md="6" sm="12" align-self="center">
-            <b-card >
-              <div class="titulo-card">Visitanos</div>
 
+          <b-col class="fix-movil-size" cols="12" md="6" sm="12" align-self="center">
+            <b-card>
+              <div class="titulo-card">Visitanos</div>
               <myMap :coordinates="[19.425618, -99.128960]" :height="map_height"/>
               <span>Ubicación: Jesús Maryia 153 local B, colonia centro  cp 06000 delegacion Cuauhtemoc</span>
             </b-card>
@@ -153,6 +151,11 @@ export default {
     color: #a13a4b;
     font-family: 'Franklin Gothic Medium', sans-serif !important;
 }
+@media screen {
+  .fix-movil-size{
+    margin-top: 15px;
+  }
+}
 .titulo-card{
   font-size: 1.3em;
   font-weight: 600;
@@ -166,12 +169,9 @@ export default {
         font-size: large;
       }
     }
-
 .cssanimation {
     animation: elevateRight 1.5s both;
 }
-
-
 @keyframes elevateRight {
     0% {
         transform: translateY(100%) rotate(20deg);

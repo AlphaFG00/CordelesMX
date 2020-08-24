@@ -205,32 +205,74 @@
         animation: revelar-mb 5s forwards;
         }
     }
-    @media screen and (min-width: 767px)and (max-width: 991px){
+    @media screen and (min-width: 768px)and (max-width: 991px){
         .correction-al >div{
             >article{
                 left: 5%;
             }
         }
     }
-    @media screen and (min-width: 577px)and (max-width: 766px){
+    @media screen and (min-width: 704px)and (max-width: 767px){
+        .correction-al >div{
+            >article{
+                left: 15%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 645px)and (max-width: 703px){
+        .correction-al >div{
+            >article{
+                left: 8%;
+            }
+        }
+    }
+    @media screen and (min-width: 606px)and (max-width: 644px){
         .correction-al >div{
             >article{
                 left: 0%;
             }
         }
     }
-    @media screen and (min-width: 426) and (max-width:565px){
+    @media screen and (min-width:576px) and (max-width: 605px){
         .correction-al >div{
             >article{
-                left: 25%;
+                left:-1%;
             }
         }
-
     }
-    @media screen and (min-width:0) and (max-width: 425px){
+    @media screen and (min-width: 566px)and (max-width: 575px){
         .correction-al >div{
             >article{
-                left:15%;
+                left: 15%;
+            }
+        }
+    }
+    @media screen and (min-width: 485px)and (max-width: 565px){
+        .correction-al >div{
+            >article{
+                left: 24%;
+            }
+        }
+    }
+    @media screen and (min-width: 400px)and (max-width: 484px){
+        .correction-al >div{
+            >article{
+                left: 17%;
+            }
+        }
+    }
+    @media screen and (min-width: 350px)and (max-width: 399px){
+        .correction-al >div{
+            >article{
+                left: 10%;
+            }
+        }
+    }
+    @media screen and (min-width: 704px)and (max-width: 349px){
+        .correction-al >div{
+            >article{
+                left: 5%;
             }
         }
     }
