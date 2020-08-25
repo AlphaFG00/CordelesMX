@@ -49,8 +49,8 @@
                                             <b-table v-if="producto[5]=='Cordeles'" class="table-correction table-bordered primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                             <b-table v-else class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                             <template v-if="producto[5]=='Cordeles'">
-                                                <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" :fields="producto[6]"></b-table>
-                                                <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" :fields="producto[8]"></b-table>
+                                                <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                
                                             </template>
                                         </b-modal>
                                 </b-card>
@@ -77,7 +77,21 @@
         text-align: center;
         padding-top: 1em;
         display: block;
-        content: "PIOLA POLIESTER BLANCA, NEGRA Y DE COLOR";
+        content: "PIOL A POLIESTER BLANCA, NEGRA Y DE COLOR";
+        background-color: #f3de9f;
+        width: 100%;
+        height: 3em;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+.segunda-tabla{
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "TIPOS DE CORDELES";
         background-color: #f3de9f;
         width: 100%;
         height: 3em;
@@ -329,6 +343,11 @@
         100% {opacity: 1;}  
     }  
 </style>
+<style>
+    .hidden_header{
+        display: none;
+    }
+</style>
 <script>
 export default {
     name: 'Home',
@@ -415,6 +434,16 @@ export default {
                     Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
                     decoración… etc.",
                     "Cordeles",
+                    ['cordeles','Cordeles'],
+                    [
+                        { cordeles:'CABLE DE NAYLON',Cordeles:'HILO DE NAYLON'},
+                        { cordeles:'HILAZA',Cordeles:'PASTELERO'},
+                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BL. Y COLOR'},
+                        { cordeles:'CAÑAMO',Cordeles:'PIOLA'},
+                        { cordeles:'NYLON DE COLOR',Cordeles:'NYLON NEGRO'},
+                        { cordeles:'HILAZA',Cordeles:'CORDON FLOJO'},
+                        { cordeles:'CORDON FLOJO COLOR',Cordeles:'CORDON FLOJO'},
+                    ],
                     ['CABLE_DE_NYLON'],
                     [
                         { CABLE_DE_NYLON:'NYLON DE COLOR'},
@@ -426,13 +455,6 @@ export default {
                         { CABLE_DE_NYLON:'PIOLA'},
                         { CABLE_DE_NYLON:'PIOLA BLANCA'},
                     ],
-                    ['TIPOS_DE_CORDELES'],
-                    [
-                        { TIPOS_DE_CORDELES:'CABLE DE NAYLON',TIPOS_DE_CORDELES:'HILO DE NAYLON'},
-                        { TIPOS_DE_CORDELES:'HILAZA',TIPOS_DE_CORDELES:'PASTELERO'},
-                        { TIPOS_DE_CORDELES:'CUERDA DE VIDA',TIPOS_DE_CORDELES:'CORDON FLOJO BL. Y COLOR'},
-                        { TIPOS_DE_CORDELES:'CAÑAMO',TIPOS_DE_CORDELES:'PIOLA'},
-                    ]
                 ],
                 [
                     ['costal','medida(CM)','peso','capacidad'],
@@ -503,7 +525,7 @@ export default {
                         {jaceria:'Atomizadoes'},
                         {jaceria:'Botes para basura'},
                         {jaceria:'Cepillos'},
-                        {jaceria:'Cubuetas'},
+                        {jaceria:'Cubetas'},
                         {jaceria:'Despachadores'},
                         {jaceria:'Destapa caños'},
                         {jaceria:'Escobas'},
@@ -530,7 +552,7 @@ export default {
                         { LONAS: 'lona 2' },
                         { LONAS: 'lona 3' },
                     ],
-                    require('@/assets/productos/varios02.jpg'),
+                    require('@/assets/Gifs/lonas.gif'),
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lonas"
@@ -547,7 +569,7 @@ export default {
                         { calibre: '7', color: 'Blanca', presentación: '3, 4 kg.' },
                         { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
                     ],
-                    require('@/assets/productos/Rafia 2.jpg'),
+                    require('@/assets/Gifs/rafia.gif'),
                     "El material de Rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
                     material. La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
                     "Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
