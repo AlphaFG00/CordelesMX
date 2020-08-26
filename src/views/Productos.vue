@@ -40,18 +40,24 @@
                                             <p class="my-card-text">{{producto[4]}}</p>
                                             </b-card>
                                         </b-collapse>
-                                        <b-modal 
+                                        <b-modal
+                                        size="lg"
                                         header-border-variant="primary" 
                                         header-text-variant="warning"
-                                        :id="'modal-'+i+'-'+index" 
+                                        :id="'modal-'+i+'-'+index"
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
-                                            <b-table v-if="producto[5]=='Cordeles'" class="table-correction table-bordered primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            <b-table v-else class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            <template v-if="producto[5]=='Cordeles'">
-                                                <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" :fields="producto[6]"></b-table>
-                                                <b-table class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" :fields="producto[8]"></b-table>
-                                            </template>
+                                            <b-table v-if="producto[5]=='Cordeles'" class="table-correction primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-table v-else class="table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-button v-if="producto[5]=='Cordeles'" class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'" >Cable de Nylon</b-button>
+                                            <b-collapse v-if="producto[5]=='Cordeles'" :id="'collapse-table-'+i+'-'+index+'-1'">
+                                                <b-table class="table-correction table-join" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]"></b-table>
+                                            </b-collapse>
+                                            <b-button v-if="producto[5]=='Cordeles'" class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-2'" >Tipos de Cordeles</b-button>
+                                            <b-collapse v-if="producto[5]=='Cordeles'" :id="'collapse-table-'+i+'-'+index+'-2'">
+                                                <b-table class="no-thead table-correction table-join" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]"></b-table>
+                                                <b-table class="no-thead table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[11]"></b-table>
+                                            </b-collapse>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -86,26 +92,39 @@
         font-weight: bold;
     }
 }
-    .table-correction{
-        text-align: center;
-        max-height: 60vh !important;
-        overflow: auto !important;
-
-        &::-webkit-scrollbar-track
-        {
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-            background-color: #F5F5F5;
-        }
-        &::-webkit-scrollbar
-        {
-            width: 10px;
-            background-color: #F5F5F5;
-        }
-        &::-webkit-scrollbar-thumb
-        {
-            background-color:#e7bf47;
-        }
+.table-correction{
+    text-align: center;
+    max-height: 60vh !important;
+    overflow: auto !important;
+    &::-webkit-scrollbar-track
+    {
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
     }
+    &::-webkit-scrollbar
+    {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb
+    {
+        background-color:#e7bf47;
+    }
+}
+
+.table-join{
+    margin: 0;
+}
+
+.button-table{
+    display: block;
+    background-color: #f3de9f;
+    width: 100%;
+    font-size:.9em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
     .correction-al{
         align-self: center;
         position: relative;
@@ -426,16 +445,17 @@ export default {
                         { CABLE_DE_NYLON:'PIOLA'},
                         { CABLE_DE_NYLON:'PIOLA BLANCA'},
                     ],
-                    ['TIPOS_DE_CORDELES'],
+                    ['CABLE_DE_NYLON','HILO_DE_NYLON'],
                     [
-                        { TIPOS_DE_CORDELES:'CABLE DE NAYLON',TIPOS_DE_CORDELES:'HILO DE NAYLON'},
-                        { TIPOS_DE_CORDELES:'HILAZA',TIPOS_DE_CORDELES:'PASTELERO'},
-                        { TIPOS_DE_CORDELES:'CUERDA DE VIDA',TIPOS_DE_CORDELES:'CORDON FLOJO BL. Y COLOR'},
-                        { TIPOS_DE_CORDELES:'CAÑAMO',TIPOS_DE_CORDELES:'PIOLA'},
+                        { CABLE_DE_NYLON:'HILAZA',HILO_DE_NYLON:'PASTELERO'},
+                    ],
+                    ['CUERDA_DE_VIDA','CORDON_FLOJO_BL._Y_COLOR'],
+                    [
+                        { CUERDA_DE_VIDA:'CAÑAMO','CORDON_FLOJO_BL._Y_COLOR':'PIOLA'},
                     ]
                 ],
                 [
-                    ['costal','medida(CM)','peso','capacidad'],
+                    ['costal','medida(CM)','peso_gr','capacidad'],
                     [
                         {costal:'TRIGUERO','medida(CM)':'70x110',peso_gr:'900 g',capacidad:'100 kg'},
                         {costal:'BURRERO','medida(CM)':'60x100',peso_gr:'760 g',capacidad:'100 kg'},
@@ -454,7 +474,7 @@ export default {
                     "Costal Henequén"
                 ],
                 [
-                    ['costal','medida(CM)','peso','capacidad'],
+                    ['costal','medida(CM)','peso_gr','capacidad'],
                     [
                         {costal:'NUEVO','medida(CM)':'70x110',peso_gr:'930 g',capacidad:'70 kg'},
                         {costal:'USADO','medida(CM)':'65x100',peso_gr:'750 g',capacidad:'60 kg'},
