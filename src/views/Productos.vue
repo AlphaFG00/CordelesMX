@@ -29,12 +29,12 @@
                                     tag="article"
                                     :style="['width: 12rem;']"
                                     class="mb-2">
-                                    <b-card-img :src="producto[2]" alt="imagen" height="110" />
+                                    <b-card-img class="image-product" :src="producto[2]" alt="imagen" height="110" />
                                     <!--<b-card-text>-->
                                         <!--<div class="info-tarjeta">{{producto[3]}}</div>-->
                                     <!--</b-card-text>-->
-                                        <b-button variant="info"  v-b-toggle="['collapse-'+i+'-'+index]" >Mas</b-button> 
-                                        <b-button  variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
+                                        <b-button class="button-more" variant="info" v-b-toggle="['collapse-'+i+'-'+index]"><swapIcon/></b-button>
+                                        <b-button class="button-details" variant="primary"   v-b-modal="'modal-'+i+'-'+index">Detalles</b-button>
                                         <b-collapse :id="'collapse-'+i+'-'+index" class="mt-2 text-structure">
                                             <b-card>
                                             <p class="my-card-text">{{producto[4]}}</p>
@@ -80,6 +80,7 @@
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
 
+/*
 .primera-tabla{
     &::before{
         text-align: center;
@@ -93,7 +94,14 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
     }
+}*/
+
+.button-more{
+  margin: 12px 3px 0 0;
+  padding: 0;
+  width: 25%;
 }
+.button-details{margin: 12px 0 0 3px;}
 /*
 .segunda-tabla{
     &::before{
@@ -170,8 +178,7 @@
     {
         background-color:#e7bf47;
     }
-    }
-
+}
 .table-join{
     margin: 0;
 }
@@ -184,7 +191,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
 }
-
     .correction-al{
         align-self: center;
         position: relative;
@@ -414,6 +420,8 @@
     }
 </style>
 <script>
+import swapIcon from '@/components/ToggleIcon.vue'
+
 export default {
     name: 'Home',
     data(){
@@ -840,6 +848,9 @@ export default {
 
     beforeDestroy() { 
       window.removeEventListener('resize', this.onResize); 
+    },
+    components:{
+      swapIcon,
     },
 }
 </script>
