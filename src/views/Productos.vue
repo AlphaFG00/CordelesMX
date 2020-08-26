@@ -47,10 +47,16 @@
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
                                             <b-table v-if="producto[5]=='Cordeles'" class="table-correction table-bordered primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            <b-table v-else class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <template v-else >
+                                                <b-table v-if="producto[5]=='Lonas'" class="table-correction table-bordered lonas1-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
+                                                <b-table v-else class="table-correction table-bordered" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            </template>
                                             <template v-if="producto[5]=='Cordeles'">
                                                 <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
-                                                
+                                            </template>
+                                            <template v-if="producto[5]=='Lonas'">
+                                                <b-table class="table-correction table-bordered lonas2-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
                                             </template>
                                         </b-modal>
                                 </b-card>
@@ -72,6 +78,7 @@
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
+
 .primera-tabla{
     &::before{
         text-align: center;
@@ -95,6 +102,48 @@
         background-color: #f3de9f;
         width: 100%;
         height: 3em;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+.lonas1-tabla {
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA";
+        background-color: #f3de9f;
+        width: 100%;
+        height: max-content;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+.lonas2-tabla {
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "LONA REFORZADA 3 CAPAS CALIBRE 12*14 HILOS COLOR AZUL, VERDE, NARANJA, ROJO, AMARILLO Y GRIS";
+        background-color: #f3de9f;
+        width: 100%;
+        height: max-content;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+.lonas3-tabla {
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "LONA REFORZADA EXTRA CALIBRE 14*14 HILOS COLOR AZUL, BLANCA, ROJO, AMARILLO, GRIS Y VERDE";
+        background-color: #f3de9f;
+        width: 100%;
+        height: max-content;
         font-size:.9em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
@@ -535,6 +584,7 @@ export default {
                         {jaceria:'Guantes'},
                         {jaceria:'Jaladores'},
                         {jaceria:'Jerga'},
+                        {jaceria:'Lazo de tendedero'},
                         {jaceria:'Mechudos'},
                         {jaceria:'Mops'},
                         {jaceria:'Recogedores'},
@@ -546,16 +596,98 @@ export default {
                     "Jarcieria"
                 ],
                 [
-                    ['LONAS'],
+                    ['LONAS_LIGERAS_M_xM'],
                     [
-                        { LONAS: 'lona 1' },
-                        { LONAS: 'lona 2' },
-                        { LONAS: 'lona 3' },
+                        { LONAS_LIGERAS_M_xM: ' 1.8 x 2.40' },
+                        { LONAS_LIGERAS_M_xM: '2.4 x 3.60' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 3.0' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 3.6' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 4.2' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 5.4' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 3.60' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 4.8' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 5.4' },
+                        { LONAS_LIGERAS_M_xM: '4.20 x 4.80' },
+                        { LONAS_LIGERAS_M_xM: '4.20 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: '4.80 x 6' },
+                        { LONAS_LIGERAS_M_xM: '5.40 x 7.2' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 9.0' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 12.0' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 15.0' },
+                        { LONAS_LIGERAS_M_xM: '7.20 x 7.20' },
+                        { LONAS_LIGERAS_M_xM: '7.20 x 9.0' },
+                        { LONAS_LIGERAS_M_xM: '8.20 x 12.0' },
+                        { LONAS_LIGERAS_M_xM: '8.20 x 15.0' },
+                        { LONAS_LIGERAS_M_xM: '9.0 x 9.0' },
+                        { LONAS_LIGERAS_M_xM: '12.0 x 18.0' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
+                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz Lonas con forro y de publicidad, carpas.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
-                    "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
-                    "Lonas"
+                    "Lonas",
+                    ['LONA_REFORZADA_M_xM'],
+                    [
+                        { LONA_REFORZADA_M_xM: '3.0 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '3.6 x 5.4' },
+                        { LONA_REFORZADA_M_xM: '4.2 x 4.8' },
+                        { LONA_REFORZADA_M_xM: '4.2 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '4.8 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '5.10 x 5.10' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.2' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.2' },
+                        { LONA_REFORZADA_M_xM: '4.40 x 8.20' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 8.2' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 9.0' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 12.0' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 15.0' },
+                        { LONA_REFORZADA_M_xM: '8.10 x 10.20' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 12.0' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 15.0' },
+                    ],
+                    ['LONA_REFORZADA_M_xM'],
+                    [
+                        { LONA_REFORZADA_M_xM: '1.80 x 2.40' },
+                        { LONA_REFORZADA_M_xM: '2.40 x 3.00' },
+                        { LONA_REFORZADA_M_xM: '2.40 x 3.60' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 3.0' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '3.30 x 9.30' },
+                        { LONA_REFORZADA_M_xM: '3.60 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 4.80' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 8.40' },
+                        { LONA_REFORZADA_M_xM: '4.80 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '5.10 x 5.10' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 8.10' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 10.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 8.20' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 10.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 15.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 10.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 15.00' },
+                        { LONA_REFORZADA_M_xM: '8.10 x 10.20' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '9.00 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '9.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '10.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '10.00 x 15.00' },
+                    ],
                 ],
                 [
                     ['calibre','color','presentación'],
