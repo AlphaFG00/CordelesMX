@@ -47,17 +47,18 @@
                                         :id="'modal-'+i+'-'+index"
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
+
                                             <b-table v-if="producto[5]=='Cordeles'" class="table-correction primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                             <b-table v-else class="table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            <b-button v-if="producto[5]=='Cordeles'" class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'" >Cable de Nylon</b-button>
-                                            <b-collapse v-if="producto[5]=='Cordeles'" :id="'collapse-table-'+i+'-'+index+'-1'">
-                                                <b-table class="table-correction table-join" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]"></b-table>
-                                            </b-collapse>
                                             <b-button v-if="producto[5]=='Cordeles'" class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-2'" >Tipos de Cordeles</b-button>
                                             <b-collapse v-if="producto[5]=='Cordeles'" :id="'collapse-table-'+i+'-'+index+'-2'">
-                                                <b-table class="no-thead table-correction table-join" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]"></b-table>
-                                                <b-table class="no-thead table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[11]"></b-table>
+                                                <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
                                             </b-collapse>
+                                            <b-table v-if="producto[5]=='Lonas'" class="table-correction table-bordered lonas1-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
+                                            <template v-if="producto[5]=='Lonas'">
+                                                <b-table class="table-correction table-bordered lonas2-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
+                                            </template>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -78,15 +79,74 @@
 </template>
 <style scoped lang="scss">
 /*Mucho que ajustar aqui */
+
 .primera-tabla{
     &::before{
         text-align: center;
         padding-top: 1em;
         display: block;
-        content: "PIOLA POLIESTER BLANCA, NEGRA Y DE COLOR";
+        content: "PIOL A POLIESTER BLANCA, NEGRA Y DE COLOR";
         background-color: #f3de9f;
         width: 100%;
         height: 3em;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+/*
+.segunda-tabla{
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "TIPOS DE CORDELES";
+        background-color: #f3de9f;
+        width: 100%;
+        height: 3em;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+*/
+.lonas1-tabla {
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA";
+        background-color: #f3de9f;
+        width: 100%;
+        height: max-content;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+.lonas2-tabla {
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "LONA REFORZADA 3 CAPAS CALIBRE 12*14 HILOS COLOR AZUL, VERDE, NARANJA, ROJO, AMARILLO Y GRIS";
+        background-color: #f3de9f;
+        width: 100%;
+        height: max-content;
+        font-size:.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+.lonas3-tabla {
+    &::before{
+        text-align: center;
+        padding-top: 1em;
+        display: block;
+        content: "LONA REFORZADA EXTRA CALIBRE 14*14 HILOS COLOR AZUL, BLANCA, ROJO, AMARILLO, GRIS Y VERDE";
+        background-color: #f3de9f;
+        width: 100%;
+        height: max-content;
         font-size:.9em;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
@@ -110,7 +170,7 @@
     {
         background-color:#e7bf47;
     }
-}
+    }
 
 .table-join{
     margin: 0;
@@ -348,6 +408,11 @@
         100% {opacity: 1;}  
     }  
 </style>
+<style>
+    .hidden_header{
+        display: none;
+    }
+</style>
 <script>
 export default {
     name: 'Home',
@@ -434,6 +499,16 @@ export default {
                     Trenzados, torcidos y con esfuerzo al interior para el uso en el hogar, hoteles, restaurantes,\
                     decoración… etc.",
                     "Cordeles",
+                    ['cordeles','Cordeles'],
+                    [
+                        { cordeles:'CABLE DE NAYLON',Cordeles:'HILO DE NAYLON'},
+                        { cordeles:'HILAZA',Cordeles:'PASTELERO'},
+                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BL. Y COLOR'},
+                        { cordeles:'CAÑAMO',Cordeles:'PIOLA'},
+                        { cordeles:'NYLON DE COLOR',Cordeles:'NYLON NEGRO'},
+                        { cordeles:'HILAZA',Cordeles:'CORDON FLOJO'},
+                        { cordeles:'CORDON FLOJO COLOR',Cordeles:'CORDON FLOJO'},
+                    ],
                     ['CABLE_DE_NYLON'],
                     [
                         { CABLE_DE_NYLON:'NYLON DE COLOR'},
@@ -523,7 +598,7 @@ export default {
                         {jaceria:'Atomizadoes'},
                         {jaceria:'Botes para basura'},
                         {jaceria:'Cepillos'},
-                        {jaceria:'Cubuetas'},
+                        {jaceria:'Cubetas'},
                         {jaceria:'Despachadores'},
                         {jaceria:'Destapa caños'},
                         {jaceria:'Escobas'},
@@ -533,6 +608,7 @@ export default {
                         {jaceria:'Guantes'},
                         {jaceria:'Jaladores'},
                         {jaceria:'Jerga'},
+                        {jaceria:'Lazo de tendedero'},
                         {jaceria:'Mechudos'},
                         {jaceria:'Mops'},
                         {jaceria:'Recogedores'},
@@ -542,6 +618,100 @@ export default {
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
                     "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
                     "Jarcieria"
+                ],
+                [
+                    ['LONAS_LIGERAS_M_xM'],
+                    [
+                        { LONAS_LIGERAS_M_xM: ' 1.8 x 2.40' },
+                        { LONAS_LIGERAS_M_xM: '2.4 x 3.60' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 3.0' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 3.6' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 4.2' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 5.4' },
+                        { LONAS_LIGERAS_M_xM: '3.0 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 3.60' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 4.8' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 5.4' },
+                        { LONAS_LIGERAS_M_xM: '4.20 x 4.80' },
+                        { LONAS_LIGERAS_M_xM: '4.20 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: '4.80 x 6' },
+                        { LONAS_LIGERAS_M_xM: '5.40 x 7.2' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 9.0' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 12.0' },
+                        { LONAS_LIGERAS_M_xM: '6.0 x 15.0' },
+                        { LONAS_LIGERAS_M_xM: '7.20 x 7.20' },
+                        { LONAS_LIGERAS_M_xM: '7.20 x 9.0' },
+                        { LONAS_LIGERAS_M_xM: '8.20 x 12.0' },
+                        { LONAS_LIGERAS_M_xM: '8.20 x 15.0' },
+                        { LONAS_LIGERAS_M_xM: '9.0 x 9.0' },
+                        { LONAS_LIGERAS_M_xM: '12.0 x 18.0' },
+                    ],
+                    require('@/assets/Gifs/lonas.gif'),
+                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz Lonas con forro y de publicidad, carpas.",
+                    "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
+                    "Lonas",
+                    ['LONA_REFORZADA_M_xM'],
+                    [
+                        { LONA_REFORZADA_M_xM: '3.0 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '3.6 x 5.4' },
+                        { LONA_REFORZADA_M_xM: '4.2 x 4.8' },
+                        { LONA_REFORZADA_M_xM: '4.2 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '4.8 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '5.10 x 5.10' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.2' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.2' },
+                        { LONA_REFORZADA_M_xM: '4.40 x 8.20' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 8.2' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 9.0' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 12.0' },
+                        { LONA_REFORZADA_M_xM: '6.0 x 15.0' },
+                        { LONA_REFORZADA_M_xM: '8.10 x 10.20' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 12.0' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 15.0' },
+                    ],
+                    ['LONA_REFORZADA_M_xM'],
+                    [
+                        { LONA_REFORZADA_M_xM: '1.80 x 2.40' },
+                        { LONA_REFORZADA_M_xM: '2.40 x 3.00' },
+                        { LONA_REFORZADA_M_xM: '2.40 x 3.60' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 3.0' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '3.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '3.30 x 9.30' },
+                        { LONA_REFORZADA_M_xM: '3.60 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 4.80' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 8.40' },
+                        { LONA_REFORZADA_M_xM: '4.80 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '5.10 x 5.10' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 8.10' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 10.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 8.20' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 10.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 15.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 10.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '7.20 x 15.00' },
+                        { LONA_REFORZADA_M_xM: '8.10 x 10.20' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '9.00 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '9.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '10.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '10.00 x 15.00' },
+                    ],
                 ],
                 [
                     ['calibre','color','presentación'],
@@ -555,7 +725,7 @@ export default {
                         { calibre: '7', color: 'Blanca', presentación: '3, 4 kg.' },
                         { calibre: '8', color: 'Blanca', presentación: '3, 4 kg.' },
                     ],
-                    require('@/assets/productos/Rafia 2.jpg'),
+                    require('@/assets/Gifs/rafia.gif'),
                     "El material de Rafia es reutilizado en múltiples ocasiones debido a la resistencia y durabilidad del\
                     material. La Rafia se produce a partir de fibras textiles sintéticas, principalmente de polipropileno trenzado.",
                     "Toda nuestra Rafia es 100% virgen y con protección a los rayos UVB.",
@@ -575,13 +745,18 @@ export default {
                 [
                     ['varios'],
                     [
-                        {varios:'Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.'},
-                        {varios:'Manguera para agua y gas.'},
-                        {varios:'Petate'},
-                        {varios:'Pachon'},
-                        {varios:'Rascadores para gatos'},
-                        {varios:'Cubrebocas'},
+                        {varios:'Ahuja de arrea (varias medidas)'},
+                        {varios:'Bidones,  botes ,cubetas industriales '},
                         {varios:'Caretas'},
+                        {varios:'Cintas canela y transparente'},
+                        {varios:'Cubrebocas'},
+                        {varios:'Hule negro '},
+                        {varios:'Manguera para agua y gas.'},
+                        {varios:'Pachon'},
+                        {varios:'Petate'},
+                        {varios:'Playo o polistretch'},
+                        {varios:'Rascadores para gatos'},
+                        {varios:'Tarimas'},
                         
                     ],
                     require('@/assets/Gifs/varios.gif'),

@@ -9,3 +9,10 @@ $primary:   $primario;
 $info:      $claro;
 $warning:   $amarillo;
 $danger:    $primario;
+
+$color_tabla: #ecc3c7;
+.table-striped {
+    tbody tr:nth-of-type(#{odd}) {
+      background-color: $color_tabla !important;
+    }
+  }
