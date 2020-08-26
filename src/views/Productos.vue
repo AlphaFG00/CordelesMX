@@ -5,7 +5,7 @@
         <br>
         <br>
         <div class="titulo segundo-t knockout">
-            <span class="ultimo-t">Lo mejor en Jarcieria</span>
+            <span class="ultimo-t">Lo mejor en Cables, Cordeles y Jarcieria</span>
         </div>
         <br>
         <br>
@@ -48,16 +48,16 @@
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
 
-                                            <b-table v-if="producto[5]=='Cordeles'" class="table-correction primera-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            <b-table v-else class="table-correction" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-table v-if="producto[5]=='Cordeles'" class="table-correction primera-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <b-table v-else class="table-correction thead-dark" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                             <b-button v-if="producto[5]=='Cordeles'" class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-2'" >Tipos de Cordeles</b-button>
                                             <b-collapse v-if="producto[5]=='Cordeles'" :id="'collapse-table-'+i+'-'+index+'-2'">
-                                                <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
                                             </b-collapse>
-                                            <b-table v-if="producto[5]=='Lonas'" class="table-correction table-bordered lonas1-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
+                                            <b-table v-if="producto[5]=='Lonas'" class="table-correction table-bordered lonas1-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
                                             <template v-if="producto[5]=='Lonas'">
-                                                <b-table class="table-correction table-bordered lonas2-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
-                                                <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="warning"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
+                                                <b-table class="table-correction table-bordered lonas2-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
                                             </template>
                                         </b-modal>
                                 </b-card>
@@ -293,7 +293,8 @@
     }
     @media screen and (max-width: 565px){
       .titulo{
-        font-size:x-large;
+        font-size:large;
+        
       }
       .fondo{
           margin-left: 1em;
@@ -392,16 +393,16 @@
     @keyframes revelar {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width: 360px;}
-        80% {opacity:1; width: 360px;}
-        100% {opacity:1;width:360px;}
+        30% {width: 660px;}
+        80% {opacity:1; width: 660px;}
+        100% {opacity:1;width:660px;}
     }
     @keyframes revelar-mb {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width: 245px;}
-        80% {opacity:1; width: 245px;}
-        100% {opacity:1;width:245px;}
+        30% {width: 345px;}
+        80% {opacity:1; width: 345px;}
+        100% {opacity:1;width:345px;}
     }
     @keyframes mostrar {
         0% {opacity: 0;}
@@ -578,7 +579,7 @@ export default {
                 [
                     ['HENEQUEN'],
                     [
-                        {HENEQUEN:'Hilo Yucantán'},
+                        {HENEQUEN:'Hilo Yucatán'},
                         {HENEQUEN:'Tomatero'},
                         {HENEQUEN:'Medio Cabo'},
                         {HENEQUEN:'1,2,3 Cabos'},
@@ -736,6 +737,8 @@ export default {
                     [
                         { tela_de_yute:'1.30 Metros de ancho'},
                         { tela_de_yute:'2.80 Metros de ancho'},
+                        { tela_de_yute:'hilo de yute 1,2 y 4 hilos (naturalo colores varios)'},
+                        { tela_de_yute:'cable de yute 4,6, 8, 10, 11, 13, 16, 19 y 25 mm'},
                     ],
                     require('@/assets/Gifs/yute.gif'),
                     "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
@@ -779,7 +782,6 @@ export default {
             this.sliding = false
         },
         myCeil(number) {
-            console.log(this.productos.length)
             return Math.ceil(number)
         },
         prev() {
@@ -830,14 +832,12 @@ export default {
                 return 8
                 }
         }
-    },
-    
+    },   
     mounted() {
       this.$nextTick(() => {
         window.addEventListener('resize', this.onResize);
       })
     },
-
     beforeDestroy() { 
       window.removeEventListener('resize', this.onResize); 
     },
