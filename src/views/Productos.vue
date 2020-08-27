@@ -47,18 +47,33 @@
                                         :id="'modal-'+i+'-'+index"
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
+                                            <div v-if="producto[5]=='Cordeles'">
+                                                <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'"> <swapTextIcon :simpletext="'PIOLA POLIESTER BLANCA, NEGRA Y DE COLOR'"/> </b-button>
+                                                <b-collapse :id="'collapse-table-'+i+'-'+index+'-1'">
+                                                    <b-table class="table-correction primera-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                                </b-collapse>
+                                                <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-2'"><swapTextIcon :simpletext="'TIPOS DE CORDELES'"/></b-button>
+                                                <b-collapse :id="'collapse-table-'+i+'-'+index+'-2'">
+                                                    <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                </b-collapse>
+                                            </div>
+                                            <div v-else-if="producto[5]=='Lonas'">
+                                                    <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'"> <swapTextIcon :simpletext="'LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA'"/> </b-button>
+                                                    <b-collapse :id="'collapse-table-'+i+'-'+index+'-1'">
+                                                        <b-table class="table-correction table-bordered lonas1-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
+                                                    </b-collapse>
 
-                                            <b-table v-if="producto[5]=='Cordeles'" class="table-correction primera-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                                    <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-2'"> <swapTextIcon :simpletext="'LONA REFORZADA 3 CAPAS CALIBRE 12*14 HILOS COLOR AZUL, VERDE, NARANJA, ROJO, AMARILLO Y GRIS'"/> </b-button>
+                                                    <b-collapse :id="'collapse-table-'+i+'-'+index+'-2'">
+                                                        <b-table class="table-correction table-bordered lonas2-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
+                                                    </b-collapse>
+
+                                                    <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-3'"> <swapTextIcon :simpletext="'LONA REFORZADA EXTRA CALIBRE 14*14 HILOS COLOR AZUL, BLANCA, ROJO, AMARILLO, GRIS Y VERDE'"/> </b-button>
+                                                    <b-collapse :id="'collapse-table-'+i+'-'+index+'-3'">
+                                                        <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
+                                                    </b-collapse>
+                                            </div>
                                             <b-table v-else class="table-correction thead-dark" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
-                                            <b-button v-if="producto[5]=='Cordeles'" class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-2'" >Tipos de Cordeles</b-button>
-                                            <b-collapse v-if="producto[5]=='Cordeles'" :id="'collapse-table-'+i+'-'+index+'-2'">
-                                                <b-table class="table-correction table-bordered segunda-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
-                                            </b-collapse>
-                                            <b-table v-if="producto[5]=='Lonas'" class="table-correction table-bordered lonas1-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
-                                            <template v-if="producto[5]=='Lonas'">
-                                                <b-table class="table-correction table-bordered lonas2-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" thead-class="hidden_header"></b-table>
-                                                <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
-                                            </template>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -86,7 +101,7 @@
         text-align: center;
         padding-top: 1em;
         display: block;
-        content: "PIOL A POLIESTER BLANCA, NEGRA Y DE COLOR";
+        content: "PIOLA POLIESTER BLANCA, NEGRA Y DE COLOR";
         background-color: #f3de9f;
         width: 100%;
         height: 3em;
@@ -118,6 +133,7 @@
     }
 }
 */
+/*
 .lonas1-tabla {
     &::before{
         text-align: center;
@@ -132,6 +148,8 @@
         font-weight: bold;
     }
 }
+*/
+/*
 .lonas2-tabla {
     &::before{
         text-align: center;
@@ -145,7 +163,8 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
     }
-}
+}*/
+/*
 .lonas3-tabla {
     &::before{
         text-align: center;
@@ -160,6 +179,7 @@
         font-weight: bold;
     }
 }
+*/
 .table-correction{
     text-align: center;
     max-height: 60vh !important;
@@ -190,6 +210,8 @@
     font-size:.9em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
     .correction-al{
         align-self: center;
@@ -285,7 +307,10 @@
         font-size: xx-large;
         color: #a13a4b;
         font-family: 'Franklin Gothic Medium', sans-serif !important;
+        max-width: 100%;
     }
+@media screen and (min-width:880px){
+    
     .primero-t {    
       animation: showup 5s forwards;
     }
@@ -297,19 +322,30 @@
       margin-left:-355px;
       animation: slidein 5s forwards;
     }
-    @media screen and (max-width: 565px){
-      .titulo{
-        font-size:large;
-        
-      }
+}
       .fondo{
           margin-left: 1em;
           margin-right: 1em;
       }
+    @media screen and (min-width: 487px) and (max-width: 879px){
+      .titulo{
+        font-size:x-large;
+      }
       .segundo-t {
         animation: revelar-mb 5s forwards;
+      }
+    }
+
+
+    @media screen and (min-width: 0) and (max-width:486px){
+        .titulo{
+            font-size:medium;
+        }
+        .segundo-t{
+            animation: revelar-mb 5s forwards;
         }
     }
+
     @media screen and (min-width: 768px)and (max-width: 991px){
         .correction-al >div{
             >article{
@@ -382,6 +418,7 @@
             }
         }
     }
+
     @keyframes showup {
         0% {opacity:0;}
         20% {opacity:1;}
@@ -408,7 +445,9 @@
         20% {opacity:1;width:0px;}
         30% {width: 345px;}
         80% {opacity:1; width: 345px;}
-        100% {opacity:1;width:345px;}
+        100% {opacity:1;width:345px;
+              min-width:fit-content;
+        }
     }
     @keyframes mostrar {
         0% {opacity: 0;}
@@ -419,10 +458,21 @@
     .hidden_header{
         display: none;
     }
+
+    @media screen and (min-width:400px) and (max-width:500px){
+        .table-correction >*{
+            font-size:.8em !important;
+        }
+    }
+    @media screen and (min-width:0px) and (max-width:399px){
+        .table-correction >*{
+            font-size:.5em !important;
+        }
+    }
 </style>
 <script>
 import swapIcon from '@/components/ToggleIcon.vue'
-
+import swapTextIcon from '@/components/ToggleTextIcon.vue'
 export default {
     name: 'Home',
     data(){
@@ -851,6 +901,7 @@ export default {
     },
     components:{
       swapIcon,
+      swapTextIcon,
     },
 }
 </script>

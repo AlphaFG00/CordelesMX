@@ -22,9 +22,9 @@ export default {
   }
 }
 </script>
-<style lang="scss" scope>
+<style lang="scss" scoped>
 .my-size{
     min-width: 100%;
     height:auto;
-}    
+}
 </style>
