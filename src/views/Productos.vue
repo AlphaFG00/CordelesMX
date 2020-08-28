@@ -73,7 +73,14 @@
                                                         <b-table class="table-correction table-bordered lonas3-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[9]" thead-class="hidden_header"></b-table>
                                                     </b-collapse>
                                             </div>
-                                            <b-table v-else class="table-correction thead-dark" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
+                                            <div v-else-if="producto[5]=='Costales de Rafia'">
+                                                <b-table class="table-correction thead-dark" head-row-variant="danger"  responsive="sm" striped hover :items="producto[7]" :fields="producto[6]"></b-table>
+                                                <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'"> <swapTextIcon :simpletext="'TIPO'"/> </b-button>
+                                                <b-collapse :id="'collapse-table-'+i+'-'+index+'-1'">
+                                                    <b-table class="table-correction table-bordered lonas1-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
+                                                </b-collapse>
+                                            </div>
+                                            <b-table v-else class="table-correction thead-dark"   responsive="sm" striped hover :items="producto[1]" :fields="producto[0]"></b-table>
                                         </b-modal>
                                 </b-card>
                             </b-col>
@@ -196,8 +203,9 @@
     }
     &::-webkit-scrollbar-thumb
     {
-        background-color:#e7bf47;
+        background-color:#a13a4b;
     }
+    
 }
 .table-join{
     margin: 0;
@@ -205,7 +213,8 @@
 
 .button-table{
     display: block;
-    background-color: #f3de9f;
+    background-color: #a13a4b;
+    color: white;
     width: 100%;
     font-size:.9em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -458,7 +467,11 @@
     .hidden_header{
         display: none;
     }
-
+    
+    .thead-dark th{
+        background-color:#a13a4b !important;
+        color: white !important;
+    }
     @media screen and (min-width:400px) and (max-width:500px){
         .table-correction >*{
             font-size:.8em !important;
@@ -473,6 +486,7 @@
 <script>
 import swapIcon from '@/components/ToggleIcon.vue'
 import swapTextIcon from '@/components/ToggleTextIcon.vue'
+import tablaCostalRafia from '@/components/TablaCostalRafia.vue'
 export default {
     name: 'Home',
     data(){
@@ -506,7 +520,7 @@ export default {
                         { diametro:'10 mm - 3/8”',peso_en_kg:"0.061",peso:"50",resistencia:"472"},
                         { diametro:'11 mm - 7/16”',peso_en_kg:"0.078",peso:"50",resistencia:"610"},
                         { diametro:'13 mm - 1/2”',peso_en_kg:"0.112",peso:"50",resistencia:"940"},
-                        { diametro:'16 mm - 5/8”',peso_en_kg:"0.198",peso:"100",resistencia:"1537"},
+                        { diametro :'16 mm - 5/8”',peso_en_kg:"0.198",peso:"100",resistencia:"1537"},
                         { diametro:'19 mm - 3/4”',peso_en_kg:"0.248",peso:"100",resistencia:"1886"},
                         { diametro:'25 mm - 1”',peso_en_kg:"0.402",peso:"100",resistencia:"3144"},
                         { diametro:'25 mm - 1”',peso_en_kg:"0.620",peso:"500",resistencia:"4715"},
@@ -560,13 +574,10 @@ export default {
                     "Cordeles",
                     ['cordeles','Cordeles'],
                     [
-                        { cordeles:'CABLE DE NAYLON',Cordeles:'HILO DE NAYLON'},
+                        { cordeles:'CABLE DE NYLON',Cordeles:'HILO DE NYLON'},
                         { cordeles:'HILAZA',Cordeles:'PASTELERO'},
-                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BL. Y COLOR'},
+                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BLANNCO Y COLOR'},
                         { cordeles:'CAÑAMO',Cordeles:'PIOLA'},
-                        { cordeles:'NYLON DE COLOR',Cordeles:'NYLON NEGRO'},
-                        { cordeles:'HILAZA',Cordeles:'CORDON FLOJO'},
-                        { cordeles:'CORDON FLOJO COLOR',Cordeles:'CORDON FLOJO'},
                     ],
                     ['CABLE_DE_NYLON'],
                     [
@@ -621,18 +632,27 @@ export default {
                     "Costales de Yute"
                 ],
                 [
-                    ['tipo','info','menudeo','medio_mayoreo','mayoreo'],
+                    ['tipo'],
                     [
-                        {tipo:'',info:'',menudeo:'De 1-99 PZAS',medio_mayoreo:'100-499 PZAS',mayoreo:'A PARTIR DE 500'},
-                        {tipo:'Nuevo',info:'De 54 x 100 cm kg Nuevo sin impresión',menudeo:'$6.70',medio_mayoreo:'$5.70',mayoreo:'$5.20'},
-                        {tipo:'Azucarero',info:'De 54 x 100 cm 50kg una vaciada impresa',menudeo:'$3.70',medio_mayoreo:'$3.20',mayoreo:'$3.00'},
-                        {tipo:'Sucio',info:'De 50 kg. La medida varía y la capacidad',menudeo:'$2.70',medio_mayoreo:'$2.40',mayoreo:'$2.10'},
-                        {tipo:'Una vaciada',info:'De 25 kg con compresión',menudeo:'$3.00',medio_mayoreo:'$2.70',mayoreo:'$2.50'},
+                        {tipo:'NUEVO'},
+                        {tipo:'AZUCARERO'},
+                        {tipo:'SUCIO'},
+                        {tipo:'UNA VACIADA'},
                     ],
                     require('@/assets/productos/Costal_rafia.jpg'),
                     "Son sacos rígidos, ligeros y resistentes, así como reutilizables debido a la gran durabilidad y resistencia del tejido, disminuyendo el consumo.",
                     "Son usados mayoritariamente para envasar granos, alimentos balanceados, arena, escombros, legumbres, fertilizantes, productos químicos, etc ",
-                    "Costales de Rafia"
+                    "Costales de Rafia",
+                    ['MEDIDA','CAPACIDAD'],
+                    [
+                        {MEDIDA:'36 X 30 cm',CAPACIDAD:'10 kg'},
+                        {MEDIDA:'45 X 75 cm',CAPACIDAD:'25 kg'},
+                        {MEDIDA:'45 X 85 cm',CAPACIDAD:'30 kg'},
+                        {MEDIDA:'54 X 100 cm',CAPACIDAD:'50 kg'},
+                        {MEDIDA:'60 X 100 cm',CAPACIDAD:'60 kg'},
+                        {MEDIDA:'70 X 120 cm',CAPACIDAD:'70 kg'},
+                        {MEDIDA:'80 X 120 cm',CAPACIDAD:'80 kg'},
+                    ]
                 ],
                 [
                     ['HENEQUEN'],
@@ -707,7 +727,7 @@ export default {
                         { LONAS_LIGERAS_M_xM: '12.0 x 18.0' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
-                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz Lonas con forro y de publicidad, carpas.",
+                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz, Lonas con forro y de publicidad, carpas. Lona de rafia (se anexan medidas), Lonas de vinil ( sobre medida), Carpas varias medidas",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lonas",
                     ['LONA_REFORZADA_M_xM'],
@@ -821,7 +841,7 @@ export default {
                         
                     ],
                     require('@/assets/Gifs/varios.gif'),
-                    "Tenemos productos de Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
+                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona de rafia, Lonas de vinil ( sobre medida), Carpas varias medidas",
                     "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
                     "Varios"
                 ],
@@ -902,6 +922,7 @@ export default {
     components:{
       swapIcon,
       swapTextIcon,
+      tablaCostalRafia,
     },
 }
 </script>
