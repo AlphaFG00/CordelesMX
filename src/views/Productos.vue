@@ -462,15 +462,18 @@
         0% {opacity: 0;}
         100% {opacity: 1;}  
     }  
+    
 </style>
 <style>
     .hidden_header{
         display: none;
     }
-    
     .thead-dark th{
         background-color:#a13a4b !important;
         color: white !important;
+    }
+    .modal-title {
+        font-weight: 600 !important;
     }
     @media screen and (min-width:400px) and (max-width:500px){
         .table-correction >*{
