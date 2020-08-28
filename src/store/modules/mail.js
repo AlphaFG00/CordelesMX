@@ -1,4 +1,4 @@
-//import db  from '@/fire'
+import db  from '@/fire'
 
 const state = {
     valor: null
@@ -11,9 +11,9 @@ const getters = {
 const actions = {
     send_mail({commit}, info){
         {
-/*            return new Promise((resolve, reject) => {
+            return new Promise((resolve, reject) => {
                 db.collection('mail').add({
-                    to: 'ismaello125@gmail.com',
+                    to: 'link@cordelesmx.com',
                     message: {
                         subject: 'Correo desde la pagina web',
                         html: `
@@ -31,7 +31,7 @@ const actions = {
                     reject(error)
                 }))
             })
-        */
+
         }
     }
 }
