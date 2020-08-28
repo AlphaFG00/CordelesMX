@@ -43,7 +43,7 @@
                                         <b-modal
                                         size="lg"
                                         header-border-variant="primary" 
-                                        header-text-variant="warning"
+                                        header-text-variant="primary"
                                         :id="'modal-'+i+'-'+index"
                                         :title="'Mas Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
@@ -815,8 +815,8 @@ export default {
                     [
                         { tela_de_yute:'1.30 Metros de ancho'},
                         { tela_de_yute:'2.80 Metros de ancho'},
-                        { tela_de_yute:'hilo de yute 1,2 y 4 hilos (naturalo colores varios)'},
-                        { tela_de_yute:'cable de yute 4,6, 8, 10, 11, 13, 16, 19 y 25 mm'},
+                        { tela_de_yute:'hilo de yute 1, 2 y 4 hilos (natural o colores varios)'},
+                        { tela_de_yute:'cable de yute 4, 6, 8, 10, 11, 13, 16, 19 y 25 mm'},
                     ],
                     require('@/assets/Gifs/yute.gif'),
                     "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
