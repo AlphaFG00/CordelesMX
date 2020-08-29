@@ -484,17 +484,17 @@ export default {
                     "Cables Henequén"
                 ],
                 [
-                    ['milimetros','pulgadas','metros_por_kilo','peso_por_royo','resistencia_a_la_tension'],
+                    ['milimetros','pulgadas','metros_por_kilo','peso_por_rollo','resistencia_a_la_tension'],
                     [
-                        {'milimetros':'4',pulgadas:'3/16',metros_por_kilo:'110',peso_por_royo:'16 kg',resistencia_a_la_tension:'330 kg'},
-                        {'milimetros':'6',pulgadas:'1/4',metros_por_kilo:'62',peso_por_royo:'20 kg',resistencia_a_la_tension:'440 kg'},
-                        {'milimetros':'8',pulgadas:'1/16',metros_por_kilo:'34',peso_por_royo:'22 kg',resistencia_a_la_tension:'550 kg'},
-                        {'milimetros':'10',pulgadas:'3/8',metros_por_kilo:'20',peso_por_royo:'18/30 kg',resistencia_a_la_tension:'930 kg'},
-                        {'milimetros':'11',pulgadas:'7/16',metros_por_kilo:'16',peso_por_royo:'19/30 kg',resistencia_a_la_tension:'1020 kg'},
-                        {'milimetros':'13',pulgadas:'1/2',metros_por_kilo:'14',peso_por_royo:'19/32 kg',resistencia_a_la_tension:'1815 kg'},
-                        {'milimetros':'16',pulgadas:'5/8',metros_por_kilo:'9',peso_por_royo:'58/60 kg',resistencia_a_la_tension:'2585 kg'},
-                        {'milimetros':'19',pulgadas:'3/4',metros_por_kilo:'6',peso_por_royo:'58/60 kg',resistencia_a_la_tension:'3630 kg'},
-                        {'milimetros':'25',pulgadas:'1',metros_por_kilo:'3.4',peso_por_royo:'68/70 kg',resistencia_a_la_tension:'7590 kg'},
+                        {'milimetros':'4',pulgadas:'3/16',metros_por_kilo:'110',peso_por_rollo:'16 kg',resistencia_a_la_tension:'330 kg'},
+                        {'milimetros':'6',pulgadas:'1/4',metros_por_kilo:'62',peso_por_rollo:'20 kg',resistencia_a_la_tension:'440 kg'},
+                        {'milimetros':'8',pulgadas:'1/16',metros_por_kilo:'34',peso_por_rollo:'22 kg',resistencia_a_la_tension:'550 kg'},
+                        {'milimetros':'10',pulgadas:'3/8',metros_por_kilo:'20',peso_por_rollo:'18/30 kg',resistencia_a_la_tension:'930 kg'},
+                        {'milimetros':'11',pulgadas:'7/16',metros_por_kilo:'16',peso_por_rollo:'19/30 kg',resistencia_a_la_tension:'1020 kg'},
+                        {'milimetros':'13',pulgadas:'1/2',metros_por_kilo:'14',peso_por_rollo:'19/32 kg',resistencia_a_la_tension:'1815 kg'},
+                        {'milimetros':'16',pulgadas:'5/8',metros_por_kilo:'9',peso_por_rollo:'58/60 kg',resistencia_a_la_tension:'2585 kg'},
+                        {'milimetros':'19',pulgadas:'3/4',metros_por_kilo:'6',peso_por_rollo:'58/60 kg',resistencia_a_la_tension:'3630 kg'},
+                        {'milimetros':'25',pulgadas:'1',metros_por_kilo:'3.4',peso_por_rollo:'68/70 kg',resistencia_a_la_tension:'7590 kg'},
                     ],
                     require('@/assets/Gifs/cable_polipropileno.gif'),
                     "Tenemos productos de Sogas y cables de polipropileno.",
@@ -502,17 +502,17 @@ export default {
                     "Cables Polipropileno"
                 ],
                 [
-                    ['MEDIDA_Y_CALIBRE','RENDIMIENTO_APROX._EN_METROS_POR_KG','RESISTENCIA_A_LA_RUPTURA','PESO_APROX._POR_ROYO'],
+                    ['MEDIDA_Y_CALIBRE','RENDIMIENTO_APROX._EN_METROS_POR_KG','RESISTENCIA_A_LA_RUPTURA','PESO_APROX._POR_ROLLO'],
                     [
-                        { MEDIDA_Y_CALIBRE:'3 mm (1/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'166 m',RESISTENCIA_A_LA_RUPTURA:'43 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'4 mm (5/32")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'95 m',RESISTENCIA_A_LA_RUPTURA:'115 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'5 mm (3/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'52 m',RESISTENCIA_A_LA_RUPTURA:'207 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'6 mm (1/4")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'38 m',RESISTENCIA_A_LA_RUPTURA:'314 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'8 mm (5/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'25 m',RESISTENCIA_A_LA_RUPTURA:'420 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'10 mm (3/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'25 m',RESISTENCIA_A_LA_RUPTURA:'630 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'12 mm (1/2")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'13 m',RESISTENCIA_A_LA_RUPTURA:'790 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'14 mm (9/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'8 m',RESISTENCIA_A_LA_RUPTURA:'1000 kg','PESO_APROX._POR_ROYO':'10 kg'},
-                        { MEDIDA_Y_CALIBRE:'16 mm (5/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'7 m',RESISTENCIA_A_LA_RUPTURA:'1200 kg','PESO_APROX._POR_ROYO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'3 mm (1/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'166 m',RESISTENCIA_A_LA_RUPTURA:'43 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'4 mm (5/32")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'95 m',RESISTENCIA_A_LA_RUPTURA:'115 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'5 mm (3/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'52 m',RESISTENCIA_A_LA_RUPTURA:'207 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'6 mm (1/4")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'38 m',RESISTENCIA_A_LA_RUPTURA:'314 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'8 mm (5/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'25 m',RESISTENCIA_A_LA_RUPTURA:'420 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'10 mm (3/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'25 m',RESISTENCIA_A_LA_RUPTURA:'630 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'12 mm (1/2")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'13 m',RESISTENCIA_A_LA_RUPTURA:'790 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'14 mm (9/16")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'8 m',RESISTENCIA_A_LA_RUPTURA:'1000 kg','PESO_APROX._POR_ROLLO':'10 kg'},
+                        { MEDIDA_Y_CALIBRE:'16 mm (5/8")','RENDIMIENTO_APROX._EN_METROS_POR_KG':'7 m',RESISTENCIA_A_LA_RUPTURA:'1200 kg','PESO_APROX._POR_ROLLO':'10 kg'},
                         
                     ],
                     require('@/assets/Gifs/cordeles.gif'),
@@ -645,7 +645,7 @@ export default {
                     require('@/assets/Gifs/jarcieria.gif'),
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
                     "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
-                    "Jarcieria"
+                    "Jarciería"
                 ],
                 [
                     ['LONAS_LIGERAS_M_xM'],
