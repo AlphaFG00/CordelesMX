@@ -62,7 +62,7 @@
 </template>
 <script>
   export default {
-    name: 'contactForm',
+    name: 'ContactForm',
     data() {
       return {
         form: {
