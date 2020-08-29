@@ -579,7 +579,7 @@ export default {
                     [
                         { cordeles:'CABLE DE NYLON',Cordeles:'HILO DE NYLON'},
                         { cordeles:'HILAZA',Cordeles:'PASTELERO'},
-                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BLANNCO Y COLOR'},
+                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BLANCO Y COLOR'},
                         { cordeles:'CAÑAMO',Cordeles:'PIOLA'},
                     ],
                     ['CABLE_DE_NYLON'],
@@ -603,7 +603,7 @@ export default {
                     ]
                 ],
                 [
-                    ['costal','medida(CM)','peso_gr','capacidad'],
+                    ['costal','medida(CM)','peso','capacidad'],
                     [
                         {costal:'TRIGUERO','medida(CM)':'70x110',peso_gr:'900 g',capacidad:'100 kg'},
                         {costal:'BURRERO','medida(CM)':'60x100',peso_gr:'760 g',capacidad:'100 kg'},
