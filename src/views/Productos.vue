@@ -790,7 +790,7 @@ export default {
                         
                     ],
                     require('@/assets/Gifs/varios.gif'),
-                    "La mejor selección de productos en nuestro giro para sus necesidades",
+                    "La mejor selección de productos en nuestro giro para sus necesidades.",
                     "Ofrecemos Manguera para agua y gas, Petate, Pachon, etc.",
                     "Varios"
                 ],
