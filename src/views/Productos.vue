@@ -670,7 +670,7 @@ export default {
                         {HENEQUEN:'Tela de henequen de 1.40 *100 mtrs'},
                     ],
                     require('@/assets/Gifs/henequen.gif'),
-                    "La fibra es primero extraída de la planta y posteriormente procesada en diversas formas racterísticas tales que favorecen su hilado y su tratamiento textil.",
+                    "La fibra es primero extraída de la planta y posteriormente procesada en diversas formas con características tales que favorecen su hilado y su tratamiento textil.",
                     "Son utilizados para el amarre del enfardelado y del embalaje de la paja, del heno, entre otros.",
                     "Henequén"
                 ],
