@@ -4,7 +4,7 @@
     <b-container id="view-inicio" class="mt-4 mb-5 pt-4 pb-5">
       <div class="mi-titulo-1">Bienvenido</div> 
       <div class="mi-titulo-2"> 
-          <span> a CordelesMX</span>
+          <span> a Cordeles MX</span>
       </div>
       <br>
       <div class="titulo-slogan animacion-1">
@@ -140,9 +140,9 @@ export default {
     @keyframes reveal {
       0% {opacity: 0; width: 0px;}
       10% {opacity: 1; width: 0px;}
-      25% {width: 420px;}
+      25% {width: 480px;}
       80% {opacity: 1;}
-      100% {opacity: 1;width: 420px;}
+      100% {opacity: 1;width: 480px;}
     }
     @keyframes reveal-mb {
         0% {opacity:0;width:0px;}
