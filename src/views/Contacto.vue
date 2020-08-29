@@ -26,7 +26,7 @@
             <b-card>
               <div class="titulo-card">Visitanos</div>
               <myMap :coordinates="[19.425618, -99.128960]" :height="map_height"/>
-              <span>Ubicación: Jesús Maryia 153 local B, colonia centro  cp 06000 delegacion Cuauhtemoc</span>
+              <span>Ubicación: Jesús María 153 Local B , Colonia Centro, CP 06000, Delegación  Cuauhtémoc.</span>
             </b-card>
           </b-col> 
         </b-row>

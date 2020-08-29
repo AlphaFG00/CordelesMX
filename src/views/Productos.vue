@@ -58,6 +58,12 @@
                                                 </b-collapse>
                                             </div>
                                             <div v-else-if="producto[5]=='Lonas'">
+                                                    <!--<ul class="fix-list">
+                                                        <li>Lona de rafia (se anexan medidas)</li>
+                                                        <li>Lonas de vinil (sobre medida)</li>
+                                                        <li>Carpas (varias medidas)</li>
+                                                    </ul> -->
+                                                    <p class="fix-list"> - Lona de rafia (se anexan medidas)<br>- Lonas de vinil (sobre medida)<br>- Carpas (varias medidas)</p>
                                                     <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'"> <swapTextIcon :simpletext="'LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA'"/> </b-button>
                                                     <b-collapse :id="'collapse-table-'+i+'-'+index+'-1'">
                                                         <b-table class="table-correction table-bordered lonas1-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
@@ -124,69 +130,9 @@
   width: 25%;
 }
 .button-details{margin: 12px 0 0 3px;}
-/*
-.segunda-tabla{
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "TIPOS DE CORDELES";
-        background-color: #f3de9f;
-        width: 100%;
-        height: 3em;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
+.fix-list{
+    margin-top: -1.5em;
 }
-*/
-/*
-.lonas1-tabla {
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA";
-        background-color: #f3de9f;
-        width: 100%;
-        height: max-content;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
-}
-*/
-/*
-.lonas2-tabla {
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "LONA REFORZADA 3 CAPAS CALIBRE 12*14 HILOS COLOR AZUL, VERDE, NARANJA, ROJO, AMARILLO Y GRIS";
-        background-color: #f3de9f;
-        width: 100%;
-        height: max-content;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
-}*/
-/*
-.lonas3-tabla {
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "LONA REFORZADA EXTRA CALIBRE 14*14 HILOS COLOR AZUL, BLANCA, ROJO, AMARILLO, GRIS Y VERDE";
-        background-color: #f3de9f;
-        width: 100%;
-        height: max-content;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
-}
-*/
 .table-correction{
     text-align: center;
     max-height: 60vh !important;
@@ -461,7 +407,7 @@
     @keyframes mostrar {
         0% {opacity: 0;}
         100% {opacity: 1;}  
-    }  
+    }
     
 </style>
 <style>
@@ -579,7 +525,7 @@ export default {
                     [
                         { cordeles:'CABLE DE NYLON',Cordeles:'HILO DE NYLON'},
                         { cordeles:'HILAZA',Cordeles:'PASTELERO'},
-                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BLANNCO Y COLOR'},
+                        { cordeles:'CUERDA DE VIDA',Cordeles:'CORDON FLOJO BLANCO Y COLOR'},
                         { cordeles:'CAÑAMO',Cordeles:'PIOLA'},
                     ],
                     ['CABLE_DE_NYLON'],
@@ -603,18 +549,18 @@ export default {
                     ]
                 ],
                 [
-                    ['costal','medida(CM)','peso_gr','capacidad'],
+                    ['costal','medida(CM)','peso_(Grms)','capacidad'],
                     [
-                        {costal:'TRIGUERO','medida(CM)':'70x110',peso_gr:'900 g',capacidad:'100 kg'},
-                        {costal:'BURRERO','medida(CM)':'60x100',peso_gr:'760 g',capacidad:'100 kg'},
-                        {costal:'CACAO','medida(CM)':'70x110',peso_gr:'800 g',capacidad:'100 kg'},
-                        {costal:'ZANAHORIA','medida(CM)':'67x100',peso_gr:'640 g',capacidad:'100 kg'},
-                        {costal:'MAÍZ-FRIJOL','medida(CM)':'62x102',peso_gr:'750 g',capacidad:'100 kg'},
-                        {costal:'JICAMA','medida(CM)':'65x100',peso_gr:'500 g',capacidad:'100 kg'},
-                        {costal:'DOBLE PIE','medida(CM)':'70x100',peso_gr:'1250 g',capacidad:'50 kg'},
-                        {costal:'CEBOLLA','medida(CM)':'60x80',peso_gr:'300 g',capacidad:'100 kg'},
-                        {costal:'PERGAMINO','medida(CM)':'70x110',peso_gr:'1000 g',capacidad:'100 kg'},
-                        {costal:'CAFETERO','medida(CM)':'70x100',peso_gr:'950 g',capacidad:'50 kg'},
+                        {costal:'TRIGUERO','medida(CM)':'70x110','peso_(Grms)':'900 g',capacidad:'100 kg'},
+                        {costal:'BURRERO','medida(CM)':'60x100','peso_(Grms)':'760 g',capacidad:'100 kg'},
+                        {costal:'CACAO','medida(CM)':'70x110','peso_(Grms)':'800 g',capacidad:'100 kg'},
+                        {costal:'ZANAHORIA','medida(CM)':'67x100','peso_(Grms)':'640 g',capacidad:'100 kg'},
+                        {costal:'MAÍZ-FRIJOL','medida(CM)':'62x102','peso_(Grms)':'750 g',capacidad:'100 kg'},
+                        {costal:'JICAMA','medida(CM)':'65x100','peso_(Grms)':'500 g',capacidad:'100 kg'},
+                        {costal:'DOBLE PIE','medida(CM)':'70x100','peso_(Grms)':'1250 g',capacidad:'50 kg'},
+                        {costal:'CEBOLLA','medida(CM)':'60x80','peso_(Grms)':'300 g',capacidad:'100 kg'},
+                        {costal:'PERGAMINO','medida(CM)':'70x110','peso_(Grms)':'1000 g',capacidad:'100 kg'},
+                        {costal:'CAFETERO','medida(CM)':'70x100','peso_(Grms)':'950 g',capacidad:'50 kg'},
                     ],
                     require('@/assets/Gifs/costal_henequen.gif'),
                     "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
@@ -622,12 +568,12 @@ export default {
                     "Costal Henequén"
                 ],
                 [
-                    ['costal','medida(CM)','peso_gr','capacidad'],
+                    ['costal','medida(CM)','peso_(Grms)','capacidad'],
                     [
-                        {costal:'NUEVO','medida(CM)':'70x110',peso_gr:'930 g',capacidad:'70 kg'},
-                        {costal:'USADO','medida(CM)':'65x100',peso_gr:'750 g',capacidad:'60 kg'},
-                        {costal:'DELGADO','medida(CM)':'60x110',peso_gr:'500 g',capacidad:'60 kg'},
-                        {costal:'CACAHUATERO','medida(CM)':'55x100',peso_gr:'750 g',capacidad:'50 kg'},
+                        {costal:'NUEVO','medida(CM)':'70x110','peso_(Grms)':'930 g',capacidad:'70 kg'},
+                        {costal:'USADO','medida(CM)':'65x100','peso_(Grms)':'750 g',capacidad:'60 kg'},
+                        {costal:'DELGADO','medida(CM)':'60x110','peso_(Grms)':'500 g',capacidad:'60 kg'},
+                        {costal:'CACAHUATERO','medida(CM)':'55x100','peso_(Grms)':'750 g',capacidad:'50 kg'},
                     ],
                     require('@/assets/Gifs/costal_yute.gif'),
                     "Permite una perfecta transpiración de los productos que contienen, su elaboración no daña al medio ambiente debido a que su planta proviene del cultivo. Si el saco se llena de tierra puede servir para fabricar barreras contra la erosión o para evitar inundaciones.",
@@ -670,11 +616,12 @@ export default {
                         {HENEQUEN:'Tela de henequen de 1.40 *100 mtrs'},
                     ],
                     require('@/assets/Gifs/henequen.gif'),
-                    "La fibra es primero extraída de la planta y posteriormente procesada en diversas formas racterísticas tales que favorecen su hilado y su tratamiento textil.",
+                    "La fibra es primero extraída de la planta y posteriormente procesada en diversas formas con características tales que favorecen su hilado y su tratamiento textil.",
                     "Son utilizados para el amarre del enfardelado y del embalaje de la paja, del heno, entre otros.",
                     "Henequén"
                 ],
                 [
+<<<<<<< HEAD
                     ['Jarciería'],
                     [
                         {'Jarcería':'Atomizadoes'},
@@ -695,6 +642,28 @@ export default {
                         {'Jarcería':'Mops'},
                         {'Jarcería':'Recogedores'},
                         {'Jarcería':'Quimicos'},
+=======
+                    ['jarcieria'],
+                    [
+                        {jarcieria:'Atomizadoes'},
+                        {jarcieria:'Botes para basura'},
+                        {jarcieria:'Cepillos'},
+                        {jarcieria:'Cubetas'},
+                        {jarcieria:'Despachadores'},
+                        {jarcieria:'Destapa caños'},
+                        {jarcieria:'Escobas'},
+                        {jarcieria:'Esponjas'},
+                        {jarcieria:'Fibras'},
+                        {jarcieria:'Franelas'},
+                        {jarcieria:'Guantes'},
+                        {jarcieria:'Jaladores'},
+                        {jarcieria:'Jerga'},
+                        {jarcieria:'Lazo de tendedero'},
+                        {jarcieria:'Mechudos'},
+                        {jarcieria:'Mops'},
+                        {jarcieria:'Recogedores'},
+                        {jarcieria:'Quimicos'},
+>>>>>>> 541e7151b46108d69c3df54601de685ae3d8edef
                     ],
                     require('@/assets/Gifs/jarcieria.gif'),
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
@@ -704,66 +673,66 @@ export default {
                 [
                     ['LONAS_LIGERAS_M_xM'],
                     [
-                        { LONAS_LIGERAS_M_xM: ' 1.8 x 2.40' },
-                        { LONAS_LIGERAS_M_xM: '2.4 x 3.60' },
-                        { LONAS_LIGERAS_M_xM: '3.0 x 3.0' },
-                        { LONAS_LIGERAS_M_xM: '3.0 x 3.6' },
-                        { LONAS_LIGERAS_M_xM: '3.0 x 4.2' },
-                        { LONAS_LIGERAS_M_xM: '3.0 x 5.4' },
-                        { LONAS_LIGERAS_M_xM: '3.0 x 6.0' },
+                        { LONAS_LIGERAS_M_xM: ' 1.80 x 2.40' },
+                        { LONAS_LIGERAS_M_xM: '2.40 x 3.60' },
+                        { LONAS_LIGERAS_M_xM: '3.00 x 3.00' },
+                        { LONAS_LIGERAS_M_xM: '3.00 x 3.60' },
+                        { LONAS_LIGERAS_M_xM: '3.00 x 4.20' },
+                        { LONAS_LIGERAS_M_xM: '3.00 x 5.40' },
+                        { LONAS_LIGERAS_M_xM: '3.00 x 6.00' },
                         { LONAS_LIGERAS_M_xM: '3.60 x 3.60' },
-                        { LONAS_LIGERAS_M_xM: '3.60 x 4.8' },
-                        { LONAS_LIGERAS_M_xM: '3.60 x 5.4' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 4.80' },
+                        { LONAS_LIGERAS_M_xM: '3.60 x 5.40' },
                         { LONAS_LIGERAS_M_xM: '4.20 x 4.80' },
-                        { LONAS_LIGERAS_M_xM: '4.20 x 6.0' },
-                        { LONAS_LIGERAS_M_xM: '4.80 x 6' },
-                        { LONAS_LIGERAS_M_xM: '5.40 x 7.2' },
-                        { LONAS_LIGERAS_M_xM: '6.0 x 6.0' },
-                        { LONAS_LIGERAS_M_xM: '6.0 x 9.0' },
-                        { LONAS_LIGERAS_M_xM: '6.0 x 12.0' },
-                        { LONAS_LIGERAS_M_xM: '6.0 x 15.0' },
+                        { LONAS_LIGERAS_M_xM: '4.20 x 6.00' },
+                        { LONAS_LIGERAS_M_xM: '4.80 x 6.00' },
+                        { LONAS_LIGERAS_M_xM: '5.40 x 7.20' },
+                        { LONAS_LIGERAS_M_xM: '6.00 x 6.00' },
+                        { LONAS_LIGERAS_M_xM: '6.00 x 9.00' },
+                        { LONAS_LIGERAS_M_xM: '6.00 x 12.00' },
+                        { LONAS_LIGERAS_M_xM: '6.00 x 15.00' },
                         { LONAS_LIGERAS_M_xM: '7.20 x 7.20' },
-                        { LONAS_LIGERAS_M_xM: '7.20 x 9.0' },
-                        { LONAS_LIGERAS_M_xM: '8.20 x 12.0' },
-                        { LONAS_LIGERAS_M_xM: '8.20 x 15.0' },
-                        { LONAS_LIGERAS_M_xM: '9.0 x 9.0' },
-                        { LONAS_LIGERAS_M_xM: '12.0 x 18.0' },
+                        { LONAS_LIGERAS_M_xM: '7.20 x 9.00' },
+                        { LONAS_LIGERAS_M_xM: '8.20 x 12.00' },
+                        { LONAS_LIGERAS_M_xM: '8.20 x 15.00' },
+                        { LONAS_LIGERAS_M_xM: '9.00 x 9.00' },
+                        { LONAS_LIGERAS_M_xM: '12.00 x 18.00' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
-                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz, Lonas con forro y de publicidad, carpas. Lona de rafia (se anexan medidas), Lonas de vinil ( sobre medida), Carpas varias medidas",
+                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz, Lonas con forro y de publicidad, carpas.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lonas",
                     ['LONA_REFORZADA_M_xM'],
                     [
-                        { LONA_REFORZADA_M_xM: '3.0 x 4.20' },
-                        { LONA_REFORZADA_M_xM: '3.0 x 5.40' },
-                        { LONA_REFORZADA_M_xM: '3.0 x 6.0' },
-                        { LONA_REFORZADA_M_xM: '3.6 x 5.4' },
-                        { LONA_REFORZADA_M_xM: '4.2 x 4.8' },
-                        { LONA_REFORZADA_M_xM: '4.2 x 6.0' },
-                        { LONA_REFORZADA_M_xM: '4.8 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '3.60 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 4.80' },
+                        { LONA_REFORZADA_M_xM: '4.20 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '4.80 x 6.00' },
                         { LONA_REFORZADA_M_xM: '5.10 x 5.10' },
-                        { LONA_REFORZADA_M_xM: '5.40 x 7.2' },
-                        { LONA_REFORZADA_M_xM: '5.40 x 7.2' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.20' },
+                        { LONA_REFORZADA_M_xM: '5.40 x 7.20' },
                         { LONA_REFORZADA_M_xM: '4.40 x 8.20' },
-                        { LONA_REFORZADA_M_xM: '6.0 x 6.0' },
-                        { LONA_REFORZADA_M_xM: '6.0 x 8.2' },
-                        { LONA_REFORZADA_M_xM: '6.0 x 9.0' },
-                        { LONA_REFORZADA_M_xM: '6.0 x 12.0' },
-                        { LONA_REFORZADA_M_xM: '6.0 x 15.0' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 6.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 8.20' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 9.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '6.00 x 15.00' },
                         { LONA_REFORZADA_M_xM: '8.10 x 10.20' },
-                        { LONA_REFORZADA_M_xM: '8.20 x 12.0' },
-                        { LONA_REFORZADA_M_xM: '8.20 x 15.0' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 12.00' },
+                        { LONA_REFORZADA_M_xM: '8.20 x 15.00' },
                     ],
                     ['LONA_REFORZADA_M_xM'],
                     [
                         { LONA_REFORZADA_M_xM: '1.80 x 2.40' },
                         { LONA_REFORZADA_M_xM: '2.40 x 3.00' },
                         { LONA_REFORZADA_M_xM: '2.40 x 3.60' },
-                        { LONA_REFORZADA_M_xM: '3.0 x 3.0' },
-                        { LONA_REFORZADA_M_xM: '3.0 x 4.20' },
-                        { LONA_REFORZADA_M_xM: '3.0 x 5.40' },
-                        { LONA_REFORZADA_M_xM: '3.0 x 6.0' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 3.00' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 4.20' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 5.40' },
+                        { LONA_REFORZADA_M_xM: '3.00 x 6.00' },
                         { LONA_REFORZADA_M_xM: '3.30 x 9.30' },
                         { LONA_REFORZADA_M_xM: '3.60 x 5.40' },
                         { LONA_REFORZADA_M_xM: '4.20 x 4.20' },
@@ -822,7 +791,7 @@ export default {
                         { tela_de_yute:'cable de yute 4, 6, 8, 10, 11, 13, 16, 19 y 25 mm'},
                     ],
                     require('@/assets/Gifs/yute.gif'),
-                    "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos,",
+                    "Se extrae de una planta conocida como “Corchorus Capsularis” la cual solo se da en climas húmedos y cálidos.",
                     "Se usa para la industria de la decoración, entre otros. Existen adicionalmente costales de yute. Hilo de Yute de 1 o 2 Cabos.",
                     "Yute"
                 ],
@@ -830,12 +799,12 @@ export default {
                     ['varios'],
                     [
                         {varios:'Ahuja de arrea (varias medidas)'},
-                        {varios:'Bidones,  botes ,cubetas industriales '},
+                        {varios:'Bidones,  botes,cubetas industriales '},
                         {varios:'Caretas'},
                         {varios:'Cintas canela y transparente'},
                         {varios:'Cubrebocas'},
                         {varios:'Hule negro '},
-                        {varios:'Manguera para agua y gas.'},
+                        {varios:'Manguera para agua y gas'},
                         {varios:'Pachon'},
                         {varios:'Petate'},
                         {varios:'Playo o polistretch'},
@@ -844,8 +813,8 @@ export default {
                         
                     ],
                     require('@/assets/Gifs/varios.gif'),
-                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona de rafia, Lonas de vinil ( sobre medida), Carpas varias medidas",
-                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
+                    "La mejor selección de productos en nuestro giro para sus necesidades.",
+                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, etc.",
                     "Varios"
                 ],
 
