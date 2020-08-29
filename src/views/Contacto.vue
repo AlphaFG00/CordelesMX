@@ -113,7 +113,7 @@ export default {
 
 #flip > div > div {
   color:#fff;
-  padding:4px 12px;
+  padding:0px 10px 0px 20px;
   height:45px;
   margin-bottom:45px;
   display:inline-block;
@@ -124,13 +124,16 @@ export default {
 }
 
 #flip div div {
-  background:#42c58a;
+  background:#dcb84a;
+  box-shadow: inset 10px 0 0 0  #b8993d;
 }
 #flip div:first-child div {
-  background:#4ec7f3;
+  background:#cb816c;
+  box-shadow: inset 10px 0 0 0 #a56857;
 }
 #flip div:last-child div {
-  background:#DC143C;
+  background:#a4181a;
+  box-shadow: inset 10px 0 0 0 #811416;
 }
 
 @keyframes show {
