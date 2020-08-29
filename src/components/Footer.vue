@@ -8,7 +8,7 @@
       </b-col>
       <b-col sm="12" lg="12" class="credits mt-2" order="3">
         <p>© 2020 CordelesMX. Todos los derechos reservados</p>
-        <p>Desarrollado por "" </p>
+        <p>Desarrollado por <span class="mexa-credits"><a href="https://www.facebook.com/MexaStack-104185894740731">MexaStack</a></span></p>
       </b-col>
       <b-col sm="12" lg="4" class="social-media" order="2">
         <div class="animation-space">
@@ -41,13 +41,17 @@
   font-family:'Times New Roman', Times, serif;
   color: #a4181a;
   margin:0 !important;
-  p{
-        margin: 0 !important;
-  }
-  p :first-child{
-    font-size: .8em;
+  p{margin: 0 !important;}
+  p :first-child {font-size: .8em;}
+  p:nth-child(2) .mexa-credits{
+      font-size: 1.25em;
+      font-family:'Times New Roman', Times, serif;
+      :hover{
+        text-decoration: none;
+      }
   }
 }
+
 .social-media{
   padding-top: .2rem;
  .animation-space, .phone-div{

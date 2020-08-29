@@ -16,6 +16,7 @@
                         id="input-1"
                         v-model="form.name"
                         required
+                        type="text"
                         placeholder="Ingrese su nombre"
                     />
                 </b-form-group>
@@ -39,9 +40,9 @@
                     <b-form-input
                         id="input-3"
                         v-model="form.number"
-                        type="text"
+                        type="number"
                         required
-                        placeholder="Ingrese su número teléfonico"
+                        placeholder="5512345678"
                     />
                 </b-form-group>
 
@@ -60,6 +61,17 @@
         </b-card>
     </div>
 </template>
+<style lang="scss">
+#input-group-3 {
+  div{
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}
+</style>
 <script>
   export default {
     name: 'ContactForm',
@@ -68,7 +80,7 @@
         form: {
             email: '',
             name: '',
-            number: '',
+            number: 0,
             text: ''
         },
         selected_message: 'success',
@@ -86,6 +98,8 @@
         },
         show: true
       }
+    },
+    computed:{
     },
     methods: {
         onSubmit(evt) {
@@ -115,8 +129,7 @@
             this.form.email = ''
             this.form.name = ''
             this.form.text = ''
-            this.form.number=''
-
+            this.form.number=0
             // Trick to reset/clear native browser form validation state
             this.show = false
             this.$nextTick(() => {
