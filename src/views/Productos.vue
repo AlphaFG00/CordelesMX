@@ -58,6 +58,12 @@
                                                 </b-collapse>
                                             </div>
                                             <div v-else-if="producto[5]=='Lonas'">
+                                                    <!--<ul class="fix-list">
+                                                        <li>Lona de rafia (se anexan medidas)</li>
+                                                        <li>Lonas de vinil (sobre medida)</li>
+                                                        <li>Carpas (varias medidas)</li>
+                                                    </ul> -->
+                                                    <p class="fix-list"> - Lona de rafia (se anexan medidas)<br>- Lonas de vinil (sobre medida)<br>- Carpas (varias medidas)</p>
                                                     <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'"> <swapTextIcon :simpletext="'LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA'"/> </b-button>
                                                     <b-collapse :id="'collapse-table-'+i+'-'+index+'-1'">
                                                         <b-table class="table-correction table-bordered lonas1-tabla" head-row-variant="danger"  responsive="sm" striped hover :items="producto[1]" thead-class="hidden_header"></b-table>
@@ -124,69 +130,9 @@
   width: 25%;
 }
 .button-details{margin: 12px 0 0 3px;}
-/*
-.segunda-tabla{
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "TIPOS DE CORDELES";
-        background-color: #f3de9f;
-        width: 100%;
-        height: 3em;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
+.fix-list{
+    margin-top: -1.5em;
 }
-*/
-/*
-.lonas1-tabla {
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "LONA LIGERA CALIBRE 8*10 HILOS COLORES AZUL, BLANCO, ROJO, AMARILLO, GRIS, VERDE Y NARANJA";
-        background-color: #f3de9f;
-        width: 100%;
-        height: max-content;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
-}
-*/
-/*
-.lonas2-tabla {
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "LONA REFORZADA 3 CAPAS CALIBRE 12*14 HILOS COLOR AZUL, VERDE, NARANJA, ROJO, AMARILLO Y GRIS";
-        background-color: #f3de9f;
-        width: 100%;
-        height: max-content;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
-}*/
-/*
-.lonas3-tabla {
-    &::before{
-        text-align: center;
-        padding-top: 1em;
-        display: block;
-        content: "LONA REFORZADA EXTRA CALIBRE 14*14 HILOS COLOR AZUL, BLANCA, ROJO, AMARILLO, GRIS Y VERDE";
-        background-color: #f3de9f;
-        width: 100%;
-        height: max-content;
-        font-size:.9em;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-    }
-}
-*/
 .table-correction{
     text-align: center;
     max-height: 60vh !important;
@@ -461,7 +407,7 @@
     @keyframes mostrar {
         0% {opacity: 0;}
         100% {opacity: 1;}  
-    }  
+    }
     
 </style>
 <style>
@@ -730,7 +676,7 @@ export default {
                         { LONAS_LIGERAS_M_xM: '12.00 x 18.00' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
-                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz, Lonas con forro y de publicidad, carpas. Lona de rafia (se anexan medidas), Lonas de vinil (sobre medida), Carpas varias medidas",
+                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz, Lonas con forro y de publicidad, carpas.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lonas",
                     ['LONA_REFORZADA_M_xM'],
@@ -844,8 +790,8 @@ export default {
                         
                     ],
                     require('@/assets/Gifs/varios.gif'),
-                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona de rafia, Lonas de vinil ( sobre medida), Carpas varias medidas",
-                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, Lona ligera, reforzada y con publicidad. ",
+                    "La mejor selección de productos en nuestro giro para sus necesidades",
+                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, etc.",
                     "Varios"
                 ],
 
