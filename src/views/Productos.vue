@@ -621,7 +621,6 @@ export default {
                     "Henequén"
                 ],
                 [
-<<<<<<< HEAD
                     ['Jarciería'],
                     [
                         {'Jarcería':'Atomizadoes'},
@@ -642,28 +641,6 @@ export default {
                         {'Jarcería':'Mops'},
                         {'Jarcería':'Recogedores'},
                         {'Jarcería':'Quimicos'},
-=======
-                    ['jarcieria'],
-                    [
-                        {jarcieria:'Atomizadoes'},
-                        {jarcieria:'Botes para basura'},
-                        {jarcieria:'Cepillos'},
-                        {jarcieria:'Cubetas'},
-                        {jarcieria:'Despachadores'},
-                        {jarcieria:'Destapa caños'},
-                        {jarcieria:'Escobas'},
-                        {jarcieria:'Esponjas'},
-                        {jarcieria:'Fibras'},
-                        {jarcieria:'Franelas'},
-                        {jarcieria:'Guantes'},
-                        {jarcieria:'Jaladores'},
-                        {jarcieria:'Jerga'},
-                        {jarcieria:'Lazo de tendedero'},
-                        {jarcieria:'Mechudos'},
-                        {jarcieria:'Mops'},
-                        {jarcieria:'Recogedores'},
-                        {jarcieria:'Quimicos'},
->>>>>>> 541e7151b46108d69c3df54601de685ae3d8edef
                     ],
                     require('@/assets/Gifs/jarcieria.gif'),
                     "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
