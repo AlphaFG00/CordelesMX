@@ -787,8 +787,8 @@ export default {
                         {varios:'Tarimas'},
                     ],
                     require('@/assets/Gifs/varios.gif'),
-                    "Contamos con un amplia gama en productos de jarceria , todo tipo de marcas y calidades",
                     "La mejor selección de productos en nuestro giro para sus necesidades.",
+                    "Contamos con un amplia gama en productos de jarceria , todo tipo de marcas y calidades",
                     "Varios"
                 ],
             ]
