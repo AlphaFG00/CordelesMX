@@ -45,7 +45,7 @@
                                         header-border-variant="primary" 
                                         header-text-variant="primary"
                                         :id="'modal-'+i+'-'+index"
-                                        :title="'Mas Datos del Producto: '+producto[5]">
+                                        :title="'Más Datos del Producto: '+producto[5]">
                                             <p class="my-4">{{producto[3]}}</p>
                                             <div v-if="producto[5]=='Cordeles'">
                                                 <b-button class="button-table" variant="info"  v-b-toggle="['collapse-table-'+i+'-'+index]+'-1'"> <swapTextIcon :simpletext="'PIOLA POLIESTER BLANCA, NEGRA Y DE COLOR'"/> </b-button>
@@ -482,17 +482,17 @@ export default {
                     "Cables Henequén"
                 ],
                 [
-                    ['milimetros','pulgadas','metros_por_kilo','peso_por_rollo','resistencia_a_la_tension'],
+                    ['milimetros','pulgadas','metros_por_kilo','peso_por_rollo','resistencia_a_la_tensión'],
                     [
-                        {'milimetros':'4',pulgadas:'3/16',metros_por_kilo:'110',peso_por_rollo:'16 kg',resistencia_a_la_tension:'330 kg'},
-                        {'milimetros':'6',pulgadas:'1/4',metros_por_kilo:'62',peso_por_rollo:'20 kg',resistencia_a_la_tension:'440 kg'},
-                        {'milimetros':'8',pulgadas:'1/16',metros_por_kilo:'34',peso_por_rollo:'22 kg',resistencia_a_la_tension:'550 kg'},
-                        {'milimetros':'10',pulgadas:'3/8',metros_por_kilo:'20',peso_por_rollo:'18/30 kg',resistencia_a_la_tension:'930 kg'},
-                        {'milimetros':'11',pulgadas:'7/16',metros_por_kilo:'16',peso_por_rollo:'19/30 kg',resistencia_a_la_tension:'1020 kg'},
-                        {'milimetros':'13',pulgadas:'1/2',metros_por_kilo:'14',peso_por_rollo:'19/32 kg',resistencia_a_la_tension:'1815 kg'},
-                        {'milimetros':'16',pulgadas:'5/8',metros_por_kilo:'9',peso_por_rollo:'58/60 kg',resistencia_a_la_tension:'2585 kg'},
-                        {'milimetros':'19',pulgadas:'3/4',metros_por_kilo:'6',peso_por_rollo:'58/60 kg',resistencia_a_la_tension:'3630 kg'},
-                        {'milimetros':'25',pulgadas:'1',metros_por_kilo:'3.4',peso_por_rollo:'68/70 kg',resistencia_a_la_tension:'7590 kg'},
+                        {'milimetros':'4',pulgadas:'3/16',metros_por_kilo:'110',peso_por_rollo:'16 kg','resistencia_a_la_tensión':'330 kg'},
+                        {'milimetros':'6',pulgadas:'1/4',metros_por_kilo:'62',peso_por_rollo:'20 kg','resistencia_a_la_tensión':'440 kg'},
+                        {'milimetros':'8',pulgadas:'1/16',metros_por_kilo:'34',peso_por_rollo:'22 kg','resistencia_a_la_tensión':'550 kg'},
+                        {'milimetros':'10',pulgadas:'3/8',metros_por_kilo:'20',peso_por_rollo:'18/30 kg','resistencia_a_la_tensión':'930 kg'},
+                        {'milimetros':'11',pulgadas:'7/16',metros_por_kilo:'16',peso_por_rollo:'19/30 kg','resistencia_a_la_tensión':'1020 kg'},
+                        {'milimetros':'13',pulgadas:'1/2',metros_por_kilo:'14',peso_por_rollo:'19/32 kg','resistencia_a_la_tensión':'1815 kg'},
+                        {'milimetros':'16',pulgadas:'5/8',metros_por_kilo:'9',peso_por_rollo:'58/60 kg','resistencia_a_la_tensión':'2585 kg'},
+                        {'milimetros':'19',pulgadas:'3/4',metros_por_kilo:'6',peso_por_rollo:'58/60 kg','resistencia_a_la_tensión':'3630 kg'},
+                        {'milimetros':'25',pulgadas:'1',metros_por_kilo:'3.4',peso_por_rollo:'68/70 kg','resistencia_a_la_tensión':'7590 kg'},
                     ],
                     require('@/assets/Gifs/cable_polipropileno.gif'),
                     "Tenemos productos de Sogas y cables de polipropileno.",
@@ -561,8 +561,8 @@ export default {
                         {costal:'CAFETERO','medida(CM)':'70x100','peso_(Grms)':'950 g',capacidad:'50 kg'},
                     ],
                     require('@/assets/Gifs/costal_henequen.gif'),
-                    "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción",
-                    "Costal hecho con fibra de Henequen varios modelos y pesaje.",
+                    "Son utilizados para la recolección, empaque, almacenamiento y comercialización de productos en sectores como el agrícola (café, tubérculos, cacao) y el de construcción.",
+                    "Costal hecho con fibra de Henequén varios modelos y pesaje.",
                     "Costal Henequén"
                 ],
                 [
@@ -602,16 +602,16 @@ export default {
                     ]
                 ],
                 [
-                    ['HENEQUEN'],
+                    ['HENEQUÉN'],
                     [
-                        {HENEQUEN:'Hilo Yucatán'},
-                        {HENEQUEN:'Tomatero'},
-                        {HENEQUEN:'Medio Cabo'},
-                        {HENEQUEN:'1,2,3 Cabos'},
-                        {HENEQUEN:'Titan'},
-                        {HENEQUEN:'Bambino'},
-                        {HENEQUEN:'Hilo de color'},
-                        {HENEQUEN:'Tela de henequen de 1.40 *100 mtrs'},
+                        {'HENEQUÉN':'Hilo Yucatán'},
+                        {'HENEQUÉN':'Tomatero'},
+                        {'HENEQUÉN':'Medio Cabo'},
+                        {'HENEQUÉN':'1,2,3 Cabos'},
+                        {'HENEQUÉN':'Títan'},
+                        {'HENEQUÉN':'Bambino'},
+                        {'HENEQUÉN':'Hilo de color'},
+                        {'HENEQUÉN':'Tela de henequén de 1.40 *100 mtrs'},
                     ],
                     require('@/assets/Gifs/henequen.gif'),
                     "La fibra es primero extraída de la planta y posteriormente procesada en diversas formas con características tales que favorecen su hilado y su tratamiento textil.",
@@ -621,7 +621,7 @@ export default {
                 [
                     ['Jarceria'],
                     [
-                        {'Jarceria':'Atomizadoes'},
+                        {'Jarceria':'Atomizadores'},
                         {'Jarceria':'Botes para basura'},
                         {'Jarceria':'Cepillos'},
                         {'Jarceria':'Cubetas'},
@@ -636,7 +636,7 @@ export default {
                         {'Jarceria':'Jerga'},
                         {'Jarceria':'Lazo de tendedero'},
                         {'Jarceria':'Mechudos'},
-                        {'Jarceria':'Mops'},
+                        {'Jarceria':'Mopas'},
                         {'Jarceria':'Recogedores'},
                         {'Jarceria':'Quimicos'},
                     ],
@@ -674,7 +674,7 @@ export default {
                         { LONAS_LIGERAS_M_xM: '12.00 x 18.00' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
-                    "Ofrecemos lonaspara diversos usos, desde carpas hasta para uso publicitario.",
+                    "Ofrecemos lonas para diversos usos, desde carpas hasta para uso publicitario.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lonas",
                     ['LONA_REFORZADA_M_xM'],
@@ -780,9 +780,9 @@ export default {
                         {varios:'Cubrebocas'},
                         {varios:'Hule negro '},
                         {varios:'Manguera para agua y gas'},
-                        {varios:'Pachon'},
+                        {varios:'Pachón'},
                         {varios:'Petate'},
-                        {varios:'Playo o polistretch'},
+                        {varios:'Playo o poliestretch'},
                         {varios:'Rascadores para gatos'},
                         {varios:'Tarimas'},
                     ],
