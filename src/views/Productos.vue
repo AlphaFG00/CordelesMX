@@ -788,7 +788,7 @@ export default {
                     ],
                     require('@/assets/Gifs/varios.gif'),
                     "La mejor selección de productos en nuestro giro para sus necesidades.",
-                    "Ofrecemos Manguera para agua y gas, Petate, Pachon, etc.",
+                    "Contamos con un amplia gama en productos de jarceria , todo tipo de marcas y calidades",
                     "Varios"
                 ],
             ]
