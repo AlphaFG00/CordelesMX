@@ -477,8 +477,8 @@ export default {
                     ],
                     require('@/assets/Gifs/cable_henequen.gif'),
                     
-                    "Cables de gran resistencia hechos con la planta de antaño que se dio a conocer como \"El oro verde\"",
                     "Presentaciones en: Hilo Yucatán, Tomatero, Medio Cabo, 1,2,3, cabos, Titan, bambino, Hilo de color",
+                    "Cables de gran resistencia hechos con la planta de antaño que se dio a conocer como \"El oro verde\"",
                     "Cables Henequén"
                 ],
                 [
@@ -641,8 +641,8 @@ export default {
                         {'Jarceria':'Quimicos'},
                     ],
                     require('@/assets/Gifs/jarcieria.gif'),
-                    "Variedad en productos de limpieza.",
                     "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
+                    "Variedad en productos de limpieza.",
                     "Jarceria"
                 ],
                 [
@@ -674,8 +674,8 @@ export default {
                         { LONAS_LIGERAS_M_xM: '12.00 x 18.00' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
-                    "Ofrecemos lonas para diversos usos, desde carpas hasta para uso publicitario.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
+                    "Ofrecemos lonas para diversos usos, desde carpas hasta para uso publicitario.",
                     "Lonas",
                     ['LONA_REFORZADA_M_xM'],
                     [
@@ -787,8 +787,8 @@ export default {
                         {varios:'Tarimas'},
                     ],
                     require('@/assets/Gifs/varios.gif'),
-                    "La mejor selección de productos en nuestro giro para sus necesidades.",
                     "Contamos con un amplia gama en productos de jarceria , todo tipo de marcas y calidades",
+                    "La mejor selección de productos en nuestro giro para sus necesidades.",
                     "Varios"
                 ],
             ]
