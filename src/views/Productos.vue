@@ -5,7 +5,7 @@
         <br>
         <br>
         <div class="titulo segundo-t knockout">
-            <span class="ultimo-t">Lo mejor en Cables, Cordeles y Jarcieria</span>
+            <span class="ultimo-t">Lo mejor en Cables, Cordeles y Jarceria</span>
         </div>
         <br>
         <br>
@@ -477,9 +477,7 @@ export default {
                     ],
                     require('@/assets/Gifs/cable_henequen.gif'),
                     
-                    "Se extrae del agave y fue conocido como el oro verde por la cultura maya, se utiliza\
-                    para hacer cordones, telas, alfombras, uso marítimo y especialmente para la decoración hoy en día,\
-                    existe el hilo.",
+                    "Cables de gran resistencia hechos con la planta de antaño que se dio a conocer como \"El oro verde\"",
                     "Presentaciones en: Hilo Yucatán, Tomatero, Medio Cabo, 1,2,3, cabos, Titan, bambino, Hilo de color",
                     "Cables Henequén"
                 ],
@@ -621,31 +619,31 @@ export default {
                     "Henequén"
                 ],
                 [
-                    ['Jarciería'],
+                    ['Jarceria'],
                     [
-                        {'Jarciería':'Atomizadoes'},
-                        {'Jarciería':'Botes para basura'},
-                        {'Jarciería':'Cepillos'},
-                        {'Jarciería':'Cubetas'},
-                        {'Jarciería':'Despachadores'},
-                        {'Jarciería':'Destapa caños'},
-                        {'Jarciería':'Escobas'},
-                        {'Jarciería':'Esponjas'},
-                        {'Jarciería':'Fibras'},
-                        {'Jarciería':'Franelas'},
-                        {'Jarciería':'Guantes'},
-                        {'Jarciería':'Jaladores'},
-                        {'Jarciería':'Jerga'},
-                        {'Jarciería':'Lazo de tendedero'},
-                        {'Jarciería':'Mechudos'},
-                        {'Jarciería':'Mops'},
-                        {'Jarciería':'Recogedores'},
-                        {'Jarciería':'Quimicos'},
+                        {'Jarceria':'Atomizadoes'},
+                        {'Jarceria':'Botes para basura'},
+                        {'Jarceria':'Cepillos'},
+                        {'Jarceria':'Cubetas'},
+                        {'Jarceria':'Despachadores'},
+                        {'Jarceria':'Destapa caños'},
+                        {'Jarceria':'Escobas'},
+                        {'Jarceria':'Esponjas'},
+                        {'Jarceria':'Fibras'},
+                        {'Jarceria':'Franelas'},
+                        {'Jarceria':'Guantes'},
+                        {'Jarceria':'Jaladores'},
+                        {'Jarceria':'Jerga'},
+                        {'Jarceria':'Lazo de tendedero'},
+                        {'Jarceria':'Mechudos'},
+                        {'Jarceria':'Mops'},
+                        {'Jarceria':'Recogedores'},
+                        {'Jarceria':'Quimicos'},
                     ],
                     require('@/assets/Gifs/jarcieria.gif'),
-                    "Ofrecemos una gran variedad de productos para la limpieza: Escobas, fibras, despachadores, etc.",
+                    "Variedad en productos de limpieza.",
                     "Escobas, fibras, despachadores, botes para basura, atomizadores, cepillos, cubetas, franelas, mechudos, mops, recogedores, quimicos... etc.",
-                    "Jarciería"
+                    "Jarceria"
                 ],
                 [
                     ['LONAS_LIGERAS_M_xM'],
@@ -676,7 +674,7 @@ export default {
                         { LONAS_LIGERAS_M_xM: '12.00 x 18.00' },
                     ],
                     require('@/assets/Gifs/lonas.gif'),
-                    "Lonas de rafia ligera y reforzada, lonas de vinil 13, 18 y 22 onz, Lonas con forro y de publicidad, carpas.",
+                    "Ofrecemos lonaspara diversos usos, desde carpas hasta para uso publicitario.",
                     "Lona ligera, reforzada, vinílica 13 y 18 ONZ, de forro y con publicidad.",
                     "Lonas",
                     ['LONA_REFORZADA_M_xM'],
@@ -787,14 +785,12 @@ export default {
                         {varios:'Playo o polistretch'},
                         {varios:'Rascadores para gatos'},
                         {varios:'Tarimas'},
-                        
                     ],
                     require('@/assets/Gifs/varios.gif'),
                     "La mejor selección de productos en nuestro giro para sus necesidades.",
                     "Ofrecemos Manguera para agua y gas, Petate, Pachon, etc.",
                     "Varios"
                 ],
-
             ]
         }
     },
